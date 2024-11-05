@@ -1,35 +1,27 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React from "react";
+import { GlobalStyle } from "./lib/theme";
+import { Placeholder, Button, lightTheme, darkTheme } from "./lib";
+import { Icon } from "./lib/icon";
+import { ThemeProvider } from "styled-components";
 
 function App() {
-  const [count, setCount] = useState(0)
+	const switcher = false;
+	return (
+		<ThemeProvider theme={switcher ? darkTheme : lightTheme}>
+			<GlobalStyle />
+			<main>
+				{/* <Placeholder text="Поехали!" /> */}
 
-  return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+				<Button
+					appearance="primary"
+					size="small"
+					iconBefore={<Icon iconName="user" size={16} />}
+					iconAfter={<Icon iconName="user" size={16} />}
+				/>
+				{/* <Button appearance="secondary" size="small" /> */}
+			</main>
+		</ThemeProvider>
+	);
 }
 
-export default App
+export default App;
