@@ -3,218 +3,238 @@ import { DefaultTheme } from 'styled-components';
 
 export const lightTheme: DefaultTheme = {
   colors: {
+    // базовые контентные цвета (текст, иконки, бордеры)
     fg: {
-      primary: '#899387',
-      secondary: '#899387',
-      tertiary: '#899387',
-      ghosty: '#899387',
-      muted: '#899387',
-      disabled: '#899387',
+      primary: palette.neutral[50],
+      secondary: palette.neutral[50],
+      tertiary: palette.neutral[50],
+      ghosty: palette.neutral[50],
+      muted: palette.neutral[50],
+      disabled: palette.neutral[50],
       inverse: {
-        primary: '#899387',
-        secondary: '#899387',
-        tertiary: '#899387',
-        ghosty: '#899387',
-        muted: '#899387',
-        disabled: '#899387',
+        // базовые контентные цвета для использования на инверсивных фонах
+        primary: palette.neutral[50],
+        secondary: palette.neutral[50],
+        tertiary: palette.neutral[50],
+        ghosty: palette.neutral[50],
+        muted: palette.neutral[50],
+        disabled: palette.neutral[50],
       },
     },
+    //   базовые фоны страницы
     bg: {
-      page: '',
-      low: '',
-      mid: '',
-      hight: '',
-      disabled: '',
-      inverse: '',
+      page: palette.neutral[50], // Дефолтный, body page background
+      low: palette.neutral[50], // второстепенные, добавочные фоны, для визуального разделения контента, футера... на откуп продуктовому дизайнеру
+      mid: palette.neutral[50],
+      hight: palette.neutral[50],
+      disabled: palette.neutral[50],
+      inverse: {
+        low: palette.neutral[50],
+        mid: palette.neutral[50],
+        hight: palette.neutral[50],
+        disabled: palette.neutral[50],
+      },
     },
+    // фоны перекрывающих поверхностей (модалки, дропдауны, карточки...)
     surface: {
-      lowest: '',
-      low: '',
-      mid: '',
-      hight: '',
-      hightest: '',
+      lowest: palette.neutral[50],
+      low: palette.neutral[50],
+      mid: palette.neutral[50],
+      hight: palette.neutral[50],
+      hightest: palette.neutral[50],
     },
+    // Набор цветов без жестко закрепленной функции, но предполагающие свой контекст использования.
+    // Цвета этой группы могут применяться на любой элемент интерфейса.
+    // Вариативность оттенков даёт возможность управлять контрастом и делают интерфейс разнообразнее и приятнее в деталях.
     lead: {
-      primary: '',
-      secondary: '',
-      tertiary: '',
-      hover: '',
-      active: '',
-      contrast: '',
+      primary: palette.purple[50],
+      secondary: palette.purple[50],
+      tertiary: palette.purple[50],
+      hover: palette.purple[50],
+      active: palette.purple[50],
+      contrast: palette.purple[50],
       container: {
-        primary: '',
-        secondary: '',
-        tertiary: '',
-        hover: '',
-        active: '',
-        contrast: '',
+        primary: palette.purple[50],
+        secondary: palette.purple[50],
+        tertiary: palette.purple[50],
+        hover: palette.purple[50],
+        active: palette.purple[50],
+        contrast: palette.purple[50],
       },
     },
     lead2: {
       fixed: {
-        enabled: '',
-        hover: '',
-        active: '',
-        contrast: '',
+        enabled: palette.purple[50],
+        hover: palette.purple[50],
+        active: palette.purple[50],
+        contrast: palette.purple[50],
       },
       primary: {
-        enabled: '',
-        hover: '',
-        active: '',
-        contrast: '',
+        enabled: palette.purple[50],
+        hover: palette.purple[50],
+        active: palette.purple[50],
+        contrast: palette.purple[50],
       },
       secondary: {
-        enabled: '',
-        hover: '',
-        active: '',
-        contrast: '',
+        enabled: palette.purple[50],
+        hover: palette.purple[50],
+        active: palette.purple[50],
+        contrast: palette.purple[50],
       },
       tertiary: {
-        enabled: '',
-        hover: '',
-        active: '',
-        contrast: '',
+        enabled: palette.purple[50],
+        hover: palette.purple[50],
+        active: palette.purple[50],
+        contrast: palette.purple[50],
       },
       ghosty: {
-        enabled: '',
-        hover: '',
-        active: '',
-        contrast: '',
+        enabled: palette.purple[50],
+        hover: palette.purple[50],
+        active: palette.purple[50],
+        contrast: palette.purple[50],
       },
       muted: {
-        enabled: '',
-        hover: '',
-        active: '',
-        contrast: '',
+        enabled: palette.purple[50],
+        hover: palette.purple[50],
+        active: palette.purple[50],
+        contrast: palette.purple[50],
       },
       alpha: {
         // ??? 🔴
-        enabled: '',
-        hover: '',
-        active: '',
-        contrast: '',
-        fixed: '',
-        primary: '',
-        secondary: '',
-        tertiary: '',
-        ghosty: '',
-        muted: '',
+        enabled: palette.purple[50],
+        hover: palette.purple[50],
+        active: palette.purple[50],
+        contrast: palette.purple[50],
+        fixed: palette.purple[50],
+        primary: palette.purple[50],
+        secondary: palette.purple[50],
+        tertiary: palette.purple[50],
+        ghosty: palette.purple[50],
+        muted: palette.purple[50],
       },
     },
     lead3: {
       primary: {
-        enabled: '',
-        hover: '',
-        active: '',
-        disabled: '',
+        enabled: palette.purple[50],
+        hover: palette.purple[50],
+        active: palette.purple[50],
+        disabled: palette.purple[50],
         contrast: {
-          enabled: '',
-          disabled: '',
+          enabled: palette.purple[50],
+          disabled: palette.purple[50],
+        },
+        alpha: {
+          enabled: palette.purple[50],
+          hover: palette.purple[50],
+          active: palette.purple[50],
+          disabled: palette.purple[50],
+          contrast: {
+            enabled: palette.purple[50],
+            disabled: palette.purple[50],
+          },
         },
       },
       secondary: {
-        enabled: '',
-        hover: '',
-        active: '',
-        contrast: '',
+        enabled: palette.purple[50],
+        hover: palette.purple[50],
+        active: palette.purple[50],
+        disabled: palette.purple[50],
+        contrast: {
+          enabled: palette.purple[50],
+          disabled: palette.purple[50],
+        },
+        alpha: {
+          enabled: palette.purple[50],
+          hover: palette.purple[50],
+          active: palette.purple[50],
+          disabled: palette.purple[50],
+          contrast: {
+            enabled: palette.purple[50],
+            disabled: palette.purple[50],
+          },
+        },
       },
       tertiary: {
-        enabled: '',
-        hover: '',
-        active: '',
-        contrast: '',
+        enabled: palette.purple[50],
+        hover: palette.purple[50],
+        active: palette.purple[50],
+        disabled: palette.purple[50],
+        contrast: {
+          enabled: palette.purple[50],
+          disabled: palette.purple[50],
+        },
+        alpha: {
+          enabled: palette.purple[50],
+          hover: palette.purple[50],
+          active: palette.purple[50],
+          disabled: palette.purple[50],
+          contrast: {
+            enabled: palette.purple[50],
+            disabled: palette.purple[50],
+          },
+        },
       },
       ghosty: {
-        enabled: '',
-        hover: '',
-        active: '',
-        contrast: '',
-      },
-      muted: {
-        enabled: '',
-        hover: '',
-        active: '',
-        contrast: '',
-      },
-      alpha: {
-        // ??? 🔴
-        enabled: '',
-        hover: '',
-        active: '',
-        contrast: '',
-        fixed: '',
-        primary: '',
-        secondary: '',
-        tertiary: '',
-        ghosty: '',
-        muted: '',
+        enabled: palette.purple[50],
+        hover: palette.purple[50],
+        active: palette.purple[50],
+        disabled: palette.purple[50],
+        contrast: {
+          enabled: palette.purple[50],
+          disabled: palette.purple[50],
+        },
+        alpha: {
+          enabled: palette.purple[50],
+          hover: palette.purple[50],
+          active: palette.purple[50],
+          disabled: palette.purple[50],
+          contrast: {
+            enabled: palette.purple[50],
+            disabled: palette.purple[50],
+          },
+        },
       },
     },
-    utility: {
-      transparent: '',
-      //??? 🔴
-      shadow: {
-        neutral: {
-          hghtest: '',
-          hght: '',
-          mid: '',
-          low: '',
-          lowest: '',
-        },
-        accent: {
-          hghtest: '',
-          hght: '',
-          mid: '',
-          low: '',
-          lowest: '',
-        },
+    //цвета текстовых ссылок
+    link: {},
+    //цвета для состояния :focus
+    focus: {
+      inner: palette.purple[50], // первый радиус
+      outer: palette.purple[50], // второй радиус
+    },
+    shadow: {
+      // цвета нейтральный теней
+      neutral: {
+        hghtest: palette.neutral[50],
+        hght: palette.neutral[50],
+        mid: palette.neutral[50],
+        low: palette.neutral[50],
+        lowest: palette.neutral[50],
       },
+      // цвета акцентных теней
+      accent: {
+        hghtest: palette.purple[50],
+        hght: palette.purple[50],
+        mid: palette.purple[50],
+        low: palette.purple[50],
+        lowest: palette.purple[50],
+      },
+    },
+    // прозрачный утилитарный цвет, используется где цвет не нужен, но свойство цвета удобней оставить
+    utility: {
+      //??? 🔴 он нужен в разработке? Учитывая что всеравно пишется background-color: transparent
+      transparent: 'transparent',
     },
   },
-
   spacing: {
-    fixed: {
-      ...sizes,
-    },
+    fixed: {},
     comp: {
-      gap: {
-        xxs: '',
-        xs: '',
-        sm: '',
-        md: '',
-        lg: '',
-        xl: '',
-        xxl: '',
-      },
-      padding: {
-        xxs: '',
-        xs: '',
-        sm: '',
-        md: '',
-        lg: '',
-        xl: '',
-        xxl: '',
-      },
+      gap: {},
+      padding: {},
     },
     group: {
-      gap: {
-        xxs: '',
-        xs: '',
-        sm: '',
-        md: '',
-        lg: '',
-        xl: '',
-        xxl: '',
-      },
-      padding: {
-        xxs: '',
-        xs: '',
-        sm: '',
-        md: '',
-        lg: '',
-        xl: '',
-        xxl: '',
-      },
+      gap: {},
+      padding: {},
     },
   },
 
@@ -226,9 +246,7 @@ export const lightTheme: DefaultTheme = {
 
   zIndices: {},
 
-  animation: {
-    base: `0.2s ease-in-out`,
-  },
+  animation: {},
 };
 
 export const darkTheme = {

@@ -21,7 +21,7 @@ declare module 'styled-components' {
           disabled: string;
         };
       };
-      // базовые фоны страницы
+      //   базовые фоны страницы
       bg: {
         page: string; // Дефолтный, body page background
         low: string; // второстепенные, добавочные фоны, для визуального разделения контента, футера... на откуп продуктовому дизайнеру

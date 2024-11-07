@@ -1,120 +1,151 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 interface IButtonProps {
-	appearance: "primary" | "secondary" | "tertiary";
-	size: "small" | "base";
-	disabled?: boolean;
-	iconBefore?: React.ReactNode;
-	iconAfter?: React.ReactNode;
+  appearance: 'filled' | 'outlined' | 'ghosty';
+  size: 'lg' | 'md' | 'sm';
+  disabled?: boolean;
+  iconBefore?: React.ReactNode;
+  iconAfter?: React.ReactNode;
+  label?: string;
 }
 
 const StyledButton = styled.button<IButtonProps>`
-	border: none;
-	border: 1px solid transparent;
-	display: inline-flex;
-	flex-direction: row;
-	justify-content: center;
-	align-items: center;
-	box-shadow: none;
-	cursor: pointer;
-	padding: unset;
-	background: unset;
-	font-size: unset;
-	gap: ${(props) => props.theme.spacing.inner.close};
+  border: none;
+  border: 1px solid transparent;
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  box-shadow: none;
+  cursor: pointer;
+  padding: unset;
+  background: unset;
+  font-size: unset;
+  gap: 8;
 
-	${(props) =>
-		props.size === "base" &&
-		`
-        padding: 0 ${props.theme.spacing.padding.relaxed};
-        height: ${props.theme.spacing.height.base};
-        font-size: ${props.theme.typography.fontSize.component.base};
-        line-height: ${props.theme.typography.lineHeight.component.base};
-        font-weight: ${props.theme.typography.fontWeight.medium};
+  ${(props) =>
+    props.size === 'lg' &&
+    `
+    border-radius: 12px;
+    padding: 10px 16px;
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 20px;
+    
+    `}
+
+  ${(props) =>
+    props.size === 'md' &&
+    `
+        border-radius: 10px;
+        padding: 8px 12px;
+        font-size: 12px;
+        line-height: 16px;
+        font-weight: 16px;
+
+
+        `}
+  ${(props) =>
+    props.size === 'sm' &&
+    `
+        border-radius: 8px;
+        padding: 6px 8px;
+        font-size: 10px;
+        line-height: 12px;
+        font-weight: 12px;
+
 
         `}
 
 	${(props) =>
-		props.size === "small" &&
-		`
-        padding: 0 ${props.theme.spacing.padding.default};
-        height: ${props.theme.spacing.height.small};
-        font-size: ${props.theme.typography.fontSize.component.small};
-        line-height: ${props.theme.typography.lineHeight.component.small};
-        font-weight: ${props.theme.typography.fontWeight.medium};
-
-
-        `}
-
-	${(props) =>
-		props.appearance === "primary" &&
-		`
-            background: ${props.theme.colors.bg.lead.loud.enabled};
-            color: ${props.theme.colors.text.inverted};
-            border-color: ${props.theme.colors.border.lead.loud.enabled};
+    props.appearance === 'filled' &&
+    `
+            background: #713FD5;
+            color: #ffffff;
+            border-color: #713FD5;
 
             &:hover {
-            background: ${props.theme.colors.bg.lead.loud.hover};
-            color: ${props.theme.colors.text.inverted};
-            border-color: ${props.theme.colors.border.lead.loud.hover};
+            background: #8450EC;
+            color: #ffffff;
+            border-color: #8450EC;
             }
 
             &:active {
-            background: ${props.theme.colors.bg.lead.loud.active};
-            color: ${props.theme.colors.text.inverted};
-            border-color: ${props.theme.colors.border.lead.loud.active};
+            background: #936CEF;
+            color: #ffffff;
+            border-color: #936CEF;
             }
         `}
 
 	${(props) =>
-		props.appearance === "secondary" &&
-		`
+    props.appearance === 'outlined' &&
+    `
             background: transparent;
-            color: ${props.theme.colors.link.loud.enabled};
-            border-color: ${props.theme.colors.border.lead.loud.enabled};
-
+            color: #713FD5;
+            border-color: #713FD5;
             &:hover {
-            background: transparent;
-            color: ${props.theme.colors.link.loud.hover};
-            border-color: ${props.theme.colors.border.lead.loud.hover};
+            background: #7C4BF11F;
+            color: #713FD5;
+            border-color: #713FD5;
             }
 
             &:active {
-            background: transparent;
-           color: ${props.theme.colors.link.loud.active};
-            border-color: ${props.theme.colors.border.lead.loud.active};
+            background: #7C4BF152;
+           color: #713FD5;
+            border-color: #713FD5;
+            }
+
+        `}
+	${(props) =>
+    props.appearance === 'ghosty' &&
+    `
+            background: #E9E1FE;
+            color: #713FD5;
+            border-color: transparent;
+            &:hover {
+            background: #D6C6FB;
+            color: #713FD5;
+            border-color: transparent;
+            }
+
+            &:active {
+            background: #C9B6F7;
+           color: #713FD5;
+            border-color: transparent;
             }
 
         `}
 
 
         ${(props) =>
-		props.disabled &&
-		`
-            color: ${props.theme.colors.text.disabled};
-            background: ${props.theme.colors.bg.disabled};
-            border: ${props.theme.colors.border.disabled};
+    props.disabled &&
+    `
+            color: #ffffff;
+            background: #bababa;
+            border: #bababa;
             cursor: not-allowed;
 
             &:hover, &:active {
-            color: ${props.theme.colors.text.disabled};
-            background: ${props.theme.colors.bg.disabled};
-            border: ${props.theme.colors.border.disabled};}
+            color: #ffffff;
+            background: #bababa;
+            border: #bababa;
 
             `}
 `;
 
 export const Button: React.FC<IButtonProps> = ({
-	appearance,
-	size,
-	disabled,
-	iconAfter,
-	iconBefore,
+  appearance,
+  size,
+  label,
+  disabled,
+  iconAfter,
+  iconBefore,
 }) => {
-	return (
-		<StyledButton appearance={appearance} size={size} disabled={disabled}>
-			{iconBefore ? iconBefore : null}
-			Hello
-			{iconAfter ? iconAfter : null}
-		</StyledButton>
-	);
+  return (
+    <StyledButton appearance={appearance} size={size} disabled={disabled}>
+      {iconBefore ? iconBefore : null}
+      {label}
+      {iconAfter ? iconAfter : null}
+    </StyledButton>
+  );
 };
