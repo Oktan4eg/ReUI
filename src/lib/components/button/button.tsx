@@ -2,7 +2,8 @@ import styled from 'styled-components';
 
 interface IButtonProps {
   appearance: 'filled' | 'outlined' | 'ghosty';
-  size: 'lg' | 'md' | 'sm';
+  size?: 'lg' | 'md' | 'sm';
+  color?: 'lead' | 'success';
   disabled?: boolean;
   iconBefore?: React.ReactNode;
   iconAfter?: React.ReactNode;
@@ -135,14 +136,20 @@ const StyledButton = styled.button<IButtonProps>`
 
 export const Button: React.FC<IButtonProps> = ({
   appearance,
-  size,
-  label,
+  color = 'lead',
+  size = 'md',
+  label = 'Button',
   disabled,
   iconAfter,
   iconBefore,
 }) => {
   return (
-    <StyledButton appearance={appearance} size={size} disabled={disabled}>
+    <StyledButton
+      appearance={appearance}
+      size={size}
+      disabled={disabled}
+      color={color}
+    >
       {iconBefore ? iconBefore : null}
       {label}
       {iconAfter ? iconAfter : null}
