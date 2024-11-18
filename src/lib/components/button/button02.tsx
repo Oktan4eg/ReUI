@@ -87,11 +87,11 @@ const StyledButton = styled.button<ButtonProps>`
             border-color: ${props.theme.colors[props.color].primary};
 
             &:hover {
-            background: ${props.theme.colors[props.color].ghosty.hover};
+            background: ${props.theme.colors[props.color].ghosty.tertiary};
             }
 
             &:active {
-            background: ${props.theme.colors[props.color].ghosty.active};
+            background: ${props.theme.colors[props.color].ghosty.hover};
             }
         `}
         
@@ -100,7 +100,7 @@ const StyledButton = styled.button<ButtonProps>`
     props.color &&
     `       
             background: ${props.theme.colors[props.color].ghosty.tertiary};
-            color: ${props.theme.colors[props.color].primary};
+            color: ${props.theme.colors[props.color].ghosty.contrast};
             border-color: transparent;
         
             &:hover {
@@ -122,7 +122,7 @@ ${(props) =>
             border-color: transparent;
                
             &:hover {
-            background: ${props.theme.colors[props.color].ghosty.hover};
+            background: ${props.theme.colors[props.color].ghosty.tertiary};
             }
 
             &:active {
