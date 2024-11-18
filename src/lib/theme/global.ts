@@ -16,8 +16,8 @@ export const GlobalStyle = createGlobalStyle`
             -webkit-overflow-scrolling: touch;
 
             font-family: sans-serif;
+            background: ${(props) => props.theme.colors.bg.page};
             }
-            background: #7C4BF152;
             `;
 
 // background: ${(props) => props.theme.colors.fg.primary};

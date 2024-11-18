@@ -8,17 +8,17 @@ declare module 'styled-components' {
         primary: string;
         secondary: string;
         tertiary: string;
-        ghosty: string;
-        muted: string;
         disabled: string;
+        muted: string;
+        ghosty: string;
         inverse: {
           // базовые контентные цвета для использования на инверсивных фонах
           primary: string;
           secondary: string;
           tertiary: string;
-          ghosty: string;
-          muted: string;
           disabled: string;
+          muted: string;
+          ghosty: string;
         };
       };
       //   базовые фоны страницы
@@ -29,6 +29,7 @@ declare module 'styled-components' {
         hight: string;
         disabled: string;
         inverse: {
+          page: string;
           low: string;
           mid: string;
           hight: string;
@@ -46,6 +47,38 @@ declare module 'styled-components' {
       // Набор цветов без жестко закрепленной функции, но предполагающие свой контекст использования.
       // Цвета этой группы могут применяться на любой элемент интерфейса.
       // Вариативность оттенков даёт возможность управлять контрастом и делают интерфейс разнообразнее и приятнее в деталях.
+      neutral: {
+        primary: string;
+        secondary: string;
+        tertiary: string;
+        hover: string;
+        active: string;
+        contrast: string;
+        ghosty: {
+          primary: string;
+          secondary: string;
+          tertiary: string;
+          hover: string;
+          active: string;
+          contrast: string;
+        };
+      };
+      inverse: {
+        primary: string;
+        secondary: string;
+        tertiary: string;
+        hover: string;
+        active: string;
+        contrast: string;
+        ghosty: {
+          primary: string;
+          secondary: string;
+          tertiary: string;
+          hover: string;
+          active: string;
+          contrast: string;
+        };
+      };
       lead: {
         primary: string;
         secondary: string;
@@ -53,7 +86,71 @@ declare module 'styled-components' {
         hover: string;
         active: string;
         contrast: string;
-        container: {
+        ghosty: {
+          primary: string;
+          secondary: string;
+          tertiary: string;
+          hover: string;
+          active: string;
+          contrast: string;
+        };
+      };
+      success: {
+        primary: string;
+        secondary: string;
+        tertiary: string;
+        hover: string;
+        active: string;
+        contrast: string;
+        ghosty: {
+          primary: string;
+          secondary: string;
+          tertiary: string;
+          hover: string;
+          active: string;
+          contrast: string;
+        };
+      };
+      distuctive: {
+        primary: string;
+        secondary: string;
+        tertiary: string;
+        hover: string;
+        active: string;
+        contrast: string;
+        ghosty: {
+          primary: string;
+          secondary: string;
+          tertiary: string;
+          hover: string;
+          active: string;
+          contrast: string;
+        };
+      };
+      info: {
+        primary: string;
+        secondary: string;
+        tertiary: string;
+        hover: string;
+        active: string;
+        contrast: string;
+        ghosty: {
+          primary: string;
+          secondary: string;
+          tertiary: string;
+          hover: string;
+          active: string;
+          contrast: string;
+        };
+      };
+      warning: {
+        primary: string;
+        secondary: string;
+        tertiary: string;
+        hover: string;
+        active: string;
+        contrast: string;
+        ghosty: {
           primary: string;
           secondary: string;
           tertiary: string;
