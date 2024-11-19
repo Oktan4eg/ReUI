@@ -1,22 +1,21 @@
-import { Button } from './button02';
+import { ButtonWithStateLayer } from './ButtonWithStateLayer';
 
 export default {
-  title: 'Компоненты/Button',
-  component: Button,
+  title: 'Компоненты/buttonWithStateLayer',
+  component: ButtonWithStateLayer,
   parameters: {
     layout: 'centered',
     status: {
       type: 'beta', // 'beta' | 'stable' | 'deprecated' | 'releaseCandidate'
     },
   },
+
   tags: ['autodocs'],
 };
 
 export const Base = {
   args: {
-    label: 'Я кнопка',
-    color: 'neutral',
-    appearance: 'filled',
+    color: 'lead',
     size: 'md',
   },
 };

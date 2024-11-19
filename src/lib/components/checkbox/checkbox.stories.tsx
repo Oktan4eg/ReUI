@@ -1,8 +1,8 @@
-import { Button } from './button02';
+import { Checkbox } from './checkbox';
 
 export default {
-  title: 'Компоненты/Button',
-  component: Button,
+  title: 'Inputs/Checkbox',
+  component: Checkbox,
   parameters: {
     layout: 'centered',
     status: {
@@ -14,9 +14,8 @@ export default {
 
 export const Base = {
   args: {
-    label: 'Я кнопка',
-    color: 'neutral',
-    appearance: 'filled',
-    size: 'md',
+    label: 'Я чекбокс',
+    name: 'filled',
+    type: 'checkbox',
   },
 };

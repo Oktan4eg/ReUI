@@ -1,200 +1,166 @@
 import { palette, sizes } from './tokensMY';
 import { DefaultTheme } from 'styled-components';
 
+// export const lightTheme = {
 export const lightTheme: DefaultTheme = {
   colors: {
     // базовые контентные цвета (текст, иконки, бордеры)
     fg: {
-      primary: palette.neutral[50],
-      secondary: palette.neutral[50],
+      primary: palette.neutral[8],
+      secondary: palette.neutral[24],
       tertiary: palette.neutral[50],
-      ghosty: palette.neutral[50],
-      muted: palette.neutral[50],
-      disabled: palette.neutral[50],
+      disabled: palette.neutral[8] + palette.opacity[4],
+      muted: palette.neutral[8] + palette.opacity[24],
+      ghosty: palette.neutral[8] + palette.opacity[12],
       inverse: {
         // базовые контентные цвета для использования на инверсивных фонах
-        primary: palette.neutral[50],
-        secondary: palette.neutral[50],
+        primary: palette.neutral[96],
+        secondary: palette.neutral[70],
         tertiary: palette.neutral[50],
-        ghosty: palette.neutral[50],
-        muted: palette.neutral[50],
-        disabled: palette.neutral[50],
+        disabled: palette.neutral[96] + palette.opacity[4],
+        muted: palette.neutral[96] + palette.opacity[24],
+        ghosty: palette.neutral[96] + palette.opacity[12],
       },
     },
     //   базовые фоны страницы
     bg: {
-      page: palette.neutral[50], // Дефолтный, body page background
-      low: palette.neutral[50], // второстепенные, добавочные фоны, для визуального разделения контента, футера... на откуп продуктовому дизайнеру
-      mid: palette.neutral[50],
-      hight: palette.neutral[50],
-      disabled: palette.neutral[50],
+      page: palette.neutral[98], // Дефолтный, body page background
+      low: palette.neutral[92], // второстепенные, добавочные фоны, для визуального разделения контента, футера... на откуп продуктовому дизайнеру
+      mid: palette.neutral[96],
+      hight: palette.neutral[100],
+      disabled: palette.neutral[98] + palette.opacity[12],
       inverse: {
-        low: palette.neutral[50],
-        mid: palette.neutral[50],
-        hight: palette.neutral[50],
-        disabled: palette.neutral[50],
+        page: palette.neutral[8], // Дефолтный, body page background
+        low: palette.neutral[8],
+        mid: palette.neutral[12],
+        hight: palette.neutral[20],
+        disabled: palette.neutral[50] + palette.opacity[12],
       },
     },
     // фоны перекрывающих поверхностей (модалки, дропдауны, карточки...)
     surface: {
-      lowest: palette.neutral[50],
-      low: palette.neutral[50],
-      mid: palette.neutral[50],
-      hight: palette.neutral[50],
-      hightest: palette.neutral[50],
+      lowest: palette.neutral[92],
+      low: palette.neutral[94],
+      mid: palette.neutral[96],
+      hight: palette.neutral[98],
+      hightest: palette.neutral[100],
     },
     // Набор цветов без жестко закрепленной функции, но предполагающие свой контекст использования.
     // Цвета этой группы могут применяться на любой элемент интерфейса.
     // Вариативность оттенков даёт возможность управлять контрастом и делают интерфейс разнообразнее и приятнее в деталях.
+    neutral: {
+      primary: palette.neutral[50],
+      secondary: palette.neutral[60],
+      tertiary: palette.neutral[80],
+      hover: palette.neutral[40],
+      active: palette.neutral[30],
+      contrast: palette.neutral[92],
+      inverse: {
+        primary: palette.neutral[80],
+        secondary: palette.neutral[88],
+        tertiary: palette.neutral[94],
+        hover: palette.neutral[88],
+        active: palette.neutral[80],
+        contrast: palette.neutral[12],
+      },
+    },
+    inverse: {
+      primary: palette.neutral[100],
+      secondary: palette.neutral[90],
+      tertiary: palette.neutral[80],
+      hover: palette.neutral[80],
+      active: palette.neutral[70],
+      contrast: palette.neutral[12],
+      inverse: {
+        primary: palette.neutral[12],
+        secondary: palette.neutral[12],
+        tertiary: palette.neutral[12],
+        hover: palette.neutral[24],
+        active: palette.neutral[20],
+        contrast: palette.neutral[96],
+      },
+    },
     lead: {
       primary: palette.purple[50],
-      secondary: palette.purple[50],
-      tertiary: palette.purple[50],
-      hover: palette.purple[50],
-      active: palette.purple[50],
-      contrast: palette.purple[50],
-      container: {
-        primary: palette.purple[50],
-        secondary: palette.purple[50],
-        tertiary: palette.purple[50],
-        hover: palette.purple[50],
-        active: palette.purple[50],
-        contrast: palette.purple[50],
+      secondary: palette.purple[60],
+      tertiary: palette.purple[80],
+      hover: palette.purple[40],
+      active: palette.purple[30],
+      contrast: palette.purple[95],
+      inverse: {
+        primary: palette.purple[90],
+        secondary: palette.purple[95],
+        tertiary: palette.purple[100],
+        hover: palette.purple[90],
+        active: palette.purple[85],
+        contrast: palette.purple[30],
       },
     },
-    lead2: {
-      fixed: {
-        enabled: palette.purple[50],
-        hover: palette.purple[50],
-        active: palette.purple[50],
-        contrast: palette.purple[50],
-      },
-      primary: {
-        enabled: palette.purple[50],
-        hover: palette.purple[50],
-        active: palette.purple[50],
-        contrast: palette.purple[50],
-      },
-      secondary: {
-        enabled: palette.purple[50],
-        hover: palette.purple[50],
-        active: palette.purple[50],
-        contrast: palette.purple[50],
-      },
-      tertiary: {
-        enabled: palette.purple[50],
-        hover: palette.purple[50],
-        active: palette.purple[50],
-        contrast: palette.purple[50],
-      },
-      ghosty: {
-        enabled: palette.purple[50],
-        hover: palette.purple[50],
-        active: palette.purple[50],
-        contrast: palette.purple[50],
-      },
-      muted: {
-        enabled: palette.purple[50],
-        hover: palette.purple[50],
-        active: palette.purple[50],
-        contrast: palette.purple[50],
-      },
-      alpha: {
-        // ??? 🔴
-        enabled: palette.purple[50],
-        hover: palette.purple[50],
-        active: palette.purple[50],
-        contrast: palette.purple[50],
-        fixed: palette.purple[50],
-        primary: palette.purple[50],
-        secondary: palette.purple[50],
-        tertiary: palette.purple[50],
-        ghosty: palette.purple[50],
-        muted: palette.purple[50],
+    success: {
+      primary: palette.green[50],
+      secondary: palette.green[60],
+      tertiary: palette.green[80],
+      hover: palette.green[40],
+      active: palette.green[30],
+      contrast: palette.green[95],
+      inverse: {
+        primary: palette.green[90],
+        secondary: palette.green[95],
+        tertiary: palette.green[100],
+        hover: palette.green[90],
+        active: palette.green[85],
+        contrast: palette.green[30],
       },
     },
-    lead3: {
-      primary: {
-        enabled: palette.purple[50],
-        hover: palette.purple[50],
-        active: palette.purple[50],
-        disabled: palette.purple[50],
-        contrast: {
-          enabled: palette.purple[50],
-          disabled: palette.purple[50],
-        },
-        alpha: {
-          enabled: palette.purple[50],
-          hover: palette.purple[50],
-          active: palette.purple[50],
-          disabled: palette.purple[50],
-          contrast: {
-            enabled: palette.purple[50],
-            disabled: palette.purple[50],
-          },
-        },
-      },
-      secondary: {
-        enabled: palette.purple[50],
-        hover: palette.purple[50],
-        active: palette.purple[50],
-        disabled: palette.purple[50],
-        contrast: {
-          enabled: palette.purple[50],
-          disabled: palette.purple[50],
-        },
-        alpha: {
-          enabled: palette.purple[50],
-          hover: palette.purple[50],
-          active: palette.purple[50],
-          disabled: palette.purple[50],
-          contrast: {
-            enabled: palette.purple[50],
-            disabled: palette.purple[50],
-          },
-        },
-      },
-      tertiary: {
-        enabled: palette.purple[50],
-        hover: palette.purple[50],
-        active: palette.purple[50],
-        disabled: palette.purple[50],
-        contrast: {
-          enabled: palette.purple[50],
-          disabled: palette.purple[50],
-        },
-        alpha: {
-          enabled: palette.purple[50],
-          hover: palette.purple[50],
-          active: palette.purple[50],
-          disabled: palette.purple[50],
-          contrast: {
-            enabled: palette.purple[50],
-            disabled: palette.purple[50],
-          },
-        },
-      },
-      ghosty: {
-        enabled: palette.purple[50],
-        hover: palette.purple[50],
-        active: palette.purple[50],
-        disabled: palette.purple[50],
-        contrast: {
-          enabled: palette.purple[50],
-          disabled: palette.purple[50],
-        },
-        alpha: {
-          enabled: palette.purple[50],
-          hover: palette.purple[50],
-          active: palette.purple[50],
-          disabled: palette.purple[50],
-          contrast: {
-            enabled: palette.purple[50],
-            disabled: palette.purple[50],
-          },
-        },
+    distuctive: {
+      primary: palette.red[50],
+      secondary: palette.red[60],
+      tertiary: palette.red[80],
+      hover: palette.red[40],
+      active: palette.red[30],
+      contrast: palette.red[95],
+      inverse: {
+        primary: palette.red[90],
+        secondary: palette.red[95],
+        tertiary: palette.red[100],
+        hover: palette.red[90],
+        active: palette.red[85],
+        contrast: palette.red[30],
       },
     },
+    info: {
+      primary: palette.blue[50],
+      secondary: palette.blue[60],
+      tertiary: palette.blue[80],
+      hover: palette.blue[40],
+      active: palette.blue[30],
+      contrast: palette.blue[95],
+      inverse: {
+        primary: palette.blue[90],
+        secondary: palette.blue[95],
+        tertiary: palette.blue[100],
+        hover: palette.blue[90],
+        active: palette.blue[85],
+        contrast: palette.blue[30],
+      },
+    },
+    warning: {
+      primary: palette.orange[50],
+      secondary: palette.orange[60],
+      tertiary: palette.orange[80],
+      hover: palette.orange[40],
+      active: palette.orange[30],
+      contrast: palette.orange[95],
+      inverse: {
+        primary: palette.orange[90],
+        secondary: palette.orange[95],
+        tertiary: palette.orange[100],
+        hover: palette.orange[90],
+        active: palette.orange[85],
+        contrast: palette.orange[30],
+      },
+    },
+
     //цвета текстовых ссылок
     link: {},
     //цвета для состояния :focus
@@ -253,20 +219,210 @@ export const darkTheme = {
   ...lightTheme,
   colors: {
     fg: {
-      primary: '#123123',
-      secondary: '#123123',
-      tertiary: '#123123',
-      ghosty: '#123123',
-      muted: '#123123',
-      disabled: '#123123',
+      primary: palette.neutral[96],
+      secondary: palette.neutral[80],
+      tertiary: palette.neutral[70],
+      disabled: palette.neutral[96] + palette.opacity[4],
+      muted: palette.neutral[96] + palette.opacity[24],
+      ghosty: palette.neutral[96] + palette.opacity[12],
       inverse: {
-        primary: '#123123',
-        secondary: '#123123',
-        tertiary: '#123123',
-        ghosty: '#123123',
-        muted: '#123123',
-        disabled: '#123123',
+        // базовые контентные цвета для использования на инверсивных фонах
+        primary: palette.neutral[8],
+        secondary: palette.neutral[24],
+        tertiary: palette.neutral[40],
+        disabled: palette.neutral[50] + palette.opacity[4],
+        muted: palette.neutral[50] + palette.opacity[24],
+        ghosty: palette.neutral[50] + palette.opacity[12],
       },
     },
+    //   базовые фоны страницы
+    bg: {
+      page: palette.neutral[8], // Дефолтный, body page background
+      low: palette.neutral[12], // второстепенные, добавочные фоны, для визуального разделения контента, футера... на откуп продуктовому дизайнеру
+      mid: palette.neutral[20],
+      hight: palette.neutral[100],
+      disabled: palette.neutral[98] + palette.opacity[12],
+      inverse: {
+        page: palette.neutral[96], // Дефолтный, body page background
+        low: palette.neutral[80],
+        mid: palette.neutral[70],
+        hight: palette.neutral[60],
+        disabled: palette.neutral[50] + palette.opacity[12],
+      },
+    },
+    surface: {
+      lowest: palette.neutral[92],
+      low: palette.neutral[94],
+      mid: palette.neutral[96],
+      hight: palette.neutral[98],
+      hightest: palette.neutral[100],
+    },
+    // Набор цветов без жестко закрепленной функции, но предполагающие свой контекст использования.
+    // Цвета этой группы могут применяться на любой элемент интерфейса.
+    // Вариативность оттенков даёт возможность управлять контрастом и делают интерфейс разнообразнее и приятнее в деталях.
+    neutral: {
+      primary: palette.neutral[100],
+      secondary: palette.neutral[90],
+      tertiary: palette.neutral[80],
+      hover: palette.neutral[80],
+      active: palette.neutral[70],
+      contrast: palette.neutral[12],
+      inverse: {
+        primary: palette.neutral[12],
+        secondary: palette.neutral[12],
+        tertiary: palette.neutral[12],
+        hover: palette.neutral[24],
+        active: palette.neutral[20],
+        contrast: palette.neutral[96],
+      },
+    },
+    inverse: {
+      primary: palette.neutral[50],
+      secondary: palette.neutral[60],
+      tertiary: palette.neutral[80],
+      hover: palette.neutral[40],
+      active: palette.neutral[30],
+      contrast: palette.neutral[92],
+      inverse: {
+        primary: palette.neutral[80],
+        secondary: palette.neutral[88],
+        tertiary: palette.neutral[94],
+        hover: palette.neutral[88],
+        active: palette.neutral[80],
+        contrast: palette.neutral[12],
+      },
+    },
+    lead: {
+      primary: palette.purple[80],
+      secondary: palette.purple[60],
+      tertiary: palette.purple[40],
+      hover: palette.purple[90],
+      active: palette.purple[80],
+      contrast: palette.purple[5],
+      inverse: {
+        primary: palette.purple[20],
+        secondary: palette.purple[15],
+        tertiary: palette.purple[10],
+        hover: palette.purple[30],
+        active: palette.purple[20],
+        contrast: palette.purple[80],
+      },
+    },
+    success: {
+      primary: palette.green[80],
+      secondary: palette.green[60],
+      tertiary: palette.green[40],
+      hover: palette.green[90],
+      active: palette.green[80],
+      contrast: palette.green[5],
+      inverse: {
+        primary: palette.green[20],
+        secondary: palette.green[15],
+        tertiary: palette.green[10],
+        hover: palette.green[30],
+        active: palette.green[20],
+        contrast: palette.green[80],
+      },
+    },
+
+    distuctive: {
+      primary: palette.red[80],
+      secondary: palette.red[60],
+      tertiary: palette.red[40],
+      hover: palette.red[90],
+      active: palette.red[80],
+      contrast: palette.red[5],
+      inverse: {
+        primary: palette.red[20],
+        secondary: palette.red[15],
+        tertiary: palette.red[10],
+        hover: palette.red[30],
+        active: palette.red[20],
+        contrast: palette.red[80],
+      },
+    },
+    info: {
+      primary: palette.blue[80],
+      secondary: palette.blue[60],
+      tertiary: palette.blue[40],
+      hover: palette.blue[90],
+      active: palette.blue[80],
+      contrast: palette.blue[5],
+      inverse: {
+        primary: palette.blue[20],
+        secondary: palette.blue[15],
+        tertiary: palette.blue[10],
+        hover: palette.blue[30],
+        active: palette.blue[20],
+        contrast: palette.blue[80],
+      },
+    },
+    warning: {
+      primary: palette.orange[80],
+      secondary: palette.orange[60],
+      tertiary: palette.orange[40],
+      hover: palette.orange[90],
+      active: palette.orange[80],
+      contrast: palette.orange[5],
+      inverse: {
+        primary: palette.orange[20],
+        secondary: palette.orange[15],
+        tertiary: palette.orange[10],
+        hover: palette.orange[30],
+        active: palette.orange[20],
+        contrast: palette.orange[80],
+      },
+    },
+    //цвета текстовых ссылок
+    link: {},
+    //цвета для состояния :focus
+    focus: {
+      inner: palette.purple[50], // первый радиус
+      outer: palette.purple[50], // второй радиус
+    },
+    shadow: {
+      // цвета нейтральный теней
+      neutral: {
+        hghtest: palette.neutral[50],
+        hght: palette.neutral[50],
+        mid: palette.neutral[50],
+        low: palette.neutral[50],
+        lowest: palette.neutral[50],
+      },
+      // цвета акцентных теней
+      accent: {
+        hghtest: palette.purple[50],
+        hght: palette.purple[50],
+        mid: palette.purple[50],
+        low: palette.purple[50],
+        lowest: palette.purple[50],
+      },
+    },
+    // прозрачный утилитарный цвет, используется где цвет не нужен, но свойство цвета удобней оставить
+    utility: {
+      //??? 🔴 он нужен в разработке? Учитывая что всеравно пишется background-color: transparent
+      transparent: 'transparent',
+    },
   },
+  spacing: {
+    fixed: {},
+    comp: {
+      gap: {},
+      padding: {},
+    },
+    group: {
+      gap: {},
+      padding: {},
+    },
+  },
+
+  shadows: {},
+
+  typography: {},
+
+  cornerRadius: {},
+
+  zIndices: {},
+
+  animation: {},
 };

@@ -8,17 +8,17 @@ declare module 'styled-components' {
         primary: string;
         secondary: string;
         tertiary: string;
-        ghosty: string;
-        muted: string;
         disabled: string;
+        muted: string;
+        ghosty: string;
         inverse: {
           // базовые контентные цвета для использования на инверсивных фонах
           primary: string;
           secondary: string;
           tertiary: string;
-          ghosty: string;
-          muted: string;
           disabled: string;
+          muted: string;
+          ghosty: string;
         };
       };
       //   базовые фоны страницы
@@ -29,6 +29,7 @@ declare module 'styled-components' {
         hight: string;
         disabled: string;
         inverse: {
+          page: string;
           low: string;
           mid: string;
           hight: string;
@@ -46,6 +47,38 @@ declare module 'styled-components' {
       // Набор цветов без жестко закрепленной функции, но предполагающие свой контекст использования.
       // Цвета этой группы могут применяться на любой элемент интерфейса.
       // Вариативность оттенков даёт возможность управлять контрастом и делают интерфейс разнообразнее и приятнее в деталях.
+      neutral: {
+        primary: string;
+        secondary: string;
+        tertiary: string;
+        hover: string;
+        active: string;
+        contrast: string;
+        inverse: {
+          primary: string;
+          secondary: string;
+          tertiary: string;
+          hover: string;
+          active: string;
+          contrast: string;
+        };
+      };
+      inverse: {
+        primary: string;
+        secondary: string;
+        tertiary: string;
+        hover: string;
+        active: string;
+        contrast: string;
+        inverse: {
+          primary: string;
+          secondary: string;
+          tertiary: string;
+          hover: string;
+          active: string;
+          contrast: string;
+        };
+      };
       lead: {
         primary: string;
         secondary: string;
@@ -53,7 +86,7 @@ declare module 'styled-components' {
         hover: string;
         active: string;
         contrast: string;
-        container: {
+        inverse: {
           primary: string;
           secondary: string;
           tertiary: string;
@@ -62,137 +95,68 @@ declare module 'styled-components' {
           contrast: string;
         };
       };
-      lead2: {
-        fixed: {
-          enabled: string;
-          hover: string;
-          active: string;
-          contrast: string;
-        };
-        primary: {
-          enabled: string;
-          hover: string;
-          active: string;
-          contrast: string;
-        };
-        secondary: {
-          enabled: string;
-          hover: string;
-          active: string;
-          contrast: string;
-        };
-        tertiary: {
-          enabled: string;
-          hover: string;
-          active: string;
-          contrast: string;
-        };
-        ghosty: {
-          enabled: string;
-          hover: string;
-          active: string;
-          contrast: string;
-        };
-        muted: {
-          enabled: string;
-          hover: string;
-          active: string;
-          contrast: string;
-        };
-        alpha: {
-          // ??? 🔴
-          enabled: string;
-          hover: string;
-          active: string;
-          contrast: string;
-          fixed: string;
+      success: {
+        primary: string;
+        secondary: string;
+        tertiary: string;
+        hover: string;
+        active: string;
+        contrast: string;
+        inverse: {
           primary: string;
           secondary: string;
           tertiary: string;
-          ghosty: string;
-          muted: string;
+          hover: string;
+          active: string;
+          contrast: string;
         };
       };
-      lead3: {
-        primary: {
-          enabled: string;
+      distuctive: {
+        primary: string;
+        secondary: string;
+        tertiary: string;
+        hover: string;
+        active: string;
+        contrast: string;
+        inverse: {
+          primary: string;
+          secondary: string;
+          tertiary: string;
           hover: string;
           active: string;
-          disabled: string;
-          contrast: {
-            enabled: string;
-            disabled: string;
-          };
-          alpha: {
-            enabled: string;
-            hover: string;
-            active: string;
-            disabled: string;
-            contrast: {
-              enabled: string;
-              disabled: string;
-            };
-          };
+          contrast: string;
         };
-        secondary: {
-          enabled: string;
+      };
+      info: {
+        primary: string;
+        secondary: string;
+        tertiary: string;
+        hover: string;
+        active: string;
+        contrast: string;
+        inverse: {
+          primary: string;
+          secondary: string;
+          tertiary: string;
           hover: string;
           active: string;
-          disabled: string;
-          contrast: {
-            enabled: string;
-            disabled: string;
-          };
-          alpha: {
-            enabled: string;
-            hover: string;
-            active: string;
-            disabled: string;
-            contrast: {
-              enabled: string;
-              disabled: string;
-            };
-          };
+          contrast: string;
         };
-        tertiary: {
-          enabled: string;
+      };
+      warning: {
+        primary: string;
+        secondary: string;
+        tertiary: string;
+        hover: string;
+        active: string;
+        contrast: string;
+        inverse: {
+          primary: string;
+          secondary: string;
+          tertiary: string;
           hover: string;
           active: string;
-          disabled: string;
-          contrast: {
-            enabled: string;
-            disabled: string;
-          };
-          alpha: {
-            enabled: string;
-            hover: string;
-            active: string;
-            disabled: string;
-            contrast: {
-              enabled: string;
-              disabled: string;
-            };
-          };
-        };
-        ghosty: {
-          enabled: string;
-          hover: string;
-          active: string;
-          disabled: string;
-          contrast: {
-            enabled: string;
-            disabled: string;
-          };
-          alpha: {
-            enabled: string;
-            hover: string;
-            active: string;
-            disabled: string;
-            contrast: {
-              enabled: string;
-              disabled: string;
-            };
-          };
+          contrast: string;
         };
       };
       //цвета текстовых ссылок

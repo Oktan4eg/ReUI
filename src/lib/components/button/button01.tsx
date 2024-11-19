@@ -1,13 +1,20 @@
+// https://www.youtube.com/watch?v=KvctnEZSvtM
 import styled from 'styled-components';
 
 interface IButtonProps {
   appearance: 'filled' | 'outlined' | 'ghosty';
-  size: 'lg' | 'md' | 'sm';
+  size?: 'lg' | 'md' | 'sm';
+  color?: 'fg' | 'lead';
   disabled?: boolean;
   iconBefore?: React.ReactNode;
   iconAfter?: React.ReactNode;
   label?: string;
 }
+// var b = 10;
+// var c = ${(props) => ${props.theme.colors.fg.primary};
+// console.log(`"переменная" + ${props.theme.colors.fg.primary}`);
+// const colors = 'fg';
+// console.log(IButtonProps);
 
 const StyledButton = styled.button<IButtonProps>`
   border: none;
@@ -76,6 +83,9 @@ const StyledButton = styled.button<IButtonProps>`
             border-color: #936CEF;
             }
         `}
+	
+        
+
 
 	${(props) =>
     props.appearance === 'outlined' &&
@@ -135,14 +145,20 @@ const StyledButton = styled.button<IButtonProps>`
 
 export const Button: React.FC<IButtonProps> = ({
   appearance,
-  size,
-  label,
+  color = 'lead',
+  size = 'md',
+  label = 'Button',
   disabled,
   iconAfter,
   iconBefore,
 }) => {
   return (
-    <StyledButton appearance={appearance} size={size} disabled={disabled}>
+    <StyledButton
+      appearance={appearance}
+      size={size}
+      disabled={disabled}
+      color={color}
+    >
       {iconBefore ? iconBefore : null}
       {label}
       {iconAfter ? iconAfter : null}
