@@ -7,4 +7,5 @@ export * from './components/checkbox';
 export * from './components/label';
 export * from './components/text-input';
 export * from './components/radio';
+export * from './components/toggle';
 export * from './theme';

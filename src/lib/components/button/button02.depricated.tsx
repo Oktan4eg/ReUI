@@ -190,13 +190,13 @@ const StyledButton = styled.button<IButtonProps>`
             border-color: ${props.theme.colors.lead.primary};
 
             &:hover {
-            background: ${props.theme.colors.lead.ghosty.hover};
+            background: ${props.theme.colors.lead.inverse.hover};
             color: ${props.theme.colors.lead.hover};
             border-color: ${props.theme.colors.lead.hover};
             }
 
             &:active {
-            background: ${props.theme.colors.lead.ghosty.active};
+            background: ${props.theme.colors.lead.inverse.active};
             color: ${props.theme.colors.lead.active};
             border-color: ${props.theme.colors.lead.active};
               `}
@@ -304,18 +304,18 @@ const StyledButton = styled.button<IButtonProps>`
     props.appearance === 'tonal' &&
     props.color === 'lead' &&
     `
-            background: ${props.theme.colors.lead.ghosty.secondary};
+            background: ${props.theme.colors.lead.inverse.secondary};
             color: ${props.theme.colors.lead.primary};
             border-color: transparent;
 
             &:hover {
-            background: ${props.theme.colors.lead.ghosty.hover};
+            background: ${props.theme.colors.lead.inverse.hover};
             color: ${props.theme.colors.lead.hover};
             border-color: transparent;
             }
 
             &:active {
-            background: ${props.theme.colors.lead.ghosty.active};
+            background: ${props.theme.colors.lead.inverse.active};
             color: ${props.theme.colors.lead.active};
             border-color: transparent;
                   }
@@ -429,13 +429,13 @@ ${(props) =>
             border-color: transparent;
 
             &:hover {
-            background: ${props.theme.colors.lead.ghosty.hover};
+            background: ${props.theme.colors.lead.inverse.hover};
             color: ${props.theme.colors.lead.hover};
             border-color: transparent;
             }
 
             &:active {
-            background: ${props.theme.colors.lead.ghosty.active};
+            background: ${props.theme.colors.lead.inverse.active};
             color: ${props.theme.colors.lead.active};
             border-color: transparent;
                   }

@@ -54,7 +54,7 @@ declare module 'styled-components' {
         hover: string;
         active: string;
         contrast: string;
-        ghosty: {
+        inverse: {
           primary: string;
           secondary: string;
           tertiary: string;
@@ -70,7 +70,7 @@ declare module 'styled-components' {
         hover: string;
         active: string;
         contrast: string;
-        ghosty: {
+        inverse: {
           primary: string;
           secondary: string;
           tertiary: string;
@@ -86,7 +86,7 @@ declare module 'styled-components' {
         hover: string;
         active: string;
         contrast: string;
-        ghosty: {
+        inverse: {
           primary: string;
           secondary: string;
           tertiary: string;
@@ -102,7 +102,7 @@ declare module 'styled-components' {
         hover: string;
         active: string;
         contrast: string;
-        ghosty: {
+        inverse: {
           primary: string;
           secondary: string;
           tertiary: string;
@@ -118,7 +118,7 @@ declare module 'styled-components' {
         hover: string;
         active: string;
         contrast: string;
-        ghosty: {
+        inverse: {
           primary: string;
           secondary: string;
           tertiary: string;
@@ -134,7 +134,7 @@ declare module 'styled-components' {
         hover: string;
         active: string;
         contrast: string;
-        ghosty: {
+        inverse: {
           primary: string;
           secondary: string;
           tertiary: string;
@@ -150,146 +150,13 @@ declare module 'styled-components' {
         hover: string;
         active: string;
         contrast: string;
-        ghosty: {
+        inverse: {
           primary: string;
           secondary: string;
           tertiary: string;
           hover: string;
           active: string;
           contrast: string;
-        };
-      };
-      lead2: {
-        fixed: {
-          enabled: string;
-          hover: string;
-          active: string;
-          contrast: string;
-        };
-        primary: {
-          enabled: string;
-          hover: string;
-          active: string;
-          contrast: string;
-        };
-        secondary: {
-          enabled: string;
-          hover: string;
-          active: string;
-          contrast: string;
-        };
-        tertiary: {
-          enabled: string;
-          hover: string;
-          active: string;
-          contrast: string;
-        };
-        ghosty: {
-          enabled: string;
-          hover: string;
-          active: string;
-          contrast: string;
-        };
-        muted: {
-          enabled: string;
-          hover: string;
-          active: string;
-          contrast: string;
-        };
-        alpha: {
-          // ??? 🔴
-          enabled: string;
-          hover: string;
-          active: string;
-          contrast: string;
-          fixed: string;
-          primary: string;
-          secondary: string;
-          tertiary: string;
-          ghosty: string;
-          muted: string;
-        };
-      };
-      lead3: {
-        primary: {
-          enabled: string;
-          hover: string;
-          active: string;
-          disabled: string;
-          contrast: {
-            enabled: string;
-            disabled: string;
-          };
-          alpha: {
-            enabled: string;
-            hover: string;
-            active: string;
-            disabled: string;
-            contrast: {
-              enabled: string;
-              disabled: string;
-            };
-          };
-        };
-        secondary: {
-          enabled: string;
-          hover: string;
-          active: string;
-          disabled: string;
-          contrast: {
-            enabled: string;
-            disabled: string;
-          };
-          alpha: {
-            enabled: string;
-            hover: string;
-            active: string;
-            disabled: string;
-            contrast: {
-              enabled: string;
-              disabled: string;
-            };
-          };
-        };
-        tertiary: {
-          enabled: string;
-          hover: string;
-          active: string;
-          disabled: string;
-          contrast: {
-            enabled: string;
-            disabled: string;
-          };
-          alpha: {
-            enabled: string;
-            hover: string;
-            active: string;
-            disabled: string;
-            contrast: {
-              enabled: string;
-              disabled: string;
-            };
-          };
-        };
-        ghosty: {
-          enabled: string;
-          hover: string;
-          active: string;
-          disabled: string;
-          contrast: {
-            enabled: string;
-            disabled: string;
-          };
-          alpha: {
-            enabled: string;
-            hover: string;
-            active: string;
-            disabled: string;
-            contrast: {
-              enabled: string;
-              disabled: string;
-            };
-          };
         };
       };
       //цвета текстовых ссылок

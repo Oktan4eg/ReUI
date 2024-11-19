@@ -14,7 +14,7 @@ export default {
 
 export const Base = {
   args: {
-    label: 'Я ваша кнопка',
+    label: 'Я кнопка',
     color: 'neutral',
     appearance: 'filled',
     size: 'md',

@@ -64,10 +64,11 @@ const StyledButton = styled.button<ButtonProps>`
 	${(props) =>
     props.appearance === 'filled' &&
     props.color &&
-    `
+    `       &:enabled {
             background: ${props.theme.colors[props.color].primary};
             color: ${props.theme.colors[props.color].contrast};
             border-color: transparent;
+            } 
 
             &:hover {
             background: ${props.theme.colors[props.color].hover};
@@ -87,11 +88,11 @@ const StyledButton = styled.button<ButtonProps>`
             border-color: ${props.theme.colors[props.color].primary};
 
             &:hover {
-            background: ${props.theme.colors[props.color].ghosty.tertiary};
+            background: ${props.theme.colors[props.color].inverse.hover};
             }
 
             &:active {
-            background: ${props.theme.colors[props.color].ghosty.hover};
+            background: ${props.theme.colors[props.color].inverse.active};
             }
         `}
         
@@ -99,16 +100,16 @@ const StyledButton = styled.button<ButtonProps>`
     props.appearance === 'tonal' &&
     props.color &&
     `       
-            background: ${props.theme.colors[props.color].ghosty.tertiary};
-            color: ${props.theme.colors[props.color].ghosty.contrast};
+            background: ${props.theme.colors[props.color].inverse.secondary};
+            color: ${props.theme.colors[props.color].inverse.contrast};
             border-color: transparent;
         
             &:hover {
-            background: ${props.theme.colors[props.color].ghosty.hover};
+            background: ${props.theme.colors[props.color].inverse.hover};
             }
 
             &:active {
-            background: ${props.theme.colors[props.color].ghosty.active};
+            background: ${props.theme.colors[props.color].inverse.active};
                   }
               `}
 
@@ -122,11 +123,11 @@ ${(props) =>
             border-color: transparent;
                
             &:hover {
-            background: ${props.theme.colors[props.color].ghosty.tertiary};
+            background: ${props.theme.colors[props.color].inverse.hover};
             }
 
             &:active {
-            background: ${props.theme.colors[props.color].ghosty.active};
+            background: ${props.theme.colors[props.color].inverse.active};
             }
     `}
        

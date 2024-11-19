@@ -1,16 +1,5 @@
 import React from 'react';
-import {
-  Radio,
-  Checkbox,
-  GlobalStyle,
-  lightTheme,
-  darkTheme,
-  Spinner,
-  Icon,
-  Button,
-  ButtonWithStateLayer,
-  TextInput,
-} from './lib';
+import { Radio, Checkbox, GlobalStyle, lightTheme, darkTheme, Button, Toggle } from './lib';
 import { useTheme } from './lib/hooks';
 import styled, { ThemeProvider } from 'styled-components';
 
@@ -19,22 +8,28 @@ function App() {
 
   const { theme, setTheme } = useTheme();
 
-  const handleLightThemeClick = () => {
-    setTheme('light');
-  };
-  const handleDarkThemeClick = () => {
-    setTheme('dark');
-  };
-
   console.log(theme);
   return (
     <main>
       <ThemeProvider theme={theme === 'dark' ? darkTheme : lightTheme}>
         {/* <ThemeProvider theme={switcher ? darkTheme : lightTheme}> */}
         <GlobalStyle />
-        <div style={{ display: 'flex', gap: '24px', margin: '24px' }}>
-          <button onClick={handleLightThemeClick}>Light</button>
-          <button onClick={handleDarkThemeClick}>Dark</button>
+        <div style={{ width: '64px', display: 'flex', gap: '8px', margin: '24px', marginLeft: 'auto' }}>
+          <Toggle
+            name={''}
+            type={'checkbox'}
+            onChange={() => {
+              theme === 'dark' ? setTheme('light') : setTheme('dark');
+            }}
+          />
+        </div>
+        <div style={{ display: 'flex', gap: '8px', margin: '24px' }}>
+          <Toggle name={''} type={'checkbox'} color='info' />
+          <Toggle name={''} type={'checkbox'} color='distuctive' />
+          <Toggle name={''} type={'checkbox'} color='success' />
+          <Toggle name={''} type={'checkbox'} color='warning' />
+          <Toggle name={''} type={'checkbox'} color='inverse' />
+          <Toggle name={''} type={'checkbox'} color='neutral' />
         </div>
 
         <div style={{ display: 'flex', gap: '24px', margin: '24px' }}>

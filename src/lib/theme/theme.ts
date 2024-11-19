@@ -55,7 +55,7 @@ export const lightTheme: DefaultTheme = {
       hover: palette.neutral[40],
       active: palette.neutral[30],
       contrast: palette.neutral[92],
-      ghosty: {
+      inverse: {
         primary: palette.neutral[80],
         secondary: palette.neutral[88],
         tertiary: palette.neutral[94],
@@ -71,7 +71,7 @@ export const lightTheme: DefaultTheme = {
       hover: palette.neutral[80],
       active: palette.neutral[70],
       contrast: palette.neutral[12],
-      ghosty: {
+      inverse: {
         primary: palette.neutral[12],
         secondary: palette.neutral[12],
         tertiary: palette.neutral[12],
@@ -87,18 +87,13 @@ export const lightTheme: DefaultTheme = {
       hover: palette.purple[40],
       active: palette.purple[30],
       contrast: palette.purple[95],
-      ghosty: {
-        primary: palette.purple[80],
-        secondary: palette.purple[90],
+      inverse: {
+        primary: palette.purple[90],
+        secondary: palette.purple[95],
         tertiary: palette.purple[100],
-        hover: palette.purple[95],
-        active: palette.purple[90],
-        // primary: palette.purple[50] + palette.opacity[16], // 0.16 opacity
-        // secondary: palette.purple[50] + palette.opacity[12], // 0.12 opacity
-        // tertiary: palette.purple[50] + palette.opacity[8], // 0.08 opacity
-        // hover: palette.purple[50] + palette.opacity[24], // 0.24 opacity
-        // active: palette.purple[50] + palette.opacity[32], // 0.32 opacity
-        contrast: palette.purple[50],
+        hover: palette.purple[90],
+        active: palette.purple[85],
+        contrast: palette.purple[30],
       },
     },
     success: {
@@ -108,13 +103,13 @@ export const lightTheme: DefaultTheme = {
       hover: palette.green[40],
       active: palette.green[30],
       contrast: palette.green[95],
-      ghosty: {
-        primary: palette.green[80],
-        secondary: palette.green[90],
+      inverse: {
+        primary: palette.green[90],
+        secondary: palette.green[95],
         tertiary: palette.green[100],
-        hover: palette.green[95],
-        active: palette.green[90],
-        contrast: palette.green[50],
+        hover: palette.green[90],
+        active: palette.green[85],
+        contrast: palette.green[30],
       },
     },
     distuctive: {
@@ -124,13 +119,13 @@ export const lightTheme: DefaultTheme = {
       hover: palette.red[40],
       active: palette.red[30],
       contrast: palette.red[95],
-      ghosty: {
-        primary: palette.red[80],
-        secondary: palette.red[90],
+      inverse: {
+        primary: palette.red[90],
+        secondary: palette.red[95],
         tertiary: palette.red[100],
-        hover: palette.red[95],
-        active: palette.red[90],
-        contrast: palette.red[50],
+        hover: palette.red[90],
+        active: palette.red[85],
+        contrast: palette.red[30],
       },
     },
     info: {
@@ -140,13 +135,13 @@ export const lightTheme: DefaultTheme = {
       hover: palette.blue[40],
       active: palette.blue[30],
       contrast: palette.blue[95],
-      ghosty: {
-        primary: palette.blue[80],
-        secondary: palette.blue[90],
+      inverse: {
+        primary: palette.blue[90],
+        secondary: palette.blue[95],
         tertiary: palette.blue[100],
-        hover: palette.blue[95],
-        active: palette.blue[90],
-        contrast: palette.blue[50],
+        hover: palette.blue[90],
+        active: palette.blue[85],
+        contrast: palette.blue[30],
       },
     },
     warning: {
@@ -156,148 +151,16 @@ export const lightTheme: DefaultTheme = {
       hover: palette.orange[40],
       active: palette.orange[30],
       contrast: palette.orange[95],
-      ghosty: {
-        primary: palette.orange[80],
-        secondary: palette.orange[90],
+      inverse: {
+        primary: palette.orange[90],
+        secondary: palette.orange[95],
         tertiary: palette.orange[100],
-        hover: palette.orange[95],
-        active: palette.orange[90],
-        contrast: palette.orange[50],
+        hover: palette.orange[90],
+        active: palette.orange[85],
+        contrast: palette.orange[30],
       },
     },
-    lead2: {
-      fixed: {
-        enabled: palette.purple[50],
-        hover: palette.purple[50],
-        active: palette.purple[50],
-        contrast: palette.purple[50],
-      },
-      primary: {
-        enabled: palette.purple[50],
-        hover: palette.purple[50],
-        active: palette.purple[50],
-        contrast: palette.purple[50],
-      },
-      secondary: {
-        enabled: palette.purple[50],
-        hover: palette.purple[50],
-        active: palette.purple[50],
-        contrast: palette.purple[50],
-      },
-      tertiary: {
-        enabled: palette.purple[50],
-        hover: palette.purple[50],
-        active: palette.purple[50],
-        contrast: palette.purple[50],
-      },
-      ghosty: {
-        enabled: palette.purple[50],
-        hover: palette.purple[50],
-        active: palette.purple[50],
-        contrast: palette.purple[50],
-      },
-      muted: {
-        enabled: palette.purple[50],
-        hover: palette.purple[50],
-        active: palette.purple[50],
-        contrast: palette.purple[50],
-      },
-      alpha: {
-        // ??? 🔴
-        enabled: palette.purple[50],
-        hover: palette.purple[50],
-        active: palette.purple[50],
-        contrast: palette.purple[50],
-        fixed: palette.purple[50],
-        primary: palette.purple[50],
-        secondary: palette.purple[50],
-        tertiary: palette.purple[50],
-        ghosty: palette.purple[50],
-        muted: palette.purple[50],
-      },
-    },
-    lead3: {
-      primary: {
-        enabled: palette.purple[50],
-        hover: palette.purple[50],
-        active: palette.purple[50],
-        disabled: palette.purple[50],
-        contrast: {
-          enabled: palette.purple[50],
-          disabled: palette.purple[50],
-        },
-        alpha: {
-          enabled: palette.purple[50],
-          hover: palette.purple[50],
-          active: palette.purple[50],
-          disabled: palette.purple[50],
-          contrast: {
-            enabled: palette.purple[50],
-            disabled: palette.purple[50],
-          },
-        },
-      },
-      secondary: {
-        enabled: palette.purple[50],
-        hover: palette.purple[50],
-        active: palette.purple[50],
-        disabled: palette.purple[50],
-        contrast: {
-          enabled: palette.purple[50],
-          disabled: palette.purple[50],
-        },
-        alpha: {
-          enabled: palette.purple[50],
-          hover: palette.purple[50],
-          active: palette.purple[50],
-          disabled: palette.purple[50],
-          contrast: {
-            enabled: palette.purple[50],
-            disabled: palette.purple[50],
-          },
-        },
-      },
-      tertiary: {
-        enabled: palette.purple[50],
-        hover: palette.purple[50],
-        active: palette.purple[50],
-        disabled: palette.purple[50],
-        contrast: {
-          enabled: palette.purple[50],
-          disabled: palette.purple[50],
-        },
-        alpha: {
-          enabled: palette.purple[50],
-          hover: palette.purple[50],
-          active: palette.purple[50],
-          disabled: palette.purple[50],
-          contrast: {
-            enabled: palette.purple[50],
-            disabled: palette.purple[50],
-          },
-        },
-      },
-      ghosty: {
-        enabled: palette.purple[50],
-        hover: palette.purple[50],
-        active: palette.purple[50],
-        disabled: palette.purple[50],
-        contrast: {
-          enabled: palette.purple[50],
-          disabled: palette.purple[50],
-        },
-        alpha: {
-          enabled: palette.purple[50],
-          hover: palette.purple[50],
-          active: palette.purple[50],
-          disabled: palette.purple[50],
-          contrast: {
-            enabled: palette.purple[50],
-            disabled: palette.purple[50],
-          },
-        },
-      },
-    },
+
     //цвета текстовых ссылок
     link: {},
     //цвета для состояния :focus
@@ -404,7 +267,7 @@ export const darkTheme = {
       hover: palette.neutral[80],
       active: palette.neutral[70],
       contrast: palette.neutral[12],
-      ghosty: {
+      inverse: {
         primary: palette.neutral[12],
         secondary: palette.neutral[12],
         tertiary: palette.neutral[12],
@@ -420,7 +283,7 @@ export const darkTheme = {
       hover: palette.neutral[40],
       active: palette.neutral[30],
       contrast: palette.neutral[92],
-      ghosty: {
+      inverse: {
         primary: palette.neutral[80],
         secondary: palette.neutral[88],
         tertiary: palette.neutral[94],
@@ -430,83 +293,84 @@ export const darkTheme = {
       },
     },
     lead: {
-      primary: palette.purple[70],
+      primary: palette.purple[80],
       secondary: palette.purple[60],
       tertiary: palette.purple[40],
       hover: palette.purple[90],
-      active: palette.purple[70],
+      active: palette.purple[80],
       contrast: palette.purple[5],
-      ghosty: {
-        primary: palette.purple[40],
-        secondary: palette.purple[30],
-        tertiary: palette.purple[15],
-        hover: palette.purple[20],
-        active: palette.purple[30],
-        contrast: palette.purple[90],
+      inverse: {
+        primary: palette.purple[20],
+        secondary: palette.purple[15],
+        tertiary: palette.purple[10],
+        hover: palette.purple[30],
+        active: palette.purple[20],
+        contrast: palette.purple[80],
       },
     },
     success: {
-      primary: palette.green[70],
+      primary: palette.green[80],
       secondary: palette.green[60],
       tertiary: palette.green[40],
       hover: palette.green[90],
-      active: palette.green[70],
+      active: palette.green[80],
       contrast: palette.green[5],
-      ghosty: {
-        primary: palette.green[40],
-        secondary: palette.green[30],
-        tertiary: palette.green[15],
-        hover: palette.green[20],
-        active: palette.green[30],
-        contrast: palette.green[90],
+      inverse: {
+        primary: palette.green[20],
+        secondary: palette.green[15],
+        tertiary: palette.green[10],
+        hover: palette.green[30],
+        active: palette.green[20],
+        contrast: palette.green[80],
       },
     },
+
     distuctive: {
-      primary: palette.red[70],
+      primary: palette.red[80],
       secondary: palette.red[60],
       tertiary: palette.red[40],
       hover: palette.red[90],
-      active: palette.red[70],
+      active: palette.red[80],
       contrast: palette.red[5],
-      ghosty: {
-        primary: palette.red[40],
-        secondary: palette.red[30],
-        tertiary: palette.red[15],
-        hover: palette.red[20],
-        active: palette.red[30],
-        contrast: palette.red[90],
+      inverse: {
+        primary: palette.red[20],
+        secondary: palette.red[15],
+        tertiary: palette.red[10],
+        hover: palette.red[30],
+        active: palette.red[20],
+        contrast: palette.red[80],
       },
     },
     info: {
-      primary: palette.blue[70],
+      primary: palette.blue[80],
       secondary: palette.blue[60],
       tertiary: palette.blue[40],
       hover: palette.blue[90],
-      active: palette.blue[70],
+      active: palette.blue[80],
       contrast: palette.blue[5],
-      ghosty: {
-        primary: palette.blue[40],
-        secondary: palette.blue[30],
-        tertiary: palette.blue[15],
-        hover: palette.blue[20],
-        active: palette.blue[30],
-        contrast: palette.blue[90],
+      inverse: {
+        primary: palette.blue[20],
+        secondary: palette.blue[15],
+        tertiary: palette.blue[10],
+        hover: palette.blue[30],
+        active: palette.blue[20],
+        contrast: palette.blue[80],
       },
     },
     warning: {
-      primary: palette.orange[70],
+      primary: palette.orange[80],
       secondary: palette.orange[60],
       tertiary: palette.orange[40],
       hover: palette.orange[90],
-      active: palette.orange[70],
+      active: palette.orange[80],
       contrast: palette.orange[5],
-      ghosty: {
-        primary: palette.orange[40],
-        secondary: palette.orange[30],
-        tertiary: palette.orange[15],
-        hover: palette.orange[20],
-        active: palette.orange[30],
-        contrast: palette.orange[90],
+      inverse: {
+        primary: palette.orange[20],
+        secondary: palette.orange[15],
+        tertiary: palette.orange[10],
+        hover: palette.orange[30],
+        active: palette.orange[20],
+        contrast: palette.orange[80],
       },
     },
     //цвета текстовых ссылок

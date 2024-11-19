@@ -37,7 +37,7 @@ const StyledCheckbox = styled.input<CheckboxProps>`
     position: absolute;
     width: 0px;
     height: 0px;
-    background: ${(props) => props.theme.colors.lead.ghosty.primary};
+    background: ${(props) => props.theme.colors.lead.inverse.primary};
     opacity: 0;
     top: 6px;
     left: 6px;
