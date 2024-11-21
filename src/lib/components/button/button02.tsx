@@ -171,17 +171,16 @@ ${(props) =>
     props.appearance === 'linked' &&
     props.color &&
     `
-            
             background: transparent;
             color: ${props.theme.colors[props.color].primary};
             border-color: transparent;
                
             &:hover {
-            background: ${props.theme.colors[props.color].hover};
+            background: ${props.theme.colors[props.color].contrast};
             }
 
             &:active {
-            background: ${props.theme.colors[props.color].active};
+            background: ${props.theme.colors[props.color].secondary};
             }
     `}
 ${(props) =>
@@ -189,13 +188,12 @@ ${(props) =>
     props.color &&
     props.inverse &&
     `
-            
             background: transparent;
             color: ${props.theme.colors[props.color].inverse.primary};
             border-color: transparent;
                
             &:hover {
-            background: ${props.theme.colors[props.color].inverse.hover};
+            background: ${props.theme.colors[props.color].inverse.contrast};
             }
 
             &:active {

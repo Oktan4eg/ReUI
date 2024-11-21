@@ -27,7 +27,7 @@ function App() {
             }}
           />
         </div>
-        <div style={{ display: 'flex', gap: '8px', margin: '24px' }}>
+        <div style={{ display: 'flex', gap: '8px', padding: '24px' }}>
           <Toggle name={''} type={'checkbox'} color='info' />
           <Toggle name={''} type={'checkbox'} color='distuctive' />
           <Toggle name={''} type={'checkbox'} color='success' />
@@ -36,7 +36,7 @@ function App() {
           <Toggle name={''} type={'checkbox'} color='neutral' />
         </div>
 
-        <div style={{ display: 'flex', gap: '24px', margin: '24px' }}>
+        <div style={{ display: 'flex', gap: '24px', padding: '24px' }}>
           <Button appearance='filled' color='lead' label='filled lead' />
           <Button appearance='filled' color='info' label='filled info' />
           <Button appearance='filled' color='success' label='filled success' />
@@ -45,7 +45,13 @@ function App() {
           <Button appearance='filled' color='neutral' label='filled neutral' />
           {/* <Button appearance='filled' color='inverse' label='filled inverse' /> */}
         </div>
-        <div style={{ display: 'flex', gap: '24px', margin: '24px' }}>
+        <div
+          style={
+            theme === 'dark'
+              ? { display: 'flex', gap: '24px', padding: '24px', backgroundColor: '#ffffff' }
+              : { display: 'flex', gap: '24px', padding: '24px', backgroundColor: '#000000' }
+          }
+        >
           <Button inverse appearance='filled' color='lead' label='filled lead' />
           <Button inverse appearance='filled' color='info' label='filled info' />
           <Button inverse appearance='filled' color='success' label='filled success' />
@@ -54,7 +60,7 @@ function App() {
           <Button inverse appearance='filled' color='neutral' label='filled neutral' />
           {/* <Button appearance='filled' color='inverse' label='filled inverse' /> */}
         </div>
-        {/* <div style={{ display: 'flex', gap: '24px', margin: '24px' }}>
+        {/* <div style={{ display: 'flex', gap: '24px', padding: '24px' }}>
           <Button appearance='tonal' color='lead' label='tonal lead' />
           <Button appearance='tonal' color='info' label='tonal info' />
           <Button appearance='tonal' color='success' label='tonal success' />
@@ -63,7 +69,7 @@ function App() {
           <Button appearance='tonal' color='neutral' label='tonal neutral' />
           {/* <Button appearance='tonal' color='inverse' label='tonal inverse' /> 
         </div> */}
-        <div style={{ display: 'flex', gap: '24px', margin: '24px' }}>
+        <div style={{ display: 'flex', gap: '24px', padding: '24px' }}>
           <Button appearance='outlined' color='lead' label='outlined lead' />
           <Button appearance='outlined' color='info' label='outlined info' />
           <Button appearance='outlined' color='success' label='outlined success' />
@@ -72,7 +78,13 @@ function App() {
           <Button appearance='outlined' color='neutral' label='outlined neutral' />
           {/* <Button appearance='outlined' color='inverse' label='outlined inverse' /> */}
         </div>
-        <div style={{ display: 'flex', gap: '24px', margin: '24px' }}>
+        <div
+          style={
+            theme === 'dark'
+              ? { display: 'flex', gap: '24px', padding: '24px', backgroundColor: '#ffffff' }
+              : { display: 'flex', gap: '24px', padding: '24px', backgroundColor: '#000000' }
+          }
+        >
           <Button inverse appearance='outlined' color='lead' label='outlined lead' />
           <Button inverse appearance='outlined' color='info' label='outlined info' />
           <Button inverse appearance='outlined' color='success' label='outlined success' />
@@ -81,7 +93,7 @@ function App() {
           <Button inverse appearance='outlined' color='neutral' label='outlined neutral' />
           {/* <Button appearance='outlined' color='inverse' label='outlined inverse' /> */}
         </div>
-        <div style={{ display: 'flex', gap: '24px', margin: '24px' }}>
+        <div style={{ display: 'flex', gap: '24px', padding: '24px' }}>
           <Button appearance='linked' color='lead' label='linked lead' />
           <Button appearance='linked' color='info' label='linked info' />
           <Button appearance='linked' color='success' label='linked success' />
@@ -90,7 +102,14 @@ function App() {
           <Button appearance='linked' color='neutral' label='linked neutral' />
           {/* <Button appearance='linked' color='inverse' label='linked inverse' /> */}
         </div>
-        <div style={{ display: 'flex', gap: '24px', margin: '24px' }}>
+        {/* <div style={{ display: 'flex', gap: '24px', margin: '24px' }}> */}
+        <div
+          style={
+            theme === 'dark'
+              ? { display: 'flex', gap: '24px', padding: '24px', backgroundColor: '#ffffff' }
+              : { display: 'flex', gap: '24px', padding: '24px', backgroundColor: '#000000' }
+          }
+        >
           <Button inverse appearance='linked' color='lead' label='linked lead' />
           <Button inverse appearance='linked' color='info' label='linked info' />
           <Button inverse appearance='linked' color='success' label='linked success' />
@@ -99,7 +118,7 @@ function App() {
           <Button inverse appearance='linked' color='neutral' label='linked neutral' />
           {/* <Button appearance='linked' color='inverse' label='linked inverse' /> */}
         </div>
-        <div style={{ display: 'flex', gap: '24px', margin: '24px' }}>
+        <div style={{ display: 'flex', gap: '24px', padding: '24px' }}>
           <Checkbox name='sdsdsd' type='checkbox' label='checkbox' />
           <Radio name='sdsdsd' type='radio' label='radio 1' />
           <Radio name='sdsdsd' type='radio' label='radio 2' />
