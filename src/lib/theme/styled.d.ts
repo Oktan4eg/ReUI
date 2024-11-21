@@ -63,22 +63,22 @@ declare module 'styled-components' {
           contrast: string;
         };
       };
-      inverse: {
-        primary: string;
-        secondary: string;
-        tertiary: string;
-        hover: string;
-        active: string;
-        contrast: string;
-        inverse: {
-          primary: string;
-          secondary: string;
-          tertiary: string;
-          hover: string;
-          active: string;
-          contrast: string;
-        };
-      };
+      // inverse: {
+      //   primary: string;
+      //   secondary: string;
+      //   tertiary: string;
+      //   hover: string;
+      //   active: string;
+      //   contrast: string;
+      //   // inverse: {
+      //   //   primary: string;
+      //   //   secondary: string;
+      //   //   tertiary: string;
+      //   //   hover: string;
+      //   //   active: string;
+      //   //   contrast: string;
+      //   // };
+      // };
       lead: {
         primary: string;
         secondary: string;

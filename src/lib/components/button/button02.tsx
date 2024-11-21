@@ -3,7 +3,8 @@ import styled from 'styled-components';
 
 interface ButtonProps {
   label?: string;
-  color?: 'neutral' | 'inverse' | 'lead' | 'success' | 'distuctive' | 'info' | 'warning';
+  color?: 'neutral' | 'lead' | 'success' | 'distuctive' | 'info' | 'warning';
+  inverse?: boolean;
   appearance: 'filled' | 'outlined' | 'tonal' | 'linked';
   size?: 'lg' | 'md' | 'sm';
   disabled?: boolean;
@@ -78,6 +79,25 @@ const StyledButton = styled.button<ButtonProps>`
             background: ${props.theme.colors[props.color].active};
             }
         `}
+	${(props) =>
+    props.appearance === 'filled' &&
+    props.color &&
+    props.inverse &&
+    `       &:enabled {
+            background: ${props.theme.colors[props.color].inverse.primary};
+            color: ${props.theme.colors[props.color].inverse.contrast};
+            border-color: transparent;
+            } 
+
+            &:hover {
+            background: ${props.theme.colors[props.color].inverse.hover};
+            }
+
+            &:active {
+            background: ${props.theme.colors[props.color].inverse.active};
+            }
+        `}
+   
 	
         ${(props) =>
     props.appearance === 'outlined' &&
@@ -95,12 +115,46 @@ const StyledButton = styled.button<ButtonProps>`
             background: ${props.theme.colors[props.color].inverse.active};
             }
         `}
+        ${(props) =>
+    props.appearance === 'outlined' &&
+    props.color &&
+    props.inverse &&
+    `
+            background: transparent;
+            color: ${props.theme.colors[props.color].inverse.primary};
+            border-color: ${props.theme.colors[props.color].inverse.primary};
+
+            &:hover {
+            background: ${props.theme.colors[props.color].hover};
+            }
+
+            &:active {
+            background: ${props.theme.colors[props.color].active};
+            }
+        `}
         
         ${(props) =>
     props.appearance === 'tonal' &&
     props.color &&
     `       
-            background: ${props.theme.colors[props.color].inverse.secondary};
+            background: ${props.theme.colors[props.color].primary};
+            color: ${props.theme.colors[props.color].contrast};
+            border-color: transparent;
+        
+            &:hover {
+            background: ${props.theme.colors[props.color].hover};
+            }
+
+            &:active {
+            background: ${props.theme.colors[props.color].active};
+                  }
+              `}
+        ${(props) =>
+    props.appearance === 'tonal' &&
+    props.color &&
+    props.inverse &&
+    `       
+            background: ${props.theme.colors[props.color].inverse.primary};
             color: ${props.theme.colors[props.color].inverse.contrast};
             border-color: transparent;
         
@@ -120,6 +174,24 @@ ${(props) =>
             
             background: transparent;
             color: ${props.theme.colors[props.color].primary};
+            border-color: transparent;
+               
+            &:hover {
+            background: ${props.theme.colors[props.color].hover};
+            }
+
+            &:active {
+            background: ${props.theme.colors[props.color].active};
+            }
+    `}
+${(props) =>
+    props.appearance === 'linked' &&
+    props.color &&
+    props.inverse &&
+    `
+            
+            background: transparent;
+            color: ${props.theme.colors[props.color].inverse.primary};
             border-color: transparent;
                
             &:hover {
@@ -146,6 +218,7 @@ ${(props) =>
 export const Button: React.FC<ButtonProps> = ({
   appearance,
   color = 'lead',
+  inverse = false,
   size = 'md',
   label = 'Button',
   disabled,
@@ -154,7 +227,7 @@ export const Button: React.FC<ButtonProps> = ({
   onClick,
 }) => {
   return (
-    <StyledButton appearance={appearance} size={size} disabled={disabled} color={color}>
+    <StyledButton appearance={appearance} size={size} inverse={inverse} disabled={disabled} color={color}>
       {iconBefore ? iconBefore : null}
       {label}
       {iconAfter ? iconAfter : null}
