@@ -1,7 +1,7 @@
 import { Button } from './button02';
 
 export default {
-  title: 'Компоненты/Button',
+  title: 'Components/Button',
   component: Button,
   parameters: {
     layout: 'centered',
