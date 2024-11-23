@@ -24,10 +24,10 @@ const StyledCheckbox = styled.input<CheckboxProps>`
   display: block;
   margin: 0px 8px 0px 0px;
   padding: 0px;
-  width: 20px;
-  height: 20px;
+  width: 16px;
+  height: 16px;
   border-radius: 4px;
-  border: 2px solid ${(props) => props.theme.colors.lead.default.primary};
+  outline: 2px solid ${(props) => props.theme.colors.lead.default.primary};
   transition: all 250ms ease;
 
   &:before {
@@ -45,8 +45,8 @@ const StyledCheckbox = styled.input<CheckboxProps>`
   }
   &:checked {
     border-color: ${(props) => props.theme.colors.lead.default.primary};
-    border: 2px solid ${(props) => props.theme.colors.lead.default.primary};
-    /* outline-offset: -8px; */
+    outline: 10px solid ${(props) => props.theme.colors.lead.default.primary};
+    outline-offset: -8px;
     background-color: ${(props) => props.theme.colors.lead.default.primary};
   }
   &:hover::before {
@@ -58,7 +58,8 @@ const StyledCheckbox = styled.input<CheckboxProps>`
     height: 32px;
     background: ${(props) => props.theme.colors.lead.default.primary};
     opacity: 0.16;
-    inset: -8px;
+    top: -8px;
+    left: -8px;
   }
   &:active::before {
     content: '';
@@ -79,10 +80,11 @@ const StyledCheckbox = styled.input<CheckboxProps>`
     /* border-radius: 2px; */
     /* stroke: ${(props) => props.theme.colors.fg.default.primary}; */
     position: absolute;
-    width: 24px;
-    height: 24px;
+    width: 20px;
+    height: 20px;
     /* color: ${(props) => props.theme.colors.fg.default.primary}; */
-    inset: -4px;
+    top: -2px;
+    left: -2px;
   }
 
   ${(props) =>

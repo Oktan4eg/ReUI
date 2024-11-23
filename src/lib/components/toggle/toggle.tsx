@@ -20,7 +20,7 @@ const StyledToggle = styled.input<ToggleProps>`
   display: block;
   cursor: pointer;
   appearance: none;
-  outline: 2px solid ${props.theme.colors.lead.primary};
+  outline: 2px solid ${props.theme.colors.lead.default.primary};
   transition: all 250ms ease-in;
   border-radius: 32px;
 
@@ -39,7 +39,7 @@ const StyledToggle = styled.input<ToggleProps>`
     width: 0px;
     height: 0px;
     transition: all 250ms ease-in;
-    outline: ${props.theme.colors.lead.contrast};
+    outline: ${props.theme.colors.lead.default.contrast};
   }
 
   &:after {
@@ -47,14 +47,14 @@ const StyledToggle = styled.input<ToggleProps>`
     width: 20px;
     height: 20px;
     transform: translate(0px);
-    background-color: ${props.theme.colors.lead.primary}; // цвет хендла
+    background-color: ${props.theme.colors.lead.default.primary}; // цвет хендла
     transition: all 250ms ease-out;
   }
   &:enabled {
     &:hover {
-      /* background-color: ${props.theme.colors.lead.contrast}; // фон трека */
+      /* background-color: ${props.theme.colors.lead.default.contrast}; // фон трека */
       &:after {
-        /* background-color: ${props.theme.colors.lead.primary}; // ховер хендла */
+        /* background-color: ${props.theme.colors.lead.default.primary}; // ховер хендла */
       }
       &:before {
         margin: -8px;
@@ -62,7 +62,7 @@ const StyledToggle = styled.input<ToggleProps>`
         height: 48px;
         transition: all 250ms ease-out;
         opacity: 0.24;
-        background-color: ${props.theme.colors.lead.primary}; // ховер вокруг хендла
+        background-color: ${props.theme.colors.lead.default.primary}; // ховер вокруг хендла
       }
     }
     &:active {
@@ -75,8 +75,8 @@ const StyledToggle = styled.input<ToggleProps>`
     }
   }
   &:checked {
-    outline: 2px solid ${props.theme.colors.lead.primary};
-    background-color: ${props.theme.colors.lead.primary};
+    outline: 2px solid ${props.theme.colors.lead.default.primary};
+    background-color: ${props.theme.colors.lead.default.primary};
 
     &:after {
       transform: translate(32px);
@@ -84,21 +84,21 @@ const StyledToggle = styled.input<ToggleProps>`
       transition: all 250ms ease-out;
       width: 28px;
       height: 28px;
-      background-color: ${props.theme.colors.lead.contrast};
+      background-color: ${props.theme.colors.lead.default.contrast};
     }
     &:hover {
       transition: all 250ms ease-out;
       &:after {
-        /* background-color: ${props.theme.colors.lead.primary}; */
+        /* background-color: ${props.theme.colors.lead.default.primary}; */
       }
-      /* background-color: ${props.theme.colors.lead.contrast}; // фон трека */
+      /* background-color: ${props.theme.colors.lead.default.contrast}; // фон трека */
       &:before {
         margin: -8px 0px 0px 16px;
         width: 48px;
         height: 48px;
         transition: all 250ms ease-out;
         opacity: 0.24;
-        background-color: ${props.theme.colors.lead.tertiary}; // ховер вокруг хендла
+        background-color: ${props.theme.colors.lead.default.tertiary}; // ховер вокруг хендла
       }
     }
     &:active {
