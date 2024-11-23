@@ -61,15 +61,17 @@ export const lightTheme: DefaultTheme = {
         active: palette.neutral[24],
         contrast: palette.neutral[100],
       },
-      // inverse: {
-      //   primary: palette.neutral[80],
-      //   secondary: palette.neutral[88],
-      //   tertiary: palette.neutral[94],
-      //   hover: palette.neutral[88],
-      //   active: palette.neutral[80],
-      //   contrast: palette.neutral[12],
-      // },
-      inverse: {
+      ghosty: {
+        primary: palette.neutral[80],
+        secondary: palette.neutral[88],
+        tertiary: palette.neutral[94],
+        hover: palette.neutral[88],
+        active: palette.neutral[80],
+        contrast: palette.neutral[12],
+      },
+    },
+    inverse: {
+      default: {
         primary: palette.neutral[100],
         secondary: palette.neutral[90],
         tertiary: palette.neutral[80],
@@ -77,23 +79,15 @@ export const lightTheme: DefaultTheme = {
         active: palette.neutral[70],
         contrast: palette.neutral[12],
       },
+      ghosty: {
+        primary: palette.neutral[12],
+        secondary: palette.neutral[12],
+        tertiary: palette.neutral[12],
+        hover: palette.neutral[24],
+        active: palette.neutral[20],
+        contrast: palette.neutral[96],
+      },
     },
-    // inverse: {
-    //   primary: palette.neutral[100],
-    //   secondary: palette.neutral[90],
-    //   tertiary: palette.neutral[80],
-    //   hover: palette.neutral[88],
-    //   active: palette.neutral[70],
-    //   contrast: palette.neutral[12],
-    // inverse: {
-    //   primary: palette.neutral[12],
-    //   secondary: palette.neutral[12],
-    //   tertiary: palette.neutral[12],
-    //   hover: palette.neutral[24],
-    //   active: palette.neutral[20],
-    //   contrast: palette.neutral[96],
-    // },
-    // },
     lead: {
       default: {
         primary: palette.purple[50],
@@ -103,7 +97,7 @@ export const lightTheme: DefaultTheme = {
         active: palette.purple[30],
         contrast: palette.purple[95],
       },
-      inverse: {
+      ghosty: {
         primary: palette.purple[90],
         secondary: palette.purple[95],
         tertiary: palette.purple[100],
@@ -121,7 +115,7 @@ export const lightTheme: DefaultTheme = {
         active: palette.green[30],
         contrast: palette.green[95],
       },
-      inverse: {
+      ghosty: {
         primary: palette.green[90],
         secondary: palette.green[95],
         tertiary: palette.green[100],
@@ -139,7 +133,7 @@ export const lightTheme: DefaultTheme = {
         active: palette.red[30],
         contrast: palette.red[95],
       },
-      inverse: {
+      ghosty: {
         primary: palette.red[90],
         secondary: palette.red[95],
         tertiary: palette.red[100],
@@ -157,7 +151,7 @@ export const lightTheme: DefaultTheme = {
         active: palette.blue[30],
         contrast: palette.blue[95],
       },
-      inverse: {
+      ghosty: {
         primary: palette.blue[90],
         secondary: palette.blue[95],
         tertiary: palette.blue[100],
@@ -175,7 +169,7 @@ export const lightTheme: DefaultTheme = {
         active: palette.orange[30],
         contrast: palette.orange[95],
       },
-      inverse: {
+      ghosty: {
         primary: palette.orange[90],
         secondary: palette.orange[95],
         tertiary: palette.orange[100],
@@ -297,7 +291,7 @@ export const darkTheme = {
         active: palette.neutral[70],
         contrast: palette.neutral[12],
       },
-      inverse: {
+      ghosty: {
         primary: palette.neutral[12],
         secondary: palette.neutral[40],
         tertiary: palette.neutral[60],
@@ -306,22 +300,24 @@ export const darkTheme = {
         contrast: palette.neutral[96],
       },
     },
-    // inverse: {
-    //   primary: palette.neutral[50],
-    //   secondary: palette.neutral[60],
-    //   tertiary: palette.neutral[80],
-    //   hover: palette.neutral[40],
-    //   active: palette.neutral[30],
-    //   contrast: palette.neutral[92],
-    //   inverse: {
-    //     primary: palette.neutral[80],
-    //     secondary: palette.neutral[88],
-    //     tertiary: palette.neutral[94],
-    //     hover: palette.neutral[88],
-    //     active: palette.neutral[80],
-    //     contrast: palette.neutral[12],
-    //   },
-    // },
+    inverse: {
+      default: {
+        primary: palette.neutral[50],
+        secondary: palette.neutral[60],
+        tertiary: palette.neutral[80],
+        hover: palette.neutral[40],
+        active: palette.neutral[30],
+        contrast: palette.neutral[92],
+      },
+      ghosty: {
+        primary: palette.neutral[80],
+        secondary: palette.neutral[88],
+        tertiary: palette.neutral[94],
+        hover: palette.neutral[88],
+        active: palette.neutral[80],
+        contrast: palette.neutral[12],
+      },
+    },
     lead: {
       default: {
         primary: palette.purple[60],
@@ -331,7 +327,7 @@ export const darkTheme = {
         active: palette.purple[60],
         contrast: palette.purple[5],
       },
-      inverse: {
+      ghosty: {
         primary: palette.purple[15],
         secondary: palette.purple[10],
         tertiary: palette.purple[5],
@@ -349,7 +345,7 @@ export const darkTheme = {
         active: palette.green[60],
         contrast: palette.green[5],
       },
-      inverse: {
+      ghosty: {
         primary: palette.green[15],
         secondary: palette.green[10],
         tertiary: palette.green[5],
@@ -368,7 +364,7 @@ export const darkTheme = {
         active: palette.red[60],
         contrast: palette.red[5],
       },
-      inverse: {
+      ghosty: {
         primary: palette.red[15],
         secondary: palette.red[10],
         tertiary: palette.red[5],
@@ -386,7 +382,7 @@ export const darkTheme = {
         active: palette.blue[60],
         contrast: palette.blue[5],
       },
-      inverse: {
+      ghosty: {
         primary: palette.blue[15],
         secondary: palette.blue[10],
         tertiary: palette.blue[5],
@@ -404,7 +400,7 @@ export const darkTheme = {
         active: palette.orange[60],
         contrast: palette.orange[5],
       },
-      inverse: {
+      ghosty: {
         primary: palette.orange[15],
         secondary: palette.orange[10],
         tertiary: palette.orange[5],

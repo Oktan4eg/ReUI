@@ -60,7 +60,7 @@ declare module 'styled-components' {
           active: string;
           contrast: string;
         };
-        inverse: {
+        ghosty: {
           primary: string;
           secondary: string;
           tertiary: string;
@@ -69,22 +69,24 @@ declare module 'styled-components' {
           contrast: string;
         };
       };
-      // inverse: {
-      //   primary: string;
-      //   secondary: string;
-      //   tertiary: string;
-      //   hover: string;
-      //   active: string;
-      //   contrast: string;
-      //   // inverse: {
-      //   //   primary: string;
-      //   //   secondary: string;
-      //   //   tertiary: string;
-      //   //   hover: string;
-      //   //   active: string;
-      //   //   contrast: string;
-      //   // };
-      // };
+      inverse: {
+        default: {
+          primary: string;
+          secondary: string;
+          tertiary: string;
+          hover: string;
+          active: string;
+          contrast: string;
+        };
+        ghosty: {
+          primary: string;
+          secondary: string;
+          tertiary: string;
+          hover: string;
+          active: string;
+          contrast: string;
+        };
+      };
       lead: {
         default: {
           primary: string;
@@ -94,7 +96,7 @@ declare module 'styled-components' {
           active: string;
           contrast: string;
         };
-        inverse: {
+        ghosty: {
           primary: string;
           secondary: string;
           tertiary: string;
@@ -112,7 +114,7 @@ declare module 'styled-components' {
           active: string;
           contrast: string;
         };
-        inverse: {
+        ghosty: {
           primary: string;
           secondary: string;
           tertiary: string;
@@ -130,7 +132,7 @@ declare module 'styled-components' {
           active: string;
           contrast: string;
         };
-        inverse: {
+        ghosty: {
           primary: string;
           secondary: string;
           tertiary: string;
@@ -148,7 +150,7 @@ declare module 'styled-components' {
           active: string;
           contrast: string;
         };
-        inverse: {
+        ghosty: {
           primary: string;
           secondary: string;
           tertiary: string;
@@ -166,7 +168,7 @@ declare module 'styled-components' {
           active: string;
           contrast: string;
         };
-        inverse: {
+        ghosty: {
           primary: string;
           secondary: string;
           tertiary: string;

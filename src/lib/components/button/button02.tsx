@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 interface ButtonProps {
   label?: string;
-  color?: 'neutral' | 'lead' | 'success' | 'distuctive' | 'info' | 'warning';
+  color?: 'inverse' | 'neutral' | 'lead' | 'success' | 'distuctive' | 'info' | 'warning';
   volume?: 'default' | 'inverse';
   inverse?: boolean;
   appearance: 'filled' | 'outlined' | 'tonal' | 'linked';
@@ -69,17 +69,17 @@ const StyledButton = styled.button<ButtonProps>`
     props.color &&
     props.volume &&
     `       &:enabled {
-            background: ${props.theme.colors[props.color][props.volume].primary};
-            color: ${props.theme.colors[props.color][props.volume].contrast};
+            background: ${props.theme.colors[props.color].default.primary};
+            color: ${props.theme.colors[props.color].default.contrast};
             border-color: transparent;
             } 
 
             &:hover {
-            background: ${props.theme.colors[props.color][props.volume].hover};
+            background: ${props.theme.colors[props.color].default.hover};
             }
 
             &:active {
-            background: ${props.theme.colors[props.color][props.volume].active};
+            background: ${props.theme.colors[props.color].default.active};
             }
         `}
    
@@ -91,15 +91,15 @@ const StyledButton = styled.button<ButtonProps>`
     props.volume &&
     `
             background: transparent;
-            color: ${props.theme.colors[props.color][props.volume].primary};
-            border-color: ${props.theme.colors[props.color][props.volume].primary};
+            color: ${props.theme.colors[props.color].default.primary};
+            border-color: ${props.theme.colors[props.color].default.primary};
 
             &:hover {
-            background: ${props.theme.colors[props.color][props.volume].hover};
+            background: ${props.theme.colors[props.color].default.hover};
             }
 
             &:active {
-            background: ${props.theme.colors[props.color][props.volume].active};
+            background: ${props.theme.colors[props.color].default.active};
             }
         `}
 
@@ -108,16 +108,16 @@ const StyledButton = styled.button<ButtonProps>`
     props.color &&
     props.volume &&
     `       
-            background: ${props.theme.colors[props.color][props.volume].primary};
-            color: ${props.theme.colors[props.color][props.volume].contrast};
+            background: ${props.theme.colors[props.color].default.primary};
+            color: ${props.theme.colors[props.color].default.contrast};
             border-color: transparent;
         
             &:hover {
-            background: ${props.theme.colors[props.color][props.volume].hover};
+            background: ${props.theme.colors[props.color].default.hover};
             }
 
             &:active {
-            background: ${props.theme.colors[props.color][props.volume].active};
+            background: ${props.theme.colors[props.color].default.active};
                   }
               `}
 
@@ -127,15 +127,15 @@ ${(props) =>
     props.volume &&
     `
             background: transparent;
-            color: ${props.theme.colors[props.color][props.volume].primary};
+            color: ${props.theme.colors[props.color].default.primary};
             border-color: transparent;
                
             &:hover {
-            background: ${props.theme.colors[props.color][props.volume].contrast};
+            background: ${props.theme.colors[props.color].default.contrast};
             }
 
             &:active {
-            background: ${props.theme.colors[props.color][props.volume].active};
+            background: ${props.theme.colors[props.color].default.active};
             }
     `}
        

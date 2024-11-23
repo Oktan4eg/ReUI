@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import React, { FC } from 'react';
+import { FC } from 'react';
 
 import { InputProps } from '../text-input';
 import { Label } from '../label';
@@ -37,7 +37,7 @@ const StyledCheckbox = styled.input<CheckboxProps>`
     position: absolute;
     width: 0px;
     height: 0px;
-    background: ${(props) => props.theme.colors.lead.inverse.primary};
+    background: ${(props) => props.theme.colors.lead.ghosty.primary};
     opacity: 0;
     top: 6px;
     left: 6px;
