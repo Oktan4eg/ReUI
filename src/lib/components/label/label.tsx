@@ -24,7 +24,7 @@ const StyledLabel = styled.label<LabelProps>`
   width: 100%;
 
   span.input-label {
-    color: ${(props) => props.theme.colors.fg.primary};
+    color: ${(props) => props.theme.colors.fg.default.primary};
   }
 
   span {

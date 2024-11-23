@@ -23,7 +23,7 @@ const StyledRadio = styled.input<RadioProps>`
   width: 16px;
   height: 16px;
   border-radius: 50%;
-  outline: 2px solid ${(props) => props.theme.colors.lead.primary};
+  outline: 2px solid ${(props) => props.theme.colors.lead.default.primary};
   transition: all 250ms ease;
 
   &:before {
@@ -33,22 +33,22 @@ const StyledRadio = styled.input<RadioProps>`
     position: absolute;
     height: 0px;
     width: 0px;
-    background: ${(props) => props.theme.colors.lead.primary};
+    background: ${(props) => props.theme.colors.lead.default.primary};
     opacity: 0;
     top: 8px;
     left: 8px;
     transition: all 250ms ease;
   }
   &:checked {
-    background-color: ${(props) => props.theme.colors.lead.primary};
-    outline: 10px solid ${(props) => props.theme.colors.lead.primary};
+    background-color: ${(props) => props.theme.colors.lead.default.primary};
+    outline: 10px solid ${(props) => props.theme.colors.lead.default.primary};
     outline-offset: -8px;
-    background-color: ${(props) => props.theme.colors.lead.primary};
+    background-color: ${(props) => props.theme.colors.lead.default.primary};
   }
   &:hover::before {
     width: 32px;
     height: 32px;
-    background: ${(props) => props.theme.colors.lead.primary};
+    background: ${(props) => props.theme.colors.lead.default.primary};
     opacity: 0.16;
     top: -8px;
     left: -8px;
@@ -56,7 +56,7 @@ const StyledRadio = styled.input<RadioProps>`
   &:active::before {
     width: 32px;
     height: 32px;
-    background: ${(props) => props.theme.colors.lead.primary};
+    background: ${(props) => props.theme.colors.lead.default.primary};
     opacity: 0.24;
     top: -8px;
     left: -8px;

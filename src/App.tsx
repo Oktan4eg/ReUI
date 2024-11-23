@@ -52,12 +52,12 @@ function App() {
               : { display: 'flex', gap: '24px', padding: '24px', backgroundColor: '#000000' }
           }
         >
-          <Button inverse appearance='filled' color='lead' label='filled lead' />
-          <Button inverse appearance='filled' color='info' label='filled info' />
-          <Button inverse appearance='filled' color='success' label='filled success' />
-          <Button inverse appearance='filled' color='warning' label='filled warning' />
-          <Button inverse appearance='filled' color='distuctive' label='filled distuctive' />
-          <Button inverse appearance='filled' color='neutral' label='filled neutral' />
+          <Button volume='inverse' appearance='filled' color='lead' label='filled lead' />
+          <Button volume='inverse' appearance='filled' color='info' label='filled info' />
+          <Button volume='inverse' appearance='filled' color='success' label='filled success' />
+          <Button volume='inverse' appearance='filled' color='warning' label='filled warning' />
+          <Button volume='inverse' appearance='filled' color='distuctive' label='filled distuctive' />
+          <Button volume='inverse' appearance='filled' color='neutral' label='filled neutral' />
           {/* <Button appearance='filled' color='inverse' label='filled inverse' /> */}
         </div>
         {/* <div style={{ display: 'flex', gap: '24px', padding: '24px' }}>
@@ -85,12 +85,12 @@ function App() {
               : { display: 'flex', gap: '24px', padding: '24px', backgroundColor: '#000000' }
           }
         >
-          <Button inverse appearance='outlined' color='lead' label='outlined lead' />
-          <Button inverse appearance='outlined' color='info' label='outlined info' />
-          <Button inverse appearance='outlined' color='success' label='outlined success' />
-          <Button inverse appearance='outlined' color='warning' label='outlined warning' />
-          <Button inverse appearance='outlined' color='distuctive' label='outlined distuctive' />
-          <Button inverse appearance='outlined' color='neutral' label='outlined neutral' />
+          <Button volume='inverse' appearance='outlined' color='lead' label='outlined lead' />
+          <Button volume='inverse' appearance='outlined' color='info' label='outlined info' />
+          <Button volume='inverse' appearance='outlined' color='success' label='outlined success' />
+          <Button volume='inverse' appearance='outlined' color='warning' label='outlined warning' />
+          <Button volume='inverse' appearance='outlined' color='distuctive' label='outlined distuctive' />
+          <Button volume='inverse' appearance='outlined' color='neutral' label='outlined neutral' />
           {/* <Button appearance='outlined' color='inverse' label='outlined inverse' /> */}
         </div>
         <div style={{ display: 'flex', gap: '24px', padding: '24px' }}>
@@ -110,12 +110,12 @@ function App() {
               : { display: 'flex', gap: '24px', padding: '24px', backgroundColor: '#000000' }
           }
         >
-          <Button inverse appearance='linked' color='lead' label='linked lead' />
-          <Button inverse appearance='linked' color='info' label='linked info' />
-          <Button inverse appearance='linked' color='success' label='linked success' />
-          <Button inverse appearance='linked' color='warning' label='linked warning' />
-          <Button inverse appearance='linked' color='distuctive' label='linked distuctive' />
-          <Button inverse appearance='linked' color='neutral' label='linked neutral' />
+          <Button volume='inverse' appearance='linked' color='lead' label='linked lead' />
+          <Button volume='inverse' appearance='linked' color='info' label='linked info' />
+          <Button volume='inverse' appearance='linked' color='success' label='linked success' />
+          <Button volume='inverse' appearance='linked' color='warning' label='linked warning' />
+          <Button volume='inverse' appearance='linked' color='distuctive' label='linked distuctive' />
+          <Button volume='inverse' appearance='linked' color='neutral' label='linked neutral' />
           {/* <Button appearance='linked' color='inverse' label='linked inverse' /> */}
         </div>
         <div style={{ display: 'flex', gap: '24px', padding: '24px' }}>

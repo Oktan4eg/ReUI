@@ -27,7 +27,7 @@ const StyledCheckbox = styled.input<CheckboxProps>`
   width: 16px;
   height: 16px;
   border-radius: 4px;
-  outline: 2px solid ${(props) => props.theme.colors.lead.primary};
+  outline: 2px solid ${(props) => props.theme.colors.lead.default.primary};
   transition: all 250ms ease;
 
   &:before {
@@ -44,10 +44,10 @@ const StyledCheckbox = styled.input<CheckboxProps>`
     transition: all 250ms ease;
   }
   &:checked {
-    border-color: ${(props) => props.theme.colors.lead.primary};
-    outline: 10px solid ${(props) => props.theme.colors.lead.primary};
+    border-color: ${(props) => props.theme.colors.lead.default.primary};
+    outline: 10px solid ${(props) => props.theme.colors.lead.default.primary};
     outline-offset: -8px;
-    background-color: ${(props) => props.theme.colors.lead.primary};
+    background-color: ${(props) => props.theme.colors.lead.default.primary};
   }
   &:hover::before {
     content: '';
@@ -56,7 +56,7 @@ const StyledCheckbox = styled.input<CheckboxProps>`
     position: absolute;
     width: 32px;
     height: 32px;
-    background: ${(props) => props.theme.colors.lead.primary};
+    background: ${(props) => props.theme.colors.lead.default.primary};
     opacity: 0.16;
     top: -8px;
     left: -8px;
@@ -78,11 +78,11 @@ const StyledCheckbox = styled.input<CheckboxProps>`
     /* background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3e%3cpath fill='none' stroke='%23000' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 10l3 3l6-6'/%3e%3c/svg%3e"); */
     /* display: block; */
     /* border-radius: 2px; */
-    /* stroke: ${(props) => props.theme.colors.fg.primary}; */
+    /* stroke: ${(props) => props.theme.colors.fg.default.primary}; */
     position: absolute;
     width: 20px;
     height: 20px;
-    /* color: ${(props) => props.theme.colors.fg.primary}; */
+    /* color: ${(props) => props.theme.colors.fg.default.primary}; */
     top: -2px;
     left: -2px;
   }

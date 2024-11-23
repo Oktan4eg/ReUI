@@ -4,6 +4,7 @@ import styled from 'styled-components';
 interface ButtonProps {
   label?: string;
   color?: 'neutral' | 'lead' | 'success' | 'distuctive' | 'info' | 'warning';
+  volume?: 'default' | 'inverse';
   inverse?: boolean;
   appearance: 'filled' | 'outlined' | 'tonal' | 'linked';
   size?: 'lg' | 'md' | 'sm';
@@ -27,8 +28,8 @@ const StyledButton = styled.button<ButtonProps>`
   gap: 8;
   transition: all 250ms ease;
   &:focus-visible {
-    box-shadow: 0px 0px 0px 2px ${(props) => props.theme.colors.bg.page},
-      0px 0px 0px 4px ${(props) => props.theme.colors.lead.primary};
+    box-shadow: 0px 0px 0px 2px ${(props) => props.theme.colors.bg.default.page},
+      0px 0px 0px 4px ${(props) => props.theme.colors.lead.default.primary};
   }
   ${(props) =>
     props.size === 'lg' &&
@@ -62,142 +63,79 @@ const StyledButton = styled.button<ButtonProps>`
         min-width: 72px;
         `}
 
+
 	${(props) =>
     props.appearance === 'filled' &&
     props.color &&
+    props.volume &&
     `       &:enabled {
-            background: ${props.theme.colors[props.color].primary};
-            color: ${props.theme.colors[props.color].contrast};
+            background: ${props.theme.colors[props.color][props.volume].primary};
+            color: ${props.theme.colors[props.color][props.volume].contrast};
             border-color: transparent;
             } 
 
             &:hover {
-            background: ${props.theme.colors[props.color].hover};
+            background: ${props.theme.colors[props.color][props.volume].hover};
             }
 
             &:active {
-            background: ${props.theme.colors[props.color].active};
-            }
-        `}
-	${(props) =>
-    props.appearance === 'filled' &&
-    props.color &&
-    props.inverse &&
-    `       &:enabled {
-            background: ${props.theme.colors[props.color].inverse.primary};
-            color: ${props.theme.colors[props.color].inverse.contrast};
-            border-color: transparent;
-            } 
-
-            &:hover {
-            background: ${props.theme.colors[props.color].inverse.hover};
-            }
-
-            &:active {
-            background: ${props.theme.colors[props.color].inverse.active};
+            background: ${props.theme.colors[props.color][props.volume].active};
             }
         `}
    
 	
+
         ${(props) =>
     props.appearance === 'outlined' &&
     props.color &&
+    props.volume &&
     `
             background: transparent;
-            color: ${props.theme.colors[props.color].primary};
-            border-color: ${props.theme.colors[props.color].primary};
+            color: ${props.theme.colors[props.color][props.volume].primary};
+            border-color: ${props.theme.colors[props.color][props.volume].primary};
 
             &:hover {
-            background: ${props.theme.colors[props.color].inverse.hover};
+            background: ${props.theme.colors[props.color][props.volume].hover};
             }
 
             &:active {
-            background: ${props.theme.colors[props.color].inverse.active};
+            background: ${props.theme.colors[props.color][props.volume].active};
             }
         `}
-        ${(props) =>
-    props.appearance === 'outlined' &&
-    props.color &&
-    props.inverse &&
-    `
-            background: transparent;
-            color: ${props.theme.colors[props.color].inverse.primary};
-            border-color: ${props.theme.colors[props.color].inverse.primary};
 
-            &:hover {
-            background: ${props.theme.colors[props.color].hover};
-            }
-
-            &:active {
-            background: ${props.theme.colors[props.color].active};
-            }
-        `}
-        
         ${(props) =>
     props.appearance === 'tonal' &&
     props.color &&
+    props.volume &&
     `       
-            background: ${props.theme.colors[props.color].primary};
-            color: ${props.theme.colors[props.color].contrast};
+            background: ${props.theme.colors[props.color][props.volume].primary};
+            color: ${props.theme.colors[props.color][props.volume].contrast};
             border-color: transparent;
         
             &:hover {
-            background: ${props.theme.colors[props.color].hover};
+            background: ${props.theme.colors[props.color][props.volume].hover};
             }
 
             &:active {
-            background: ${props.theme.colors[props.color].active};
-                  }
-              `}
-        ${(props) =>
-    props.appearance === 'tonal' &&
-    props.color &&
-    props.inverse &&
-    `       
-            background: ${props.theme.colors[props.color].inverse.primary};
-            color: ${props.theme.colors[props.color].inverse.contrast};
-            border-color: transparent;
-        
-            &:hover {
-            background: ${props.theme.colors[props.color].inverse.hover};
-            }
-
-            &:active {
-            background: ${props.theme.colors[props.color].inverse.active};
+            background: ${props.theme.colors[props.color][props.volume].active};
                   }
               `}
 
 ${(props) =>
     props.appearance === 'linked' &&
     props.color &&
+    props.volume &&
     `
             background: transparent;
-            color: ${props.theme.colors[props.color].primary};
+            color: ${props.theme.colors[props.color][props.volume].primary};
             border-color: transparent;
                
             &:hover {
-            background: ${props.theme.colors[props.color].contrast};
+            background: ${props.theme.colors[props.color][props.volume].contrast};
             }
 
             &:active {
-            background: ${props.theme.colors[props.color].secondary};
-            }
-    `}
-${(props) =>
-    props.appearance === 'linked' &&
-    props.color &&
-    props.inverse &&
-    `
-            background: transparent;
-            color: ${props.theme.colors[props.color].inverse.primary};
-            border-color: transparent;
-               
-            &:hover {
-            background: ${props.theme.colors[props.color].inverse.contrast};
-            }
-
-            &:active {
-            background: ${props.theme.colors[props.color].inverse.active};
+            background: ${props.theme.colors[props.color][props.volume].active};
             }
     `}
        
@@ -216,6 +154,7 @@ ${(props) =>
 export const Button: React.FC<ButtonProps> = ({
   appearance,
   color = 'lead',
+  volume = 'default',
   inverse = false,
   size = 'md',
   label = 'Button',
@@ -225,7 +164,14 @@ export const Button: React.FC<ButtonProps> = ({
   onClick,
 }) => {
   return (
-    <StyledButton appearance={appearance} size={size} inverse={inverse} disabled={disabled} color={color}>
+    <StyledButton
+      appearance={appearance}
+      size={size}
+      volume={volume}
+      inverse={inverse}
+      disabled={disabled}
+      color={color}
+    >
       {iconBefore ? iconBefore : null}
       {label}
       {iconAfter ? iconAfter : null}
