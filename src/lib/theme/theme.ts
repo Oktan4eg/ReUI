@@ -1,4 +1,4 @@
-import { palette, sizes } from './tokensMY';
+import { palette, sizes, typography } from './tokensMY';
 import { DefaultTheme } from 'styled-components';
 
 // export const lightTheme = {
@@ -224,7 +224,13 @@ export const lightTheme: DefaultTheme = {
 
   shadows: {},
 
-  typography: {},
+  typography: {
+    fontFamily: {
+      heading: typography.family.heading,
+      body: typography.family.body,
+      monospace: typography.family.monospace,
+    },
+  },
 
   cornerRadius: {},
 

@@ -64,24 +64,14 @@ const StyledCheckbox = styled.input<CheckboxProps>`
     content: '';
     opacity: 0.24;
   }
-  /* <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M17.0856 5.25972C16.7393 4.91343 16.1779 4.91343 15.8316 5.25972L8.08359 13.0077L5.33433 10.2584C4.98403 9.90815 4.42035 9.89473 4.05379 10.228C3.6617 10.5844 3.64714 11.1963 4.02183 11.5709L7.63878 15.1879C7.88398 15.4331 8.2819 15.4318 8.52551 15.185L17.0896 6.50969C17.4321 6.16276 17.4303 5.60443 17.0856 5.25972Z" fill="#E9E1FE"/>
-</svg> */
-  /* background-image: url('icon.svg'); */
-  /* background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3e%3cpath fill='none' stroke='000000' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 10l3 3l6-6'/%3e%3c/svg%3e"); */
 
   &:checked::after {
     content: '';
-    /* background-image: url('icon.svg'); */
+
     background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3e%3cpath fill='none' stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 10l3 3l6-6'/%3e%3c/svg%3e");
-    /* background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3e%3cpath fill='none' stroke='%23000' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 10l3 3l6-6'/%3e%3c/svg%3e"); */
-    /* display: block; */
-    /* border-radius: 2px; */
-    /* stroke: ${(props) => props.theme.colors.fg.default.primary}; */
     position: absolute;
     width: 24px;
     height: 24px;
-    /* color: ${(props) => props.theme.colors.fg.default.primary}; */
     inset: -4px;
   }
 

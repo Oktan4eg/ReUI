@@ -1,6 +1,32 @@
 import { createGlobalStyle } from 'styled-components';
+import InterVarRegular from '../fonts/Inter-VariableFont_opsz,wght.ttf';
+import InterVarItalic from '../fonts/Inter-Italic-VariableFont_opsz,wght.ttf';
+import RobotoVarRegular from '../fonts/RobotoSerif-VariableFont_GRAD,opsz,wdth,wght.ttf';
+import RobotoVarItalic from '../fonts/RobotoSerif-Italic-VariableFont_GRAD,opsz,wdth,wght.ttf';
 
 export const GlobalStyle = createGlobalStyle`
+  @font-face {
+		font-family: 'Roboto';
+		font-style: normal;
+		src: url(${RobotoVarRegular}) format('truetype');
+	}
+
+	@font-face {
+		font-family: 'Roboto';
+		font-style: italic;
+		src: url(${RobotoVarItalic}) format('truetype');
+	}
+  @font-face {
+		font-family: 'Inter';
+		font-style: normal;
+		src: url(${InterVarRegular}) format('truetype');
+	}
+
+	@font-face {
+		font-family: 'Inter';
+		font-style: italic;
+		src: url(${InterVarItalic}) format('truetype');
+	}
 
     *, *::before, *::after {
       box-sizing: border-box;

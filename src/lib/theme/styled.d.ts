@@ -222,7 +222,13 @@ declare module 'styled-components' {
 
     shadows: {};
 
-    typography: {};
+    typography: {
+      fontFamily: {
+        heading: string;
+        body: string;
+        monospace: string;
+      };
+    };
 
     cornerRadius: {};
 
