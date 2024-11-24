@@ -31,7 +31,7 @@ interface ButtonProps {
 }
 const borderWidth = 1.5;
 const StyledButton = styled.button<ButtonProps>`
-  font-family: ${(props) => props.theme.typography.fontFamily.text};
+  font-family: ${(props) => props.theme.typography.fontFamily.body};
   border: ${borderWidth}px solid transparent;
   display: inline-flex;
   flex-direction: row;
