@@ -5,12 +5,14 @@ declare module 'styled-components' {
     colors: {
       // базовые контентные цвета (текст, иконки, бордеры)
       fg: {
-        primary: string;
-        secondary: string;
-        tertiary: string;
-        disabled: string;
-        muted: string;
-        ghosty: string;
+        default: {
+          primary: string;
+          secondary: string;
+          tertiary: string;
+          disabled: string;
+          muted: string;
+          ghosty: string;
+        };
         inverse: {
           // базовые контентные цвета для использования на инверсивных фонах
           primary: string;
@@ -23,11 +25,13 @@ declare module 'styled-components' {
       };
       //   базовые фоны страницы
       bg: {
-        page: string; // Дефолтный, body page background
-        low: string; // второстепенные, добавочные фоны, для визуального разделения контента, футера... на откуп продуктовому дизайнеру
-        mid: string;
-        hight: string;
-        disabled: string;
+        default: {
+          page: string; // Дефолтный, body page background
+          low: string; // второстепенные, добавочные фоны, для визуального разделения контента, футера... на откуп продуктовому дизайнеру
+          mid: string;
+          hight: string;
+          disabled: string;
+        };
         inverse: {
           page: string;
           low: string;
@@ -48,13 +52,15 @@ declare module 'styled-components' {
       // Цвета этой группы могут применяться на любой элемент интерфейса.
       // Вариативность оттенков даёт возможность управлять контрастом и делают интерфейс разнообразнее и приятнее в деталях.
       neutral: {
-        primary: string;
-        secondary: string;
-        tertiary: string;
-        hover: string;
-        active: string;
-        contrast: string;
-        inverse: {
+        default: {
+          primary: string;
+          secondary: string;
+          tertiary: string;
+          hover: string;
+          active: string;
+          contrast: string;
+        };
+        ghosty: {
           primary: string;
           secondary: string;
           tertiary: string;
@@ -64,13 +70,15 @@ declare module 'styled-components' {
         };
       };
       inverse: {
-        primary: string;
-        secondary: string;
-        tertiary: string;
-        hover: string;
-        active: string;
-        contrast: string;
-        inverse: {
+        default: {
+          primary: string;
+          secondary: string;
+          tertiary: string;
+          hover: string;
+          active: string;
+          contrast: string;
+        };
+        ghosty: {
           primary: string;
           secondary: string;
           tertiary: string;
@@ -80,13 +88,15 @@ declare module 'styled-components' {
         };
       };
       lead: {
-        primary: string;
-        secondary: string;
-        tertiary: string;
-        hover: string;
-        active: string;
-        contrast: string;
-        inverse: {
+        default: {
+          primary: string;
+          secondary: string;
+          tertiary: string;
+          hover: string;
+          active: string;
+          contrast: string;
+        };
+        ghosty: {
           primary: string;
           secondary: string;
           tertiary: string;
@@ -96,13 +106,15 @@ declare module 'styled-components' {
         };
       };
       success: {
-        primary: string;
-        secondary: string;
-        tertiary: string;
-        hover: string;
-        active: string;
-        contrast: string;
-        inverse: {
+        default: {
+          primary: string;
+          secondary: string;
+          tertiary: string;
+          hover: string;
+          active: string;
+          contrast: string;
+        };
+        ghosty: {
           primary: string;
           secondary: string;
           tertiary: string;
@@ -112,13 +124,15 @@ declare module 'styled-components' {
         };
       };
       distuctive: {
-        primary: string;
-        secondary: string;
-        tertiary: string;
-        hover: string;
-        active: string;
-        contrast: string;
-        inverse: {
+        default: {
+          primary: string;
+          secondary: string;
+          tertiary: string;
+          hover: string;
+          active: string;
+          contrast: string;
+        };
+        ghosty: {
           primary: string;
           secondary: string;
           tertiary: string;
@@ -128,13 +142,15 @@ declare module 'styled-components' {
         };
       };
       info: {
-        primary: string;
-        secondary: string;
-        tertiary: string;
-        hover: string;
-        active: string;
-        contrast: string;
-        inverse: {
+        default: {
+          primary: string;
+          secondary: string;
+          tertiary: string;
+          hover: string;
+          active: string;
+          contrast: string;
+        };
+        ghosty: {
           primary: string;
           secondary: string;
           tertiary: string;
@@ -144,13 +160,15 @@ declare module 'styled-components' {
         };
       };
       warning: {
-        primary: string;
-        secondary: string;
-        tertiary: string;
-        hover: string;
-        active: string;
-        contrast: string;
-        inverse: {
+        default: {
+          primary: string;
+          secondary: string;
+          tertiary: string;
+          hover: string;
+          active: string;
+          contrast: string;
+        };
+        ghosty: {
           primary: string;
           secondary: string;
           tertiary: string;
@@ -204,7 +222,13 @@ declare module 'styled-components' {
 
     shadows: {};
 
-    typography: {};
+    typography: {
+      fontFamily: {
+        heading: string;
+        body: string;
+        monospace: string;
+      };
+    };
 
     cornerRadius: {};
 
