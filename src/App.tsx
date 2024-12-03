@@ -90,7 +90,7 @@ function App() {
             <Button appearance='linked' color='distuctive' label='linked distuctive' />
             <Button appearance='linked' color='neutral' label='linked neutral' />
           </section>
-          <Button appearance='filled' color='lead' label='linked lead' />
+          <Button filled appearance='filled' color='lead' label='linked lead' />
           <span
             style={
               theme === 'dark'

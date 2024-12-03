@@ -33,7 +33,7 @@ interface ButtonProps {
   /** Функция при нажатии на кнопку */
   onClick?: MouseEventHandler;
 
-  fill?: boolean;
+  filled?: boolean;
 }
 const borderWidth = 1.5;
 const StyledButton = styled.button<ButtonProps>`
@@ -51,17 +51,18 @@ const StyledButton = styled.button<ButtonProps>`
   gap: 8;
   transition: all 250ms ease;
   max-width: 100%;
-  /* width: ${(props) => (props.fill ? '100%' : 'auto')} */
-  /* ${(props) =>
-    props.fill &&
+
+  ${(props) =>
+    props.filled &&
     `
     width: 100%;
+    `}
 
-    `} */
   &:focus-visible {
     box-shadow: 0px 0px 0px 2px ${(props) => props.theme.colors.bg.default.page},
       0px 0px 0px 4px ${(props) => props.theme.colors.lead.default.primary};
   }
+
   ${(props) =>
     props.size === 'lg' &&
     `
@@ -198,7 +199,7 @@ export const Button: React.FC<ButtonProps> = ({
   color = 'lead',
   scaleble = true,
   size = 'md',
-  fill,
+  filled,
   label = 'Button',
   disabled,
   iconAfter,
@@ -210,7 +211,7 @@ export const Button: React.FC<ButtonProps> = ({
       onClick={onClick}
       appearance={appearance}
       size={size}
-      fill={fill}
+      filled={filled}
       disabled={disabled}
       color={color}
       scaleble={scaleble}
