@@ -1,18 +1,22 @@
 import { MouseEventHandler } from 'react';
 import styled from 'styled-components';
 
+type ButtonAppearance = 'filled' | 'outlined' | 'tonal' | 'linked';
+type ButtonColor = 'inverse' | 'neutral' | 'lead' | 'success' | 'distuctive' | 'info' | 'warning';
+type ButtonSize = 'lg' | 'md' | 'sm';
+
 interface ButtonProps {
   /** Текст кнопки */
   label?: string;
 
   /** Цвет кнопки */
-  color?: 'inverse' | 'neutral' | 'lead' | 'success' | 'distuctive' | 'info' | 'warning';
+  color?: ButtonColor;
 
   /** Вариант отображения кнопки */
-  appearance: 'filled' | 'outlined' | 'tonal' | 'linked';
+  appearance: ButtonAppearance;
 
   /** Размер кнопки */
-  size?: 'lg' | 'md' | 'sm';
+  size?: ButtonSize;
 
   /** Анимация уменьшения при нажатии */
   scaleble?: boolean;
@@ -28,9 +32,12 @@ interface ButtonProps {
 
   /** Функция при нажатии на кнопку */
   onClick?: MouseEventHandler;
+
+  filled?: boolean;
 }
 const borderWidth = 1.5;
 const StyledButton = styled.button<ButtonProps>`
+  font-family: ${(props) => props.theme.font.family.body};
   border: ${borderWidth}px solid transparent;
   display: inline-flex;
   flex-direction: row;
@@ -43,10 +50,19 @@ const StyledButton = styled.button<ButtonProps>`
   font-size: unset;
   gap: 8;
   transition: all 250ms ease;
+  max-width: 100%;
+
+  ${(props) =>
+    props.filled &&
+    `
+    width: 100%;
+    `}
+
   &:focus-visible {
     box-shadow: 0px 0px 0px 2px ${(props) => props.theme.colors.bg.default.page},
       0px 0px 0px 4px ${(props) => props.theme.colors.lead.default.primary};
   }
+
   ${(props) =>
     props.size === 'lg' &&
     `
@@ -169,6 +185,7 @@ ${(props) =>
     props.disabled &&
     `
             cursor: default;
+
             &:disabled, &:active, &:hover {
             color: #ffffff;
             background: #bababa;
@@ -182,6 +199,7 @@ export const Button: React.FC<ButtonProps> = ({
   color = 'lead',
   scaleble = true,
   size = 'md',
+  filled,
   label = 'Button',
   disabled,
   iconAfter,
@@ -189,7 +207,15 @@ export const Button: React.FC<ButtonProps> = ({
   onClick,
 }) => {
   return (
-    <StyledButton appearance={appearance} size={size} disabled={disabled} color={color} scaleble={scaleble}>
+    <StyledButton
+      onClick={onClick}
+      appearance={appearance}
+      size={size}
+      filled={filled}
+      disabled={disabled}
+      color={color}
+      scaleble={scaleble}
+    >
       {iconBefore ? iconBefore : null}
       {label}
       {iconAfter ? iconAfter : null}

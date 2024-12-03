@@ -1,12 +1,13 @@
 import { Button } from './button02';
+import { action } from '@storybook/addon-actions';
 
 export default {
-
   title: 'Components/Buttons/Button',
 
   component: Button,
   parameters: {
-    layout: 'centered',
+    layout: 'padded',
+    // layout: 'centered',
     status: {
       type: 'beta', // 'beta' | 'stable' | 'deprecated' | 'releaseCandidate'
     },
@@ -20,5 +21,6 @@ export const Base = {
     color: 'neutral',
     appearance: 'filled',
     size: 'md',
+    onClick: action('on-click'),
   },
 };

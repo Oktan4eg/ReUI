@@ -208,6 +208,92 @@ declare module 'styled-components' {
         transparent: string;
       };
     };
+    font: {
+      family: {
+        display: string;
+        body: string;
+        monospace: string;
+      };
+      size: {
+        display: { xl: string; lg: string; md: string; sm: string };
+        heading: { xl: string; lg: string; md: string; sm: string };
+        title: { xl: string; lg: string; md: string; sm: string };
+        label: { xl: string; lg: string; md: string; sm: string };
+        body: { xl: string; lg: string; md: string; sm: string };
+        ligal: { xl: string; lg: string; md: string; sm: string };
+        button: { xl: string; lg: string; md: string; sm: string };
+      };
+      height: {
+        display: { xl: string; lg: string; md: string; sm: string };
+        heading: { xl: string; lg: string; md: string; sm: string };
+        title: { xl: string; lg: string; md: string; sm: string };
+        label: { xl: string; lg: string; md: string; sm: string };
+        body: { xl: string; lg: string; md: string; sm: string };
+        ligal: { xl: string; lg: string; md: string; sm: string };
+        button: { xl: string; lg: string; md: string; sm: string };
+      };
+      weight: {
+        thin: string;
+        extraLight: string;
+        light: string;
+        regular: string;
+        medium: string;
+        semiBold: string;
+        bold: string;
+        extraBold: string;
+        black: string;
+      };
+    };
+
+    // font: {
+    //   family: {
+    //     display: string;
+    //     body: string;
+    //     monospace: string;
+    //   };
+
+    //   display: {
+    //     weight: string;
+    //     xl: {
+    //       size: string;
+    //       height: string;
+    //     };
+    //     lg: {
+    //       size: string;
+    //       height: string;
+    //     };
+    //     md: {
+    //       size: string;
+    //       height: string;
+    //     };
+    //     sm: {
+    //       size: string;
+    //       height: string;
+    //     };
+    //   };
+
+    //     height: {
+    //       display: { xl: string; lg: string; md: string; sm: string };
+    //       heading: { xl: string; lg: string; md: string; sm: string };
+    //       title: { xl: string; lg: string; md: string; sm: string };
+    //       label: { xl: string; lg: string; md: string; sm: string };
+    //       body: { xl: string; lg: string; md: string; sm: string };
+    //       ligal: { xl: string; lg: string; md: string; sm: string };
+    //       button: { xl: string; lg: string; md: string; sm: string };
+    //     };
+    //     weight: {
+    //       thin: string;
+    //       extraLight: string;
+    //       light: string;
+    //       regular: string;
+    //       medium: string;
+    //       semiBold: string;
+    //       bold: string;
+    //       xtraBold: string;
+    //       black: string;
+    //     };
+    //   };
+
     spacing: {
       fixed: {};
       comp: {
@@ -219,15 +305,11 @@ declare module 'styled-components' {
         padding: {};
       };
     };
-
-    shadows: {};
-
-    typography: {};
-
     cornerRadius: {};
 
     zIndices: {};
 
     animation: {};
+    shadows: {};
   }
 }
