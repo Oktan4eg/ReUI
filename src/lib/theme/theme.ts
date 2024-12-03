@@ -1,4 +1,4 @@
-import { palette, sizes, typography } from './tokensMY';
+import { palette, sizes, font } from './tokensMY';
 import { DefaultTheme } from 'styled-components';
 
 // export const lightTheme = {
@@ -142,6 +142,7 @@ export const lightTheme: DefaultTheme = {
         contrast: palette.red[30],
       },
     },
+
     info: {
       default: {
         primary: palette.blue[50],
@@ -210,6 +211,112 @@ export const lightTheme: DefaultTheme = {
       transparent: 'transparent',
     },
   },
+  font: {
+    family: {
+      display: font.family.display,
+      body: font.family.body,
+      monospace: font.family.monospace,
+    },
+    size: {
+      display: {
+        xl: font.size.display.xl,
+        lg: font.size.display.lg,
+        md: font.size.display.md,
+        sm: font.size.display.sm,
+      },
+      heading: {
+        xl: font.size.heading.xl,
+        lg: font.size.heading.lg,
+        md: font.size.heading.md,
+        sm: font.size.heading.sm,
+      },
+      title: {
+        xl: font.size.title.xl,
+        lg: font.size.title.lg,
+        md: font.size.title.md,
+        sm: font.size.title.sm,
+      },
+      label: {
+        xl: font.size.label.xl,
+        lg: font.size.label.lg,
+        md: font.size.label.md,
+        sm: font.size.label.sm,
+      },
+      body: {
+        xl: font.size.body.xl,
+        lg: font.size.body.lg,
+        md: font.size.body.md,
+        sm: font.size.body.sm,
+      },
+      ligal: {
+        xl: font.size.ligal.xl,
+        lg: font.size.ligal.lg,
+        md: font.size.ligal.md,
+        sm: font.size.ligal.sm,
+      },
+      button: {
+        xl: font.size.button.xl,
+        lg: font.size.button.lg,
+        md: font.size.button.md,
+        sm: font.size.button.sm,
+      },
+    },
+    height: {
+      display: {
+        xl: font.height.display.xl,
+        lg: font.height.display.lg,
+        md: font.height.display.md,
+        sm: font.height.display.sm,
+      },
+      heading: {
+        xl: font.height.heading.xl,
+        lg: font.height.heading.lg,
+        md: font.height.heading.md,
+        sm: font.height.heading.sm,
+      },
+      title: {
+        xl: font.height.title.xl,
+        lg: font.height.title.lg,
+        md: font.height.title.md,
+        sm: font.height.title.sm,
+      },
+      label: {
+        xl: font.height.label.xl,
+        lg: font.height.label.lg,
+        md: font.height.label.md,
+        sm: font.height.label.sm,
+      },
+      body: {
+        xl: font.height.body.xl,
+        lg: font.height.body.lg,
+        md: font.height.body.md,
+        sm: font.height.body.sm,
+      },
+      ligal: {
+        xl: font.height.ligal.xl,
+        lg: font.height.ligal.lg,
+        md: font.height.ligal.md,
+        sm: font.height.ligal.sm,
+      },
+      button: {
+        xl: font.height.button.xl,
+        lg: font.height.button.lg,
+        md: font.height.button.md,
+        sm: font.height.button.sm,
+      },
+    },
+    weight: {
+      thin: font.weight.thin,
+      extraLight: font.weight.extraLight,
+      light: font.weight.regular,
+      regular: font.weight.light,
+      medium: font.weight.medium,
+      semiBold: font.weight.semiBold,
+      bold: font.weight.bold,
+      extraBold: font.weight.extraBold,
+      black: font.weight.black,
+    },
+  },
   spacing: {
     fixed: {},
     comp: {
@@ -223,14 +330,6 @@ export const lightTheme: DefaultTheme = {
   },
 
   shadows: {},
-
-  typography: {
-    fontFamily: {
-      heading: typography.family.heading,
-      body: typography.family.body,
-      monospace: typography.family.monospace,
-    },
-  },
 
   cornerRadius: {},
 
@@ -457,14 +556,4 @@ export const darkTheme = {
       padding: {},
     },
   },
-
-  shadows: {},
-
-  typography: {},
-
-  cornerRadius: {},
-
-  zIndices: {},
-
-  animation: {},
 };

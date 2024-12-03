@@ -43,6 +43,7 @@ export const GlobalStyle = createGlobalStyle`
 
             font-family: sans-serif;
             background: ${(props) => props.theme.colors.bg.default.page};
+            color: ${(props) => props.theme.colors.fg.default.primary};
             }
             `;
 

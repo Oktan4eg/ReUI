@@ -1,13 +1,12 @@
-import { Button } from './button02';
+import { Text } from './text';
 import { action } from '@storybook/addon-actions';
 
 export default {
-  title: 'Components/Buttons/Button',
+  title: 'Components/Text/Text',
 
-  component: Button,
+  component: Text,
   parameters: {
-    layout: 'padded',
-    // layout: 'centered',
+    layout: 'fullscreen',
     status: {
       type: 'beta', // 'beta' | 'stable' | 'deprecated' | 'releaseCandidate'
     },
@@ -17,10 +16,12 @@ export default {
 
 export const Base = {
   args: {
-    label: 'Я кнопка',
-    color: 'neutral',
-    appearance: 'filled',
-    size: 'md',
+    children: 'Я текст',
+    font: 'body',
+    weight: 'regular',
+    size: 'display',
+    scale: 'xl',
+    as: 'h1',
     onClick: action('on-click'),
   },
 };
