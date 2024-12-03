@@ -9,4 +9,5 @@ export * from './components/text-input';
 export * from './components/radio';
 export * from './components/toggle';
 export * from './components/promoStory';
+export * from './components/text';
 export * from './theme';

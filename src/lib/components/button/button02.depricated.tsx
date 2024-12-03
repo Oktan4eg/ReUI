@@ -63,19 +63,19 @@ const StyledButton = styled.button<IButtonProps>`
     props.appearance === 'filled' &&
     props.color === 'lead' &&
     `
-            background: ${props.theme.colors.lead.primary};
-            color: ${props.theme.colors.lead.contrast};
+            background: ${props.theme.colors.success.primary};
+            color: ${props.theme.colors.success.contrast};
             border-color: transparent;
 
             &:hover {
-            background: ${props.theme.colors.lead.hover};
-            color: ${props.theme.colors.lead.contrast};
+            background: ${props.theme.colors.success.hover};
+            color: ${props.theme.colors.success.contrast};
             border-color: transparent;
             }
 
             &:active {
-            background: ${props.theme.colors.lead.active};
-            color: ${props.theme.colors.lead.contrast};
+            background: ${props.theme.colors.success.active};
+            color: ${props.theme.colors.success.contrast};
             border-color: transparent;
             }
         `}
