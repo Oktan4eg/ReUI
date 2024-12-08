@@ -88,8 +88,8 @@ export const InlinePlacement = {
     </>
   ),
   args: {
-    iconName: 'user',
-    'aria-label': 'user',
+    iconName: 'components',
+    'aria-label': 'Components',
     size: 24,
   },
 };
@@ -101,8 +101,8 @@ export const BlockPlacement = {
     </>
   ),
   args: {
-    iconName: 'chevronUp',
-    'aria-label': 'Happy face',
+    iconName: 'components',
+    'aria-label': 'Components',
     block: true,
     size: 24,
   },

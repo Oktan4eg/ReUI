@@ -1,35 +1,41 @@
-import React from 'react';
-import { Link, Text, Radio, Checkbox, GlobalStyle, lightTheme, darkTheme, Button, Toggle } from './lib';
+import {
+  ShowTokens,
+  // ShowTokens2,
+  Link,
+  Text,
+  Radio,
+  Checkbox,
+  GlobalStyle,
+  lightTheme,
+  darkTheme,
+  Button,
+  Toggle,
+} from './lib';
 import { useTheme } from './lib/hooks';
-import styled, { ThemeProvider } from 'styled-components';
+import { ThemeProvider } from 'styled-components';
+import { palette, sizes, font } from './lib/theme/tokensMY';
 
 function App() {
-  // pseudo
-
   const { theme, setTheme } = useTheme();
-  // let themeIcon = '🌞';
-  console.log(theme);
+
   return (
     <main style={{ display: 'grid', padding: '96px', gap: '96px' }}>
       <ThemeProvider theme={theme === 'dark' ? darkTheme : lightTheme}>
         <GlobalStyle />
-
+        {/* <ShowTokens2 /> */}
+        {/* <ShowTokens /> */}
         <header
           style={{
             width: '100%',
           }}
         >
-          <span // theme toggle
-            style={{
-              width: '100%',
-              display: 'flex',
-              flexDirection: 'row',
-              alignItems: 'center',
-              gap: '8px',
-            }}
-          >
+          <Text as={'h1'} size={'display'} scale={'xl'} weight={'black'} align={'justify'} font={'display'}>
+            Re UI Kit
+            <Text inline as={'span'} size={'display'} scale={'xl'} weight={'light'} align={'justify'} font={'display'}>
+              {' ' + theme + 'Theme '}
+            </Text>
             <span style={{ width: '100%' }} />
-            {theme === 'dark' ? '👀 ' : ''}
+            {theme === 'dark' ? '👀 ' : '🌝'}
             <span style={{ width: 'auto', padding: '24px' }}>
               <Toggle
                 name={''}
@@ -39,12 +45,6 @@ function App() {
                 }}
               />
             </span>
-          </span>
-          <Text as={'h1'} size={'display'} scale={'xl'} weight={'black'} align={'justify'} font={'display'}>
-            Re Kit
-            <Text inline as={'span'} size={'display'} scale={'xl'} weight={'light'} align={'justify'} font={'display'}>
-              {' ' + theme + 'Theme '}
-            </Text>
           </Text>
         </header>
 
@@ -57,40 +57,39 @@ function App() {
             style={{
               display: 'grid',
               gridTemplateColumns: 'repeat(6, 1fr)',
-              justifyContent: 'flex-end',
               gap: '24px',
               paddingBlock: '24px',
             }}
           >
-            <Button appearance='filled' color='lead' label='filled lead' />
-            <Button appearance='filled' color='info' label='filled info' />
-            <Button appearance='filled' color='success' label='filled success' />
-            <Button appearance='filled' color='warning' label='filled warning' />
-            <Button appearance='filled' color='distuctive' label='filled distuctive' />
-            <Button appearance='filled' color='neutral' label='filled neutral' />
+            <Button iconStart='checkShieldFill' size='lg' appearance='filled' color='lead' label='Filled' />
+            <Button iconStart='componentsFill' size='md' appearance='filled' color='info' label='Filled' />
+            <Button iconStart='checkCircle' size='sm' appearance='filled' color='success' label='Filled' />
+            <Button size='lg' appearance='filled' color='warning' label='Filled' />
+            <Button size='md' appearance='filled' color='distuctive' label='Filled' />
+            <Button size='sm' appearance='filled' color='neutral' label='Filled' />
 
-            <Button appearance='tonal' color='lead' label='tonal lead' />
-            <Button appearance='tonal' color='info' label='tonal info' />
-            <Button appearance='tonal' color='success' label='tonal success' />
-            <Button appearance='tonal' color='warning' label='tonal warning' />
-            <Button appearance='tonal' color='distuctive' label='tonal distuctive' />
-            <Button appearance='tonal' color='neutral' label='tonal neutral' />
+            <Button size='lg' appearance='tonal' color='lead' label='Tonal' />
+            <Button size='md' appearance='tonal' color='info' label='Tonal' />
+            <Button size='sm' appearance='tonal' color='success' label='Tonal' />
+            <Button size='lg' appearance='tonal' color='warning' label='Tonal' />
+            <Button size='md' appearance='tonal' color='distuctive' label='Tonal' />
+            <Button size='sm' appearance='tonal' color='neutral' label='Tonal' />
 
-            <Button appearance='outlined' color='lead' label='outlined lead' />
-            <Button appearance='outlined' color='info' label='outlined info' />
-            <Button appearance='outlined' color='success' label='outlined success' />
-            <Button appearance='outlined' color='warning' label='outlined warning' />
-            <Button appearance='outlined' color='distuctive' label='outlined distuctive' />
-            <Button appearance='outlined' color='neutral' label='outlined neutral' />
+            <Button iconEnd='sun' size='lg' appearance='outlined' color='lead' label='Outlined' />
+            <Button iconEnd='sun' size='md' appearance='outlined' color='info' label='Outlined' />
+            <Button iconEnd='sun' size='sm' appearance='outlined' color='success' label='Outlined' />
+            <Button size='lg' appearance='outlined' color='warning' label='Outlined' />
+            <Button size='md' appearance='outlined' color='distuctive' label='Outlined' />
+            <Button size='sm' appearance='outlined' color='neutral' label='Outlined' />
 
-            <Button appearance='linked' color='lead' label='linked lead' />
-            <Button appearance='linked' color='info' label='linked info' />
-            <Button appearance='linked' color='success' label='linked success' />
-            <Button appearance='linked' color='warning' label='linked warning' />
-            <Button appearance='linked' color='distuctive' label='linked distuctive' />
-            <Button appearance='linked' color='neutral' label='linked neutral' />
+            <Button size='lg' appearance='linked' color='lead' label='Linked' />
+            <Button size='md' appearance='linked' color='info' label='Linked' />
+            <Button size='sm' appearance='linked' color='success' label='Linked' />
+            <Button size='lg' appearance='linked' color='warning' label='Linked' />
+            <Button size='md' appearance='linked' color='distuctive' label='Linked' />
+            <Button size='sm' appearance='linked' color='neutral' label='Linked' />
           </section>
-          <Button filled appearance='filled' color='lead' label='linked lead' />
+
           <span
             style={
               theme === 'dark'
@@ -98,10 +97,10 @@ function App() {
                 : { display: 'flex', gap: '24px', padding: '24px', backgroundColor: '#000000', borderRadius: '32px' }
             }
           >
-            <Button appearance='filled' color='inverse' label='filled inverse' />
-            <Button appearance='tonal' color='inverse' label='tonal inverse' />
-            <Button appearance='outlined' color='inverse' label='outlined inverse' />
-            <Button appearance='linked' color='inverse' label='linked inverse' />
+            <Button appearance='filled' color='inverse' label='Filled' />
+            <Button appearance='tonal' color='inverse' label='Tonal' />
+            <Button appearance='outlined' color='inverse' label='Outlined' />
+            <Button appearance='linked' color='inverse' label='Linked' />
           </span>
         </section>
 
@@ -118,12 +117,12 @@ function App() {
           </Text>
 
           <span style={{ display: 'flex', gap: '8px', paddingBlock: '24px' }}>
-            <Toggle name={''} type={'checkbox'} color='info' />
-            <Toggle name={''} type={'checkbox'} color='distuctive' />
-            <Toggle name={''} type={'checkbox'} color='success' />
-            <Toggle name={''} type={'checkbox'} color='warning' />
-            <Toggle name={''} type={'checkbox'} color='inverse' />
-            <Toggle name={''} type={'checkbox'} color='neutral' />
+            <Toggle label='as radio' name={'1'} type={'radio'} color='info' />
+            <Toggle label='as radio' name={'1'} type={'radio'} color='distuctive' />
+            <Toggle label='as radio' name={'1'} type={'radio'} color='success' />
+            <Toggle label='as checkbox' name={''} type={'checkbox'} color='warning' />
+            <Toggle label='as checkbox' name={''} type={'checkbox'} color='inverse' />
+            <Toggle label='as checkbox' name={''} type={'checkbox'} color='neutral' />
           </span>
         </section>
         {/* Checkbox */}
@@ -371,6 +370,25 @@ function App() {
                 </Text>
               </section>
             </section>
+          </section>
+        </section>
+
+        {/* Colors */}
+        <section>
+          <Text as={'h2'} weight={'bold'} size={'heading'} scale={'xl'} align={'left'} font={'display'}>
+            Colors
+          </Text>
+          <section
+            style={{
+              display: 'grid',
+              gridTemplateColumns: 'repeat(6, 1fr)',
+              justifyContent: 'flex-end',
+              gap: '24px',
+              paddingBlock: '24px',
+            }}
+          >
+            {}
+            <div style={{ backgroundColor: 'black' }}></div>
           </section>
         </section>
 

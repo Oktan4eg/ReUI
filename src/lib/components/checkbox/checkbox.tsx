@@ -21,7 +21,8 @@ const StyledCheckbox = styled.input<CheckboxProps>`
   appearance: none;
   position: relative;
   cursor: pointer;
-  display: block;
+  display: flex;
+  flex-shrink: 0;
   margin: 0px 8px 0px 0px;
   padding: 0px;
   width: 20px;

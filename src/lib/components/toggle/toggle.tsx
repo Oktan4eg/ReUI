@@ -10,17 +10,20 @@ export interface ToggleProps extends InputProps {
 }
 
 const StyledToggle = styled.input<ToggleProps>`
+  flex-shrink: 0;
+  margin: 0px 8px 0px 0px;
+  /* width: 20px;
+  height: 20px; */
   ${(props) =>
     props.color &&
     `
   width: 56px;
   height: 32px;
-  margin: 0;
   position: relative;
   display: block;
   cursor: pointer;
   appearance: none;
-  outline: 2px solid ${props.theme.colors.lead.default.primary};
+  outline: 2px solid ${props.theme.colors[props.color].default.primary};
   transition: all 250ms ease-in;
   border-radius: 32px;
 
@@ -39,7 +42,7 @@ const StyledToggle = styled.input<ToggleProps>`
     width: 0px;
     height: 0px;
     transition: all 250ms ease-in;
-    outline: ${props.theme.colors.lead.default.contrast};
+    outline: ${props.theme.colors[props.color].default.contrast};
   }
 
   &:after {
@@ -47,14 +50,14 @@ const StyledToggle = styled.input<ToggleProps>`
     width: 20px;
     height: 20px;
     transform: translate(0px);
-    background-color: ${props.theme.colors.lead.default.primary}; // цвет хендла
+    background-color: ${props.theme.colors[props.color].default.primary}; // цвет хендла
     transition: all 250ms ease-out;
   }
   &:enabled {
     &:hover {
-      /* background-color: ${props.theme.colors.lead.default.contrast}; // фон трека */
+      /* background-color: ${props.theme.colors[props.color].default.contrast}; // фон трека */
       &:after {
-        /* background-color: ${props.theme.colors.lead.default.primary}; // ховер хендла */
+        /* background-color: ${props.theme.colors[props.color].default.primary}; // ховер хендла */
       }
       &:before {
         margin: -8px;
@@ -62,7 +65,7 @@ const StyledToggle = styled.input<ToggleProps>`
         height: 48px;
         transition: all 250ms ease-out;
         opacity: 0.24;
-        background-color: ${props.theme.colors.lead.default.primary}; // ховер вокруг хендла
+        background-color: ${props.theme.colors[props.color].default.primary}; // ховер вокруг хендла
       }
     }
     &:active {
@@ -75,8 +78,8 @@ const StyledToggle = styled.input<ToggleProps>`
     }
   }
   &:checked {
-    outline: 2px solid ${props.theme.colors.lead.default.primary};
-    background-color: ${props.theme.colors.lead.default.primary};
+    outline: 2px solid ${props.theme.colors[props.color].default.primary};
+    background-color: ${props.theme.colors[props.color].default.primary};
 
     &:after {
       transform: translate(32px);
@@ -84,21 +87,21 @@ const StyledToggle = styled.input<ToggleProps>`
       transition: all 250ms ease-out;
       width: 28px;
       height: 28px;
-      background-color: ${props.theme.colors.lead.default.contrast};
+      background-color: ${props.theme.colors[props.color].default.contrast};
     }
     &:hover {
       transition: all 250ms ease-out;
       &:after {
-        /* background-color: ${props.theme.colors.lead.default.primary}; */
+        /* background-color: ${props.theme.colors[props.color].default.primary}; */
       }
-      /* background-color: ${props.theme.colors.lead.default.contrast}; // фон трека */
+      /* background-color: ${props.theme.colors[props.color].default.contrast}; // фон трека */
       &:before {
         margin: -8px 0px 0px 16px;
         width: 48px;
         height: 48px;
         transition: all 250ms ease-out;
         opacity: 0.24;
-        background-color: ${props.theme.colors.lead.default.tertiary}; // ховер вокруг хендла
+        background-color: ${props.theme.colors[props.color].default.tertiary}; // ховер вокруг хендла
       }
     }
     &:active {
@@ -170,22 +173,3 @@ export const Toggle: FC<ToggleProps> = ({ color = 'lead', ...props }) => {
     </Label>
   );
 };
-// export const Toggle: FC<ToggleProps> = (props) => {
-//   return (
-//     <Label htmlFor={props.id} input={props.input} danger={props.danger} disabled={props.disabled}>
-//       <StyledToggle
-//         checked={props.checked}
-//         color={props.color}
-//         disabled={props.disabled}
-//         danger={props.danger}
-//         success={props.success}
-//         name={props.name}
-//         type={'checkbox'}
-//         id={props.id}
-//         onChange={props.onChange}
-//         className={props.className}
-//       />
-//       <span className='input-label'>{props.label}</span>
-//     </Label>
-//   );
-// };

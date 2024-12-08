@@ -14,7 +14,7 @@ export default {
 
 export const Base = {
   args: {
-    label: 'Я радиокнопка',
+    label: 'Я тоггл',
     name: 'checkbox',
     type: 'checkbox',
     color: 'lead',
