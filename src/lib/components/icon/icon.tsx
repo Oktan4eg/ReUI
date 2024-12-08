@@ -23,7 +23,9 @@ const Svg = styled.svg<ISvgProps>`
   display: ${(props) => (props.block ? 'block' : 'inline-block')};
   vertical-align: middle;
   shape-rendering: inherit;
-  transform: translate3d(0, 0, 0);
+  text-align: center;
+
+  /* transform: translate3d(10, 10, 10); */
 `;
 
 const Path = styled.path`
@@ -33,7 +35,7 @@ const Path = styled.path`
 /**
  * Компонент иконка
  */
-export const Icon: FC<ISvgProps> = ({ iconName = 'browser', block = false, size = 24, ...props }) => {
+export const Icon: FC<ISvgProps> = ({ iconName = 'component', block = false, size = 24, ...props }) => {
   return (
     <Svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width={size} height={size} block={block} {...props}>
       <Path d={icons[iconName]} />
