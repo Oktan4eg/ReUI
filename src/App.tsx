@@ -117,12 +117,12 @@ function App() {
           </Text>
 
           <span style={{ display: 'flex', gap: '8px', paddingBlock: '24px' }}>
-            <Toggle name={''} type={'checkbox'} color='info' />
-            <Toggle name={''} type={'checkbox'} color='distuctive' />
-            <Toggle name={''} type={'checkbox'} color='success' />
-            <Toggle name={''} type={'checkbox'} color='warning' />
-            <Toggle name={''} type={'checkbox'} color='inverse' />
-            <Toggle name={''} type={'checkbox'} color='neutral' />
+            <Toggle label='as radio' name={'1'} type={'radio'} color='info' />
+            <Toggle label='as radio' name={'1'} type={'radio'} color='distuctive' />
+            <Toggle label='as radio' name={'1'} type={'radio'} color='success' />
+            <Toggle label='as checkbox' name={''} type={'checkbox'} color='warning' />
+            <Toggle label='as checkbox' name={''} type={'checkbox'} color='inverse' />
+            <Toggle label='as checkbox' name={''} type={'checkbox'} color='neutral' />
           </span>
         </section>
         {/* Checkbox */}

@@ -23,6 +23,6 @@ export const Base = {
     appearance: 'filled',
     size: 'md',
     // onClick: action('on-click'),
-    onClick: fn(),
+    // onClick: fn(),
   },
 };
