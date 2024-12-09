@@ -5,11 +5,10 @@ import { InputProps } from '../text-input';
 import { Label } from '../label';
 
 export interface RadioProps extends InputProps {
+  /** 🔴 — Доделать. */
   checked?: boolean;
 
-  /**
-   * Allow applying custom classes to component
-   */
+  /** Дополнительный кастомный класс */
   className?: string;
 }
 
