@@ -3,17 +3,26 @@ import styled from 'styled-components';
 import { InputProps } from '../text-input';
 import { Label } from '../label';
 
+type ToggleColor = 'inverse' | 'neutral' | 'lead' | 'success' | 'distuctive' | 'info' | 'warning';
+
 export interface ToggleProps extends InputProps {
+  /** 🔴 — Доделать. */
   checked?: boolean;
-  color?: 'neutral' | 'inverse' | 'lead' | 'success' | 'distuctive' | 'info' | 'warning';
+
+  /** Цвет тоггла */
+  color?: ToggleColor;
+
+  /** Дополнительный кастомный класс */
   className?: string;
 }
 
 const StyledToggle = styled.input<ToggleProps>`
   flex-shrink: 0;
   margin: 0px 8px 0px 0px;
+
   /* width: 20px;
   height: 20px; */
+
   ${(props) =>
     props.color &&
     `
@@ -120,46 +129,20 @@ const StyledToggle = styled.input<ToggleProps>`
   }
   
 `}
-  ${(props) =>
-    props.disabled &&
-    `
-        cursor: not-allowed;
-        &:before {
-            background-color: grey;
-        }
-         &:hover {
-            &:before {
-                background-color: grey;
-            }
-    }
-        &:after {
-            box-shadow: none;
-            background-color: grey;
-        }
-         &:checked {
-            &:hover {
-                &:before {
-                    background-color: grey;
-                }
-            }
-         &:before {
-            background-color: grey;
-         }
-         &:after {
-            box-shadow: none;
-        }
-    }    
-    
-    `}
 `;
 
 export const Toggle: FC<ToggleProps> = ({ color = 'lead', ...props }) => {
   return (
-    <Label htmlFor={props.id} input={props.input} danger={props.danger} disabled={props.disabled}>
+    <Label
+      htmlFor={props.id}
+      input={props.input}
+      danger={props.danger}
+      disabled={props.disabled}
+      inverse={color === 'inverse' ? true : false}
+    >
       <StyledToggle
         checked={props.checked}
         color={color}
-        // color={props.color = 'lead'}
         disabled={props.disabled}
         danger={props.danger}
         success={props.success}

@@ -5,17 +5,17 @@ import { InputProps } from '../text-input';
 import { Label } from '../label';
 import { Icon } from '../icon';
 
-type CheckboxColor = 'inverse' | 'neutral' | 'lead' | 'success' | 'distuctive' | 'info' | 'warning';
-
 export interface CheckboxProps extends InputProps {
-  /** 🔴 — Доделать. */
+  /**
+   * if `true` change checkbox on check
+   * */
   checked?: boolean;
 
-  /** Дополнительный кастомный класс */
+  /**
+   * Allow to add classes to component
+   * */
   className?: string;
-
-  /** Цвет чекбокса */
-  color?: CheckboxColor;
+  color?: 'neutral' | 'inverse' | 'lead' | 'success' | 'distuctive' | 'info' | 'warning';
 }
 
 const StyledCheckbox = styled.input<CheckboxProps>`
@@ -141,7 +141,6 @@ const StyledCheckbox = styled.input<CheckboxProps>`
     }
     `} */
 `;
-
 // export const Toggle: FC<ToggleProps> = ({ color = 'lead', ...props }) => {
 export const Checkbox: FC<CheckboxProps> = ({ color = 'lead', ...props }) => {
   return (
@@ -162,7 +161,6 @@ export const Checkbox: FC<CheckboxProps> = ({ color = 'lead', ...props }) => {
         name={props.name}
         type={'checkbox'}
         onChange={props.onChange}
-        // onChange={props.onChange}
       />
       {/* <Icon iconName='components' /> */}
 

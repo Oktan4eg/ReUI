@@ -121,8 +121,17 @@ function App() {
             <Toggle label='as radio' name={'1'} type={'radio'} color='distuctive' />
             <Toggle label='as radio' name={'1'} type={'radio'} color='success' />
             <Toggle label='as checkbox' name={''} type={'checkbox'} color='warning' />
-            <Toggle label='as checkbox' name={''} type={'checkbox'} color='inverse' />
             <Toggle label='as checkbox' name={''} type={'checkbox'} color='neutral' />
+            <span
+              style={
+                theme === 'dark'
+                  ? { display: 'flex', gap: '24px', padding: '24px', backgroundColor: '#ffffff', borderRadius: '32px' }
+                  : { display: 'flex', gap: '24px', padding: '24px', backgroundColor: '#000000', borderRadius: '32px' }
+              }
+            >
+              <Toggle label='as checkbox' name={''} type={'checkbox'} color='inverse' />
+              <Toggle label='as checkbox' name={''} type={'checkbox'} color='inverse' />
+            </span>
           </span>
         </section>
         {/* Checkbox */}
@@ -139,7 +148,21 @@ function App() {
               paddingBlock: '24px',
             }}
           >
-            <Checkbox name='sdsdsd' type='checkbox' label='checkbox' />
+            <Checkbox color='lead' name='sdsdsd' type='checkbox' label='Checkbox' />
+            <Checkbox color='distuctive' name='sdsdsd' type='checkbox' label='Checkbox' />
+            <Checkbox color='info' name='sdsdsd' type='checkbox' label='Checkbox' />
+            <Checkbox color='success' name='sdsdsd' type='checkbox' label='Checkbox' />
+            <Checkbox color='warning' name='sdsdsd' type='checkbox' label='Checkbox' />
+            <Checkbox color='neutral' name='sdsdsd' type='checkbox' label='Checkbox' />
+            <span
+              style={
+                theme === 'dark'
+                  ? { display: 'flex', gap: '24px', padding: '24px', backgroundColor: '#ffffff', borderRadius: '32px' }
+                  : { display: 'flex', gap: '24px', padding: '24px', backgroundColor: '#000000', borderRadius: '32px' }
+              }
+            >
+              <Checkbox checked color='inverse' name='sdsdsd' type='checkbox' label='Checkbox' />
+            </span>
           </section>
         </section>
         {/* Radiobutton */}
@@ -158,6 +181,7 @@ function App() {
           >
             <Radio name='sdsdsd' type='radio' label='radio 1' />
             <Radio name='sdsdsd' type='radio' label='radio 2' />
+            {/* <Radio checked name='sdsdsd' type='radio' label='radio 2' /> */}
           </section>
         </section>
 

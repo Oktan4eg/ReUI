@@ -11,6 +11,7 @@ export interface LabelProps {
   success?: boolean;
   disabled?: boolean;
   fontWeight?: FontWeight;
+  inverse?: boolean;
 
   /**
    * Allow to apply custom classes to component
@@ -86,6 +87,14 @@ const StyledLabel = styled.label<LabelProps>`
             }
        
     `};
+  ${(props) =>
+    props.inverse &&
+    `
+      
+    span.input-label {
+      color: ${props.theme.colors.fg.inverse.primary}; 
+    }
+    `}
 `;
 
 export const Label: FC<LabelProps> = (props, { fontWeight }) => {
@@ -98,6 +107,7 @@ export const Label: FC<LabelProps> = (props, { fontWeight }) => {
       success={props.success}
       disabled={props.disabled}
       fontWeight={fontWeight}
+      inverse={props.inverse}
     >
       {props.children}
     </StyledLabel>
