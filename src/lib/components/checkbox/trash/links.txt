@@ -1,0 +1,17 @@
+https://www.mousedc.ru/learning/515-chekboks-radio-knopki-steyt-react/
+https://stackforgeeks.com/blog/indeterminate-checkbox-in-react-jsx
+https://gist.github.com/mhushang/8adcdfcb6d880294c5c2a74cf37b6466
+https://www.robinwieruch.de/react-checkbox-indeterminate/
+
+Пример нативного чекбокса с неопределенным состоянием
+ <label>
+              <input
+                type='checkbox'
+                ref={(input) => {
+                  if (input) {
+                    input.indeterminate = true;
+                  }
+                }}
+              />{' '}
+              Un test
+            </label>

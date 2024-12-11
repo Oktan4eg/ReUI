@@ -10,7 +10,7 @@ export const lightTheme: DefaultTheme = {
         primary: palette.neutral[8],
         secondary: palette.neutral[24],
         tertiary: palette.neutral[50],
-        disabled: palette.neutral[8] + palette.opacity[4],
+        disabled: palette.neutral[8] + palette.opacity[40],
         muted: palette.neutral[8] + palette.opacity[24],
         ghosty: palette.neutral[8] + palette.opacity[12],
       },
@@ -19,7 +19,7 @@ export const lightTheme: DefaultTheme = {
         primary: palette.neutral[96],
         secondary: palette.neutral[70],
         tertiary: palette.neutral[50],
-        disabled: palette.neutral[96] + palette.opacity[4],
+        disabled: palette.neutral[96] + palette.opacity[40],
         muted: palette.neutral[96] + palette.opacity[24],
         ghosty: palette.neutral[96] + palette.opacity[12],
       },
@@ -31,6 +31,7 @@ export const lightTheme: DefaultTheme = {
         low: palette.neutral[92], // второстепенные, добавочные фоны, для визуального разделения контента, футера... на откуп продуктовому дизайнеру
         mid: palette.neutral[96],
         hight: palette.neutral[100],
+        // disabled: palette.neutral[50] + palette.opacity[40],
         disabled: palette.neutral[98] + palette.opacity[12],
       },
       inverse: {
@@ -38,6 +39,7 @@ export const lightTheme: DefaultTheme = {
         low: palette.neutral[8],
         mid: palette.neutral[12],
         hight: palette.neutral[20],
+        // disabled: palette.neutral[50] + palette.opacity[40],
         disabled: palette.neutral[50] + palette.opacity[12],
       },
     },
@@ -54,11 +56,11 @@ export const lightTheme: DefaultTheme = {
     // Вариативность оттенков даёт возможность управлять контрастом и делают интерфейс разнообразнее и приятнее в деталях.
     neutral: {
       default: {
-        primary: palette.neutral[24],
-        secondary: palette.neutral[40],
-        tertiary: palette.neutral[80],
-        hover: palette.neutral[30],
-        active: palette.neutral[24],
+        primary: palette.neutral[8],
+        secondary: palette.neutral[24],
+        tertiary: palette.neutral[50],
+        hover: palette.neutral[12],
+        active: palette.neutral[20],
         contrast: palette.neutral[100],
       },
       ghosty: {
@@ -72,20 +74,20 @@ export const lightTheme: DefaultTheme = {
     },
     inverse: {
       default: {
-        primary: palette.neutral[100],
-        secondary: palette.neutral[90],
-        tertiary: palette.neutral[80],
+        primary: palette.neutral[80],
+        secondary: palette.neutral[88],
+        tertiary: palette.neutral[94],
         hover: palette.neutral[88],
-        active: palette.neutral[70],
+        active: palette.neutral[80],
         contrast: palette.neutral[12],
       },
       ghosty: {
-        primary: palette.neutral[12],
-        secondary: palette.neutral[12],
-        tertiary: palette.neutral[12],
-        hover: palette.neutral[24],
+        primary: palette.neutral[8],
+        secondary: palette.neutral[24],
+        tertiary: palette.neutral[50],
+        hover: palette.neutral[12],
         active: palette.neutral[20],
-        contrast: palette.neutral[96],
+        contrast: palette.neutral[100],
       },
     },
     lead: {
@@ -344,9 +346,9 @@ export const darkTheme = {
     fg: {
       default: {
         primary: palette.neutral[96],
-        secondary: palette.neutral[80],
-        tertiary: palette.neutral[70],
-        disabled: palette.neutral[96] + palette.opacity[4],
+        secondary: palette.neutral[70],
+        tertiary: palette.neutral[50],
+        disabled: palette.neutral[96] + palette.opacity[40],
         muted: palette.neutral[96] + palette.opacity[24],
         ghosty: palette.neutral[96] + palette.opacity[12],
       },
@@ -354,27 +356,29 @@ export const darkTheme = {
         // базовые контентные цвета для использования на инверсивных фонах
         primary: palette.neutral[8],
         secondary: palette.neutral[24],
-        tertiary: palette.neutral[40],
-        disabled: palette.neutral[50] + palette.opacity[4],
-        muted: palette.neutral[50] + palette.opacity[24],
-        ghosty: palette.neutral[50] + palette.opacity[12],
+        tertiary: palette.neutral[50],
+        disabled: palette.neutral[8] + palette.opacity[40],
+        muted: palette.neutral[8] + palette.opacity[24],
+        ghosty: palette.neutral[8] + palette.opacity[12],
       },
     },
     //   базовые фоны страницы
     bg: {
       default: {
         page: palette.neutral[8], // Дефолтный, body page background
-        low: palette.neutral[12], // второстепенные, добавочные фоны, для визуального разделения контента, футера... на откуп продуктовому дизайнеру
-        mid: palette.neutral[20],
-        hight: palette.neutral[100],
-        disabled: palette.neutral[98] + palette.opacity[12],
+        low: palette.neutral[8],
+        mid: palette.neutral[12],
+        hight: palette.neutral[20],
+        // disabled: palette.neutral[50] + palette.opacity[40],
+        disabled: palette.neutral[50] + palette.opacity[12],
       },
       inverse: {
-        page: palette.neutral[96], // Дефолтный, body page background
-        low: palette.neutral[80],
-        mid: palette.neutral[70],
-        hight: palette.neutral[60],
-        disabled: palette.neutral[50] + palette.opacity[12],
+        page: palette.neutral[98], // Дефолтный, body page background
+        low: palette.neutral[92], // второстепенные, добавочные фоны, для визуального разделения контента, футера... на откуп продуктовому дизайнеру
+        mid: palette.neutral[96],
+        hight: palette.neutral[100],
+        // disabled: palette.neutral[50] + palette.opacity[40],
+        disabled: palette.neutral[98] + palette.opacity[12],
       },
     },
     surface: {
@@ -389,30 +393,30 @@ export const darkTheme = {
     // Вариативность оттенков даёт возможность управлять контрастом и делают интерфейс разнообразнее и приятнее в деталях.
     neutral: {
       default: {
-        primary: palette.neutral[100],
-        secondary: palette.neutral[90],
-        tertiary: palette.neutral[80],
-        hover: palette.neutral[80],
-        active: palette.neutral[70],
+        primary: palette.neutral[80],
+        secondary: palette.neutral[88],
+        tertiary: palette.neutral[94],
+        hover: palette.neutral[88],
+        active: palette.neutral[80],
         contrast: palette.neutral[12],
       },
       ghosty: {
-        primary: palette.neutral[12],
-        secondary: palette.neutral[40],
-        tertiary: palette.neutral[60],
-        hover: palette.neutral[24],
+        primary: palette.neutral[8],
+        secondary: palette.neutral[24],
+        tertiary: palette.neutral[50],
+        hover: palette.neutral[12],
         active: palette.neutral[20],
-        contrast: palette.neutral[96],
+        contrast: palette.neutral[100],
       },
     },
     inverse: {
       default: {
-        primary: palette.neutral[50],
-        secondary: palette.neutral[60],
-        tertiary: palette.neutral[80],
-        hover: palette.neutral[40],
-        active: palette.neutral[30],
-        contrast: palette.neutral[92],
+        primary: palette.neutral[8],
+        secondary: palette.neutral[24],
+        tertiary: palette.neutral[50],
+        hover: palette.neutral[12],
+        active: palette.neutral[20],
+        contrast: palette.neutral[100],
       },
       ghosty: {
         primary: palette.neutral[80],
