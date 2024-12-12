@@ -13,7 +13,8 @@ import {
 } from './lib';
 import { useTheme } from './lib/hooks';
 import { ThemeProvider } from 'styled-components';
-import { palette, sizes, font } from './lib/theme/tokensMY';
+// import { palette, sizes, font } from './lib/theme/tokensMY';
+import { EducationLogo } from './lib/components/for-education/education-logo';
 
 function App2() {
   const { theme, setTheme } = useTheme();
@@ -24,6 +25,30 @@ function App2() {
         <GlobalStyle />
         {/* <ShowTokens2 /> */}
         {/* <ShowTokens /> */}
+        <nav style={{ display: 'flex', padding: '96px', gap: '96px' }}>
+          {/* <Text> */}
+          <Link href='/'>
+            <EducationLogo />
+          </Link>
+          {/* </Text> */}
+          {/* <link /> */}
+          <Text size={'label'} scale='lg'>
+            <Link href='/programmms'>Программы</Link>
+          </Text>
+          {/* </Text> */}
+          <Text size={'label'} scale='lg'>
+            <Link href='/franchise'>Франшиза</Link>
+          </Text>
+          <Text size={'label'} scale='lg'>
+            <Link href='/faq'>Вопросы и ответы</Link>
+          </Text>
+          <Text size={'label'} scale='lg'>
+            <Link href='/contacts'>Контакты</Link>
+          </Text>
+          <Text size={'label'} scale='lg'>
+            <Link href='/courses'>Мои курсы</Link>
+          </Text>
+        </nav>
         <header
           style={{
             width: '100%',
@@ -175,7 +200,7 @@ function App2() {
               paddingBlock: '24px',
             }}
           >
-            <Checkbox checked disabled color='lead' name='sdsdsd' type='checkbox' label='Checkbox' />
+            <Checkbox disabled color='lead' name='sdsdsd' type='checkbox' label='Checkbox' />
             <Checkbox disabled color='distuctive' name='sdsdsd' type='checkbox' label='Checkbox' />
             <Checkbox color='info' name='sdsdsd' type='checkbox' label='Checkbox' />
             <Checkbox color='success' name='sdsdsd' type='checkbox' label='Checkbox' />
@@ -190,9 +215,9 @@ function App2() {
             }
           >
             <Checkbox disabled color='inverse' name='sdsdsd' type='checkbox' label='Checkbox' />
-            <Checkbox disabled checked color='inverse' name='sdsdsd' type='checkbox' label='Checkbox' />
+            <Checkbox disabled color='inverse' name='sdsdsd' type='checkbox' label='Checkbox' />
             <Checkbox color='inverse' name='sdsdsd' type='checkbox' label='Checkbox' />
-            <Checkbox checked color='inverse' name='sdsdsd' type='checkbox' label='Checkbox' />
+            <Checkbox color='inverse' name='sdsdsd' type='checkbox' label='Checkbox' />
           </span>
         </section>
         {/* Radiobutton */}
@@ -211,7 +236,7 @@ function App2() {
           >
             <Radio name='sdsdsd' type='radio' label='radio 1' />
             <Radio name='sdsdsd' type='radio' label='radio 2' />
-            {/* <Radio checked name='sdsdsd' type='radio' label='radio 2' /> */}
+            {/* <Radio  name='sdsdsd' type='radio' label='radio 2' /> */}
           </section>
         </section>
 

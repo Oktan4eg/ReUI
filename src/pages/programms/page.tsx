@@ -10,11 +10,11 @@ import {
   darkTheme,
   Button,
   Toggle,
-} from './lib';
-import { useTheme } from './lib/hooks';
+} from '../../lib';
+import { useTheme } from '../../lib/hooks';
 import { ThemeProvider } from 'styled-components';
-import { palette, sizes, font } from './lib/theme/tokensMY';
-import { EducationLogo } from './lib/components/for-education/education-logo';
+import { palette, sizes, font } from '../../lib/theme/tokensMY';
+import { EducationLogo } from '../../lib/components/for-education/education-logo';
 import React from 'react';
 
 function Programms() {
