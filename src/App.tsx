@@ -11,31 +11,26 @@ import {
   Button,
   Toggle,
 } from './lib';
+
 import { useTheme } from './lib/hooks';
 import { ThemeProvider } from 'styled-components';
-// import { palette, sizes, font } from './lib/theme/tokensMY';
 import { EducationLogo } from './lib/components/for-education/education-logo';
 
-function App2() {
+function App() {
   const { theme, setTheme } = useTheme();
 
   return (
     <main style={{ display: 'grid', padding: '96px', gap: '96px' }}>
       <ThemeProvider theme={theme === 'dark' ? darkTheme : lightTheme}>
         <GlobalStyle />
-        {/* <ShowTokens2 /> */}
-        {/* <ShowTokens /> */}
+
         <nav style={{ display: 'flex', padding: '96px', gap: '96px' }}>
-          {/* <Text> */}
           <Link href='/'>
             <EducationLogo />
           </Link>
-          {/* </Text> */}
-          {/* <link /> */}
           <Text size={'label'} scale='lg'>
             <Link href='/programmms'>Программы</Link>
           </Text>
-          {/* </Text> */}
           <Text size={'label'} scale='lg'>
             <Link href='/franchise'>Франшиза</Link>
           </Text>
@@ -477,4 +472,4 @@ function App2() {
   );
 }
 
-export default App2;
+export default App;
