@@ -1,4 +1,4 @@
-import { FC, ReactNode, RefObject, MouseEventHandler } from 'react';
+import { ReactNode, RefObject, MouseEventHandler } from 'react';
 import styled from 'styled-components';
 export type ContainerElement = HTMLSpanElement | HTMLAnchorElement;
 

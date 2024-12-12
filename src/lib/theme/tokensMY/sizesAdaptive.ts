@@ -1,15 +1,15 @@
 const minWidth = 1324;
 
-const breakpoints = {
-  values: {
-    xxs: 0, // small phone
-    xs: 300, // phone
-    sm: 600, // tablets
-    md: 900, // small laptop
-    lg: 1200, // desktop
-    xl: 1536, // large screens
-  },
-};
+// const breakpoints = {
+//   values: {
+//     xxs: 0, // small phone
+//     xs: 300, // phone
+//     sm: 600, // tablets
+//     md: 900, // small laptop
+//     lg: 1200, // desktop
+//     xl: 1536, // large screens
+//   },
+// };
 
 var screen = window.matchMedia('(max-width:600px)');
 if (screen.matches) {

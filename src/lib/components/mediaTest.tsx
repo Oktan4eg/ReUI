@@ -1,5 +1,5 @@
-import { SizesAdaptive } from '../theme/tokensMY/sizesAdaptive';
-import { useMatchMedia, useMediaQueryMantine } from '../hooks';
+// import { SizesAdaptive } from '../theme/tokensMY/sizesAdaptive';
+import { useMatchMedia } from '../hooks';
 
 export const MediaTest = () => {
   // const example: Record<string, number> = {};

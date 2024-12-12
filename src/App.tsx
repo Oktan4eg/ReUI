@@ -1,7 +1,7 @@
 import {
-  ShowTokens,
+  // ShowTokens,
   // ShowTokens2,
-  Link,
+  // Link,
   Text,
   Radio,
   Checkbox,
@@ -13,7 +13,7 @@ import {
 } from './lib';
 import { useTheme } from './lib/hooks';
 import { ThemeProvider } from 'styled-components';
-import { palette, sizes, font } from './lib/theme/tokensMY';
+// import { palette, sizes, font } from './lib/theme/tokensMY';
 
 function App2() {
   const { theme, setTheme } = useTheme();

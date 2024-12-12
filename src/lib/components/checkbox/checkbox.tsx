@@ -1,9 +1,10 @@
 import styled from 'styled-components';
-import { FC, useState } from 'react';
+import { FC } from 'react';
+// import {  useState } from 'react';
 
 import { InputProps } from '../text-input';
 import { Label } from '../label';
-import { Icon } from '../icon';
+// import { Icon } from '../icon';
 
 export interface CheckboxProps extends InputProps {
   /** 🔴 — Доделать. В целом, логика всех чекбоксов-тогглов итд не проработана, только стилизация*/

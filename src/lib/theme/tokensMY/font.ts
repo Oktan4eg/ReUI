@@ -1,6 +1,6 @@
-import { sizes } from './sizes';
+// import { sizes } from './sizes';
 
-import { DefaultTheme } from 'styled-components';
+// import { DefaultTheme } from 'styled-components';
 
 // export const lightTheme = {
 export const font = {

@@ -1,6 +1,6 @@
 import { Button } from './button02';
-import { action } from '@storybook/addon-actions';
-import { fn } from '@storybook/test';
+// import { action } from '@storybook/addon-actions';
+// import { fn } from '@storybook/test';
 
 export default {
   title: 'Components/Buttons/Button',

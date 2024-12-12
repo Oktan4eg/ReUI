@@ -67,24 +67,24 @@ const StyledInput = styled.input<InputProps>`
   ${(props) =>
     props.danger &&
     ` 
-        border-color: ${props.theme.colors.fg.primary};
+        border-color: ${props.theme.colors.fg.default.primary};
         &:focus {
-        border-color: ${props.theme.colors.fg.primary};
+        border-color: ${props.theme.colors.fg.default.primary};
         }
          &:hover {
-            border-color: ${props.theme.colors.fg.primary};      
+            border-color: ${props.theme.colors.fg.default.primary};      
     }
     `}
     
     ${(props) =>
     props.success &&
     `       
-         border-color: ${props.theme.colors.fg.primary};
+         border-color: ${props.theme.colors.fg.default.primary};
          &:hover {
-            border-color: ${props.theme.colors.fg.primary};       
+            border-color: ${props.theme.colors.fg.default.primary};       
     }
         &:focus {
-        border-color: ${props.theme.colors.fg.primary};
+        border-color: ${props.theme.colors.fg.default.primary};
         }
     `}
 `;
