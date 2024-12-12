@@ -1,4 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
+// import InterVarRegular from '../../../.next/
 import InterVarRegular from '../fonts/Inter-VariableFont_opsz,wght.ttf';
 import InterVarItalic from '../fonts/Inter-Italic-VariableFont_opsz,wght.ttf';
 import RobotoVarRegular from '../fonts/RobotoSerif-VariableFont_GRAD,opsz,wdth,wght.ttf';

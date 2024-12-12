@@ -1,6 +1,8 @@
 /**
  * https://www.youtube.com/watch?v=2-Iex4XG_Zg
  */
+'use client';
+
 import { useLayoutEffect, useState } from 'react';
 
 // определение системной темы
