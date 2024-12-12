@@ -15,7 +15,7 @@ import { useTheme } from './lib/hooks';
 import { ThemeProvider } from 'styled-components';
 import { palette, sizes, font } from './lib/theme/tokensMY';
 
-function App() {
+function App2() {
   const { theme, setTheme } = useTheme();
 
   return (
@@ -53,6 +53,11 @@ function App() {
           <Text as={'h2'} weight={'bold'} size={'heading'} scale={'xl'} align={'left'} font={'display'}>
             Buttons
           </Text>
+
+          <Button disabled size='sm' appearance='filled' color='neutral' label='Filled' />
+          <Button disabled size='sm' appearance='tonal' color='neutral' label='Tonal' />
+          <Button disabled size='sm' appearance='outlined' color='neutral' label='Outlined' />
+          <Button disabled size='sm' appearance='linked' color='neutral' label='Linked' />
           <section
             style={{
               display: 'grid',
@@ -101,7 +106,29 @@ function App() {
             <Button appearance='tonal' color='inverse' label='Tonal' />
             <Button appearance='outlined' color='inverse' label='Outlined' />
             <Button appearance='linked' color='inverse' label='Linked' />
+            <Button disabled size='sm' appearance='filled' color='inverse' label='Filled' />
+            <Button disabled size='sm' appearance='tonal' color='inverse' label='Tonal' />
+            <Button disabled size='sm' appearance='outlined' color='inverse' label='Outlined' />
+            <Button disabled size='sm' appearance='linked' color='inverse' label='Linked' />
           </span>
+          <ThemeProvider theme={theme === 'dark' ? lightTheme : darkTheme}>
+            <span
+              style={
+                theme === 'dark'
+                  ? { display: 'flex', gap: '24px', padding: '24px', backgroundColor: '#ffffff', borderRadius: '32px' }
+                  : { display: 'flex', gap: '24px', padding: '24px', backgroundColor: '#000000', borderRadius: '32px' }
+              }
+            >
+              <Button appearance='filled' color='neutral' label='Filled' />
+              <Button appearance='tonal' color='neutral' label='Tonal' />
+              <Button appearance='outlined' color='neutral' label='Outlined' />
+              <Button appearance='linked' color='neutral' label='Linked' />
+              <Button disabled size='sm' appearance='filled' color='neutral' label='Filled' />
+              <Button disabled size='sm' appearance='tonal' color='neutral' label='Tonal' />
+              <Button disabled size='sm' appearance='outlined' color='neutral' label='Outlined' />
+              <Button disabled size='sm' appearance='linked' color='neutral' label='Linked' />
+            </span>
+          </ThemeProvider>
         </section>
 
         {/* Inputs */}
@@ -148,22 +175,25 @@ function App() {
               paddingBlock: '24px',
             }}
           >
-            <Checkbox color='lead' name='sdsdsd' type='checkbox' label='Checkbox' />
-            <Checkbox color='distuctive' name='sdsdsd' type='checkbox' label='Checkbox' />
+            <Checkbox checked disabled color='lead' name='sdsdsd' type='checkbox' label='Checkbox' />
+            <Checkbox disabled color='distuctive' name='sdsdsd' type='checkbox' label='Checkbox' />
             <Checkbox color='info' name='sdsdsd' type='checkbox' label='Checkbox' />
             <Checkbox color='success' name='sdsdsd' type='checkbox' label='Checkbox' />
             <Checkbox color='warning' name='sdsdsd' type='checkbox' label='Checkbox' />
             <Checkbox color='neutral' name='sdsdsd' type='checkbox' label='Checkbox' />
-            <span
-              style={
-                theme === 'dark'
-                  ? { display: 'flex', gap: '24px', padding: '24px', backgroundColor: '#ffffff', borderRadius: '32px' }
-                  : { display: 'flex', gap: '24px', padding: '24px', backgroundColor: '#000000', borderRadius: '32px' }
-              }
-            >
-              <Checkbox checked color='inverse' name='sdsdsd' type='checkbox' label='Checkbox' />
-            </span>
           </section>
+          <span
+            style={
+              theme === 'dark'
+                ? { display: 'flex', gap: '24px', padding: '24px', backgroundColor: '#ffffff', borderRadius: '32px' }
+                : { display: 'flex', gap: '24px', padding: '24px', backgroundColor: '#000000', borderRadius: '32px' }
+            }
+          >
+            <Checkbox disabled color='inverse' name='sdsdsd' type='checkbox' label='Checkbox' />
+            <Checkbox disabled checked color='inverse' name='sdsdsd' type='checkbox' label='Checkbox' />
+            <Checkbox color='inverse' name='sdsdsd' type='checkbox' label='Checkbox' />
+            <Checkbox checked color='inverse' name='sdsdsd' type='checkbox' label='Checkbox' />
+          </span>
         </section>
         {/* Radiobutton */}
         <section>
@@ -422,4 +452,4 @@ function App() {
   );
 }
 
-export default App;
+export default App2;

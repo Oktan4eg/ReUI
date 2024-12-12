@@ -229,11 +229,21 @@ ${(props) =>
     props.disabled &&
     `
             cursor: default;
-
             &:disabled, &:active, &:hover {
-            color: #ffffff;
-            background: #bababa;
-            border-color: #bababa;
+            color: ${props.theme.colors.fg.default.disabled};  
+            background: ${props.theme.colors.bg.inverse.disabled};  
+            border-color: transparent;  
+            }
+    `}
+    ${(props) =>
+    props.disabled &&
+    props.color === 'inverse' &&
+    `
+            cursor: default;
+            &:disabled, &:active, &:hover {
+            color: ${props.theme.colors.fg.inverse.disabled};  
+            background: ${props.theme.colors.bg.default.disabled};  
+            border-color: transparent;  
             }
     `}
 `;
