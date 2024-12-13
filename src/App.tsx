@@ -28,7 +28,7 @@ function App() {
       {' '}
       <ThemeProvider theme={theme === 'dark' ? darkTheme : lightTheme}>
         <div
-          style={{ position: 'absolute', zIndex: '1', display: 'grid', padding: '64px 96px 96px 96px', gap: '96px' }}
+          style={{ position: 'relative', zIndex: '1', display: 'grid', padding: '64px 96px 96px 96px', gap: '96px' }}
         >
           <GlobalStyle />
           <NavBar />
@@ -493,7 +493,7 @@ function App() {
 
           {/* <Button appearance="secondary" size="small" /> */}
         </div>{' '}
-        <Hero />
+        {/* <Hero /> */}
       </ThemeProvider>
     </main>
   );

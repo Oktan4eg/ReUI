@@ -6,7 +6,7 @@ import styled from 'styled-components';
 import { NavLink } from 'react-router-dom';
 import { EducationLogo } from './lib/components/for-education/education-logo';
 // import { HeroLink } from './HeroLink';
-import video from './video.mp4';
+import video from './video2.mp4';
 
 interface HeroProps {
   /** Имя logo */
@@ -15,10 +15,10 @@ interface HeroProps {
 
 const StyledHero = styled.span<HeroProps>`
   display: flex;
-  position: absolute;
+  position: relative;
   width: 100%;
-  height: 640px;
-  background-color: aliceblue;
+  height: 560px;
+  /* background-color: aliceblue; */
   gap: 24px;
   flex-direction: row;
   justify-content: space-between;
@@ -32,7 +32,7 @@ export const Hero: React.FC<HeroProps> = ({ logo = 'name' }) => {
     <StyledHero>
       {/* <video src="video.mp4" type="video/mp4" autoPlay muted loop></video> */}
 
-      <video autoPlay muted loop>
+      <video aria-hidden style={{ position: 'relative', width: '100%' }} autoPlay playsInline muted loop>
         <source src={video} type='video/mp4' />
       </video>
     </StyledHero>
