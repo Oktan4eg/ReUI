@@ -1,4 +1,4 @@
-import { palette, sizes, font } from './tokensMY';
+import { palette, sizes, font } from './tokens';
 import { DefaultTheme } from 'styled-components';
 
 // export const lightTheme = {

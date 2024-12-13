@@ -11,10 +11,12 @@ import {
   Button,
   Toggle,
 } from './lib';
+import { NavBar } from './navBar';
 
 import { useTheme } from './lib/hooks';
 import { ThemeProvider } from 'styled-components';
 import { EducationLogo } from './lib/components/for-education/education-logo';
+import { NavLink } from 'react-router-dom';
 
 function App() {
   const { theme, setTheme } = useTheme();
@@ -23,27 +25,34 @@ function App() {
     <main style={{ display: 'grid', padding: '96px', gap: '96px' }}>
       <ThemeProvider theme={theme === 'dark' ? darkTheme : lightTheme}>
         <GlobalStyle />
+        <NavBar />
+        {/* <nav style={{ display: 'flex', padding: '24px', gap: '96px' }}>
+          <NavLink to='/'>
+            <EducationLogo fill='white' />
+          </NavLink>
 
-        <nav style={{ display: 'flex', padding: '96px', gap: '96px' }}>
-          <Link href='/'>
-            <EducationLogo />
-          </Link>
+          <NavLink to='/programms'>
+            <Text size={'label'} scale='lg'>
+              Программы
+            </Text>
+          </NavLink>
           <Text size={'label'} scale='lg'>
-            <Link href='/programmms'>Программы</Link>
+            Программы
+          </Text>
+
+          <Text size={'label'} scale='lg'>
+            <NavLink to='/franchise'>Франшиза</NavLink>
           </Text>
           <Text size={'label'} scale='lg'>
-            <Link href='/franchise'>Франшиза</Link>
+            <NavLink to='/faq'>Вопросы и ответы</NavLink>
           </Text>
           <Text size={'label'} scale='lg'>
-            <Link href='/faq'>Вопросы и ответы</Link>
+            <NavLink to='/contacts'>Контакты</NavLink>
           </Text>
           <Text size={'label'} scale='lg'>
-            <Link href='/contacts'>Контакты</Link>
+            <NavLink to='/courses'>Мои курсы</NavLink>
           </Text>
-          <Text size={'label'} scale='lg'>
-            <Link href='/courses'>Мои курсы</Link>
-          </Text>
-        </nav>
+        </nav> */}
         <header
           style={{
             width: '100%',

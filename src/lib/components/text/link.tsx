@@ -66,7 +66,8 @@ const StyledTextLink = styled.a<LinkProps>`
   cursor: pointer;
   display: inline-flex;
   color: ${(props) => props.theme.colors.fg.default.primary};
-  text-decoration: underline;
+  /* text-decoration: underline; */
+  text-decoration: none;
   font-size: ${(props) => props.theme.font.size.body};
   &:hover {
     color: ${(props) => props.theme.colors.success.default.primary};

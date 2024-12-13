@@ -1,4 +1,4 @@
-import { SizesAdaptive } from '../theme/tokensMY/sizesAdaptive';
+import { SizesAdaptive } from '../theme/tokens/sizesAdaptive';
 import { useMatchMedia, useMediaQueryMantine } from '../hooks';
 
 export const MediaTest = () => {

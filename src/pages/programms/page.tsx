@@ -19,7 +19,7 @@ import React from 'react';
 import { EducationLogo } from '../../lib/components/for-education/education-logo';
 import { NavBar } from '../../navbar';
 
-function FAQ() {
+function Programm() {
   const { theme, setTheme } = useTheme();
 
   return (
@@ -35,7 +35,7 @@ function FAQ() {
           }}
         >
           <Text as={'h1'} size={'display'} scale={'xl'} weight={'black'} align={'justify'} font={'display'}>
-            Franchise
+            Programms
           </Text>
           <Text as={'h1'} size={'display'} scale={'xl'} weight={'black'} align={'justify'} font={'display'}>
             Re UI Kit
@@ -60,4 +60,4 @@ function FAQ() {
   );
 }
 
-export default FAQ;
+export default Programm;

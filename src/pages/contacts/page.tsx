@@ -13,9 +13,11 @@ import {
 } from '../../lib';
 import { useTheme } from '../../lib/hooks';
 import { ThemeProvider } from 'styled-components';
+import { NavLink } from 'react-router-dom';
 
 import React from 'react';
 import { EducationLogo } from '../../lib/components/for-education/education-logo';
+import { NavBar } from '../../navbar';
 
 function Contacts() {
   const { theme, setTheme } = useTheme();
@@ -25,32 +27,15 @@ function Contacts() {
       <ThemeProvider theme={theme === 'dark' ? darkTheme : lightTheme}>
         <GlobalStyle />
         {/* <EducationLogo /> */}
-        Contacts
-        <nav style={{ display: 'flex', padding: '96px', gap: '96px' }}>
-          <Link href='/'>
-            <EducationLogo />
-          </Link>
-          <Text size={'label'} scale='lg'>
-            <Link href='/programmms'>Программы</Link>
-          </Text>
-          <Text size={'label'} scale='lg'>
-            <Link href='/franchise'>Франшиза</Link>
-          </Text>
-          <Text size={'label'} scale='lg'>
-            <Link href='/faq'>Вопросы и ответы</Link>
-          </Text>
-          <Text size={'label'} scale='lg'>
-            <Link href='/contacts'>Контакты</Link>
-          </Text>
-          <Text size={'label'} scale='lg'>
-            <Link href='/courses'>Мои курсы</Link>
-          </Text>
-        </nav>
+        <NavBar />
         <header
           style={{
             width: '100%',
           }}
         >
+          <Text as={'h1'} size={'display'} scale={'xl'} weight={'black'} align={'justify'} font={'display'}>
+            Contacts
+          </Text>
           <Text as={'h1'} size={'display'} scale={'xl'} weight={'black'} align={'justify'} font={'display'}>
             Re UI Kit
             <Text inline as={'span'} size={'display'} scale={'xl'} weight={'light'} align={'justify'} font={'display'}>
