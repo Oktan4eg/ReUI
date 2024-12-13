@@ -1,7 +1,7 @@
 import styled, { CSSProperties } from 'styled-components';
 import { FC, ReactNode, Fragment } from 'react';
 
-type TextTags = 'div' | 'span' | 'p' | 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6'; // Нужны ли вообще H2-6?
+type TextTags = 'li' | 'div' | 'span' | 'p' | 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6'; // Нужны ли вообще H2-6?
 type TextSizes = 'display' | 'heading' | 'title' | 'label' | 'body' | 'ligal' | 'button';
 type TextScale = 'xl' | 'lg' | 'md' | 'sm';
 type TextWeight = 'extraLight' | 'light' | 'regular' | 'medium' | 'semiBold' | 'bold' | 'extraBold' | 'black';
@@ -52,6 +52,8 @@ export interface TextProps {
 
 const StyledText = styled(Fragment)<TextProps>`
   display: ${(props) => (props.inline ? 'inline' : 'block')};
+  text-decoration: inherit;
+  color: inherit;
 
   ${(props) =>
     props.weight &&

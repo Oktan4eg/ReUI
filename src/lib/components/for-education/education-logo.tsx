@@ -1,4 +1,5 @@
 import { ComponentProps } from 'react';
+
 export const EducationLogo: React.FC<ComponentProps<'svg'>> = (props) => (
   <svg
     aria-hidden='true'

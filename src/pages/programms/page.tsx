@@ -23,7 +23,7 @@ function Programm() {
   const { theme, setTheme } = useTheme();
 
   return (
-    <div style={{ display: 'grid', padding: '96px', gap: '96px' }}>
+    <main style={{ display: 'grid', padding: '64px 96px 96px 96px', gap: '96px' }}>
       <ThemeProvider theme={theme === 'dark' ? darkTheme : lightTheme}>
         <GlobalStyle />
         {/* <EducationLogo /> */}
@@ -56,7 +56,7 @@ function Programm() {
           </Text>
         </header>
       </ThemeProvider>
-    </div>
+    </main>
   );
 }
 

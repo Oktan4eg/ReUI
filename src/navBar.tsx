@@ -8,31 +8,35 @@ import { EducationLogo } from './lib/components/for-education/education-logo';
 import { NavBarLink } from './navBarLink';
 
 interface NavBarProps {
-  /** Имя линки */
+  /** Имя logo */
   logo?: ReactNode;
 }
 
 const StyledNavBar = styled.nav<NavBarProps>`
   display: flex;
-  padding: 24px;
-  gap: 96px;
+
+  gap: 24px;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  transition: all 250ms ease;
 `;
 
 export const NavBar: React.FC<NavBarProps> = ({ logo = 'name' }) => {
   return (
     <StyledNavBar>
-      <NavLink to={'/'}>
+      <NavBarLink to={'/'}>
+        {/* <a href='/'> */}
         <EducationLogo />
-      </NavLink>
-      <NavBarLink name={'Программы'} to={'programms'} />
-      <NavBarLink name={'Франшиза'} to={'franchise'} />
-      <NavBarLink name={'Вопросы и ответы'} to={'faq'} />
-      <NavBarLink name={'Контакты'} to={'contacts'} />
-      <NavBarLink name={'Мои курсы'} to={'courses'} />
+        {/* </a> */}
+      </NavBarLink>
+
+      <ul style={{ gap: '48px', display: 'flex' }}>
+        <NavBarLink children={'Программы'} to={'/programms'} />
+        <NavBarLink children={'Франшиза'} to={'/franchise'} />
+        <NavBarLink children={'Вопросы и ответы'} to={'/faq'} />
+        <NavBarLink children={'Контакты'} to={'/contacts'} />
+        <NavBarLink children={'Мои курсы'} to={'/courses'} />
+      </ul>
     </StyledNavBar>
   );
 };

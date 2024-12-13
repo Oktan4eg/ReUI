@@ -40,11 +40,15 @@ export const GlobalStyle = createGlobalStyle`
             -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
             -webkit-tap-highlight-color: transparent;
             -webkit-overflow-scrolling: touch;
-
-            font-family: sans-serif;
+			/* font-family: Roboto; */
+			
+			/* :active {
+				color: aqua;
+			} */
+				
+				
             background: ${(props) => props.theme.colors.bg.default.page};
             color: ${(props) => props.theme.colors.fg.default.primary};
             }
+	
             `;
-
-// background: ${(props) => props.theme.colors.fg.primary};

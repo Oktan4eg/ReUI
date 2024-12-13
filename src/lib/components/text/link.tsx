@@ -66,16 +66,15 @@ const StyledTextLink = styled.a<LinkProps>`
   cursor: pointer;
   display: inline-flex;
   color: ${(props) => props.theme.colors.fg.default.primary};
-  /* text-decoration: underline; */
-  text-decoration: none;
-  font-size: ${(props) => props.theme.font.size.body};
+  text-decoration: underline;
+  /* text-decoration: none; */
+  /* font-size: ${(props) => props.theme.font.size.body}; */
   &:hover {
-    color: ${(props) => props.theme.colors.success.default.primary};
-    .reui-textLink-icon {
-      &:hover {
-        color: ${(props) => props.theme.colors.success.default.primary};
-      }
-    }
+    color: ${(props) => props.theme.colors.lead.default.primary};
+  }
+  &:active {
+    /* margin: 20px; */
+    /* color: ${(props) => props.theme.colors.lead.default.active}; */
   }
 
   ${(props) => props.pseudo && `text-decoration: none;`}

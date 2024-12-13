@@ -64,9 +64,9 @@ export const lightTheme: DefaultTheme = {
         contrast: palette.neutral[100],
       },
       ghosty: {
-        primary: palette.neutral[80],
+        primary: palette.neutral[100],
         secondary: palette.neutral[88],
-        tertiary: palette.neutral[94],
+        tertiary: palette.neutral[80],
         hover: palette.neutral[88],
         active: palette.neutral[80],
         contrast: palette.neutral[12],
@@ -393,9 +393,9 @@ export const darkTheme = {
     // Вариативность оттенков даёт возможность управлять контрастом и делают интерфейс разнообразнее и приятнее в деталях.
     neutral: {
       default: {
-        primary: palette.neutral[80],
+        primary: palette.neutral[100],
         secondary: palette.neutral[88],
-        tertiary: palette.neutral[94],
+        tertiary: palette.neutral[80],
         hover: palette.neutral[88],
         active: palette.neutral[80],
         contrast: palette.neutral[12],
