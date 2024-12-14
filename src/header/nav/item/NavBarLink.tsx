@@ -1,7 +1,7 @@
 import React from 'react';
 import { ReactNode } from 'react';
 // import { Icon } from '../icon';
-import { Text } from './lib';
+import { Text } from '../../../lib';
 import styled from 'styled-components';
 import { NavLink } from 'react-router-dom';
 

@@ -1,12 +1,12 @@
 import { GlobalStyle, lightTheme, darkTheme, Toggle } from './lib';
-import { Header } from './NavBarHeader.tsx';
+import { Header } from './header/NavBarHeader.tsx';
 
 import { useTheme } from './lib/hooks';
 import { ThemeProvider } from 'styled-components';
 
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
-import { HeroBanner } from './hero-banner.tsx';
+import { HeroBanner } from './hero-banner/hero-banner.tsx';
 
 function App() {
   const { theme, setTheme } = useTheme();

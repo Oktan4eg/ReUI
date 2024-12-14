@@ -3,8 +3,8 @@ import { ReactNode } from 'react';
 // import { Icon } from '../icon';
 import styled from 'styled-components';
 
-import { NavBarLogo } from './NavBarLogo';
-import { NavBarMenu } from './NavBarMenu';
+import { NavBarLogo } from './nav/item/NavBarLogo';
+import { NavBarMenu } from '././nav/NavBarMenu';
 
 interface HeaderProps {
   /** Имя logo */

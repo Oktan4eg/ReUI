@@ -1,7 +1,7 @@
 import React from 'react';
 
 // import { NavBarLogoProps, NavBarMenuLogos,  } from './nav-bar-menu';
-import { NavBarLink } from './navBarLink';
+import { NavBarLink } from './item/NavBarLink';
 import styled from 'styled-components';
 
 interface NavBarProps {

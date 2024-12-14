@@ -1,6 +1,6 @@
-import { Children, MouseEventHandler, ReactNode } from 'react';
+import { MouseEventHandler, ReactNode } from 'react';
 import { Icon } from '../icon';
-import { Text } from '../text';
+
 import styled from 'styled-components';
 
 type ButtonAppearance = 'filled' | 'outlined' | 'tonal' | 'linked';
