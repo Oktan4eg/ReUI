@@ -13,11 +13,6 @@ import {
 } from '../../lib';
 import { useTheme } from '../../lib/hooks';
 import { ThemeProvider } from 'styled-components';
-import { NavLink } from 'react-router-dom';
-
-import React from 'react';
-import { EducationLogo } from '../../lib/components/for-education/education-logo';
-import { Header, NavBarMenu } from '../../nav-bar-menu';
 
 function FAQ() {
   const { theme, setTheme } = useTheme();
@@ -27,7 +22,7 @@ function FAQ() {
       <ThemeProvider theme={theme === 'dark' ? darkTheme : lightTheme}>
         <GlobalStyle />
         {/* <EducationLogo /> */}
-        <Header />
+        {/* <Header /> */}
 
         <header
           style={{

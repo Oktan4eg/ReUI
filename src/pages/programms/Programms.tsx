@@ -14,7 +14,9 @@ import {
 import { useTheme } from '../../lib/hooks';
 import { ThemeProvider } from 'styled-components';
 
-function Contacts() {
+import React from 'react';
+
+function Programms() {
   const { theme, setTheme } = useTheme();
 
   return (
@@ -23,13 +25,14 @@ function Contacts() {
         <GlobalStyle />
         {/* <EducationLogo /> */}
         {/* <Header /> */}
+
         <header
           style={{
             width: '100%',
           }}
         >
           <Text as={'h1'} size={'display'} scale={'xl'} weight={'black'} align={'justify'} font={'display'}>
-            Contacts
+            Programms
           </Text>
           <Text as={'h1'} size={'display'} scale={'xl'} weight={'black'} align={'justify'} font={'display'}>
             Re UI Kit
@@ -54,4 +57,4 @@ function Contacts() {
   );
 }
 
-export default Contacts;
+export default Programms;
