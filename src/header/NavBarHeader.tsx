@@ -8,7 +8,10 @@ import { NavBarMenu } from '././nav/NavBarMenu';
 
 interface HeaderProps {
   /** Имя logo */
-  logo?: ReactNode;
+  // id: string;
+  // route: string;
+  // name: string;
+  // item: string;
 }
 
 const StyledHeader = styled.div<HeaderProps>`

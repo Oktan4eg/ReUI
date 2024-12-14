@@ -62,6 +62,7 @@ function App() {
           }}
         >
           <Header />
+          {/* <Header id='1' item='item' name='name' route='route' /> */}
         </div>
         {/*  hero-banner */}
         <div

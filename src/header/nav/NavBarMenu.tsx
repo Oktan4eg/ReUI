@@ -4,6 +4,16 @@ import React from 'react';
 import { NavBarLink } from './menu-item/NavBarLink';
 import styled from 'styled-components';
 
+// export const NavBarMenu: React.FC<NavBarProps> = ({ id, route, name, item }) => {
+//   const NavBarMenuItem = () => <NavBarLink key={id} children={name} to={route} id={id} />;
+//   return <StyledNavBarMenu>{NavBarMenuItem}</StyledNavBarMenu>;
+// };
+// import React from 'react';
+
+// // import { NavBarLogoProps, NavBarMenuLogos,  } from './nav-bar-menu';
+// import { NavBarLink } from './menu-item/NavBarLink';
+// import styled from 'styled-components';
+
 interface NavBarProps {
   /** Имя logo */
   // id?: string;
@@ -25,7 +35,7 @@ const NavBarMenuItems = [
   { id: '5', route: '/courses', name: 'Мои курсы' },
 ];
 
-export const NavBarMenu: React.FC<NavBarProps> = () => {
+export const NavBarMenu: React.FC<NavBarProps> = (props) => {
   const NavBarMenuItem = NavBarMenuItems.map((route) => (
     <NavBarLink key={route.id} children={route.name} to={route.route} id={route.id} />
   ));
