@@ -1,30 +1,12 @@
-import {
-  ShowTokens,
-  // ShowTokens2,
-  Link,
-  Text,
-  Radio,
-  Checkbox,
-  GlobalStyle,
-  lightTheme,
-  darkTheme,
-  Button,
-  Toggle,
-} from './lib';
-import { Header } from './nav-bar-menu';
-import { NavBarLogo } from './NavBarLogo.tsx';
+import { GlobalStyle, lightTheme, darkTheme, Toggle } from './lib';
+import { Header } from './NavBarHeader.tsx';
 
 import { useTheme } from './lib/hooks';
 import { ThemeProvider } from 'styled-components';
-import { EducationLogo } from './lib/components/for-education/education-logo';
-import { BrowserRouter, NavLink, Route, Routes } from 'react-router-dom';
-import { NavBarLink } from './navBarLink';
-import { Hero } from './hero';
+
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+
 import { HeroBanner } from './hero-banner.tsx';
-import Franchise from './pages/franchise/page';
-import Contacts from './pages/contacts/page';
-import FAQ from './pages/faq/page';
-import Courses from './pages/courses/page';
 
 function App() {
   const { theme, setTheme } = useTheme();

@@ -1,5 +1,5 @@
 import React from 'react';
-import { EducationLogo } from './lib/components/for-education/education-logo';
+
 // import { NavBarLogoProps, NavBarMenuLogos,  } from './nav-bar-menu';
 import { NavBarLink } from './navBarLink';
 import styled from 'styled-components';

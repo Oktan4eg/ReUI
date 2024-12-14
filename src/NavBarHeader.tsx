@@ -1,10 +1,8 @@
 import React from 'react';
-import { Children, MouseEventHandler, ReactNode } from 'react';
+import { ReactNode } from 'react';
 // import { Icon } from '../icon';
-import { Text, Link } from './lib';
 import styled from 'styled-components';
-import { NavLink } from 'react-router-dom';
-import { NavBarLink } from './navBarLink';
+
 import { NavBarLogo } from './NavBarLogo';
 import { NavBarMenu } from './NavBarMenu';
 
