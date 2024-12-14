@@ -17,7 +17,7 @@ import { NavLink } from 'react-router-dom';
 
 import React from 'react';
 import { EducationLogo } from '../../lib/components/for-education/education-logo';
-import { NavBar } from '../../navbar';
+import { Header, NavBarMenu } from '../../nav-bar-menu';
 
 function Programm() {
   const { theme, setTheme } = useTheme();
@@ -27,7 +27,7 @@ function Programm() {
       <ThemeProvider theme={theme === 'dark' ? darkTheme : lightTheme}>
         <GlobalStyle />
         {/* <EducationLogo /> */}
-        <NavBar />
+        <Header />
 
         <header
           style={{

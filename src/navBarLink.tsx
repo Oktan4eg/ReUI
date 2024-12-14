@@ -19,8 +19,9 @@ interface NavBarLinkProps {
   className?: string;
 }
 
-const StyledNavBarLink = styled.span<NavBarLinkProps>`
+const StyledNavBarLink = styled.li<NavBarLinkProps>`
   .link {
+    /* style={{ gap: '48px', display: 'flex' }} */
     text-decoration: none;
     color: ${(props) => props.theme.colors.neutral.default.primary};
     &.active {
@@ -39,11 +40,11 @@ const StyledNavBarLink = styled.span<NavBarLinkProps>`
 export const NavBarLink: React.FC<NavBarLinkProps> = ({ className, children, to, id = '1' }) => {
   return (
     <StyledNavBarLink to={to}>
-      <Text as='li' font='body' scale='lg' size='label' weight='medium'>
-        <NavLink to={to} id={id} className={`${className} link`}>
+      <NavLink to={to} id={id} className={`${className} link`}>
+        <Text as='span' font='body' scale='lg' size='label' weight='medium'>
           {children}
-        </NavLink>
-      </Text>
+        </Text>
+      </NavLink>
     </StyledNavBarLink>
   );
 };
