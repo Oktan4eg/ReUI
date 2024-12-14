@@ -1,12 +1,14 @@
 import React from 'react';
 
 // import { NavBarLogoProps, NavBarMenuLogos,  } from './nav-bar-menu';
-import { NavBarLink } from './item/NavBarLink';
+import { NavBarLink } from './menu-item/NavBarLink';
 import styled from 'styled-components';
 
 interface NavBarProps {
   /** Имя logo */
-  // logo?: ReactNode;
+  // id?: string;
+  // route?: string;
+  // name?: string;
 }
 const StyledNavBarMenu = styled.nav<NavBarProps>`
   display: flex;

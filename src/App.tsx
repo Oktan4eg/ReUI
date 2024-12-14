@@ -1,4 +1,4 @@
-import { GlobalStyle, lightTheme, darkTheme, Toggle } from './lib';
+import { GlobalStyle, lightTheme, darkTheme, Toggle, Button } from './lib';
 import { Header } from './header/NavBarHeader.tsx';
 
 import { useTheme } from './lib/hooks';
@@ -15,34 +15,107 @@ function App() {
     <ThemeProvider theme={theme === 'dark' ? darkTheme : lightTheme}>
       <GlobalStyle />
       <BrowserRouter>
+        {/*  theme switcher */}
         <div
-          className='app-wrapper'
           style={{
-            position: 'relative',
+            padding: '24px 96px 24px 96px',
+            display: 'flex',
+            position: 'sticky',
+            top: '0px',
+            // bottom:'100px',
+            gap: '32px',
+            flexDirection: 'row-reverse',
             zIndex: '1',
-            display: 'grid',
-            padding: '64px 96px 96px 96px',
-            gap: '96px',
+            // backgroundColor: 'red',
           }}
         >
-          <div className='theme-switcher'>
-            <Toggle
-              name={''}
-              type={'checkbox'}
-              onChange={() => {
+          <div style={{ width: '64px' }}>
+            <Button
+              size='sm'
+              appearance='linked'
+              label='ui'
+              onClick={() => {
                 theme === 'dark' ? setTheme('light') : setTheme('dark');
               }}
             />
           </div>
+          <div style={{ width: '64px' }}>
+            <Button
+              size='sm'
+              appearance='linked'
+              label={theme}
+              onClick={() => {
+                theme === 'dark' ? setTheme('light') : setTheme('dark');
+              }}
+            />{' '}
+          </div>
+        </div>
+        {/*  header */}
+        <div
+          style={{
+            padding: '24px 96px 24px 96px',
+            display: 'grid',
+            position: 'relative',
+            gap: '32px',
+            flexDirection: 'row',
+            zIndex: '1',
+          }}
+        >
           <Header />
+        </div>
+        {/*  hero-banner */}
+        <div
+          className='app-wrapper'
+          style={{
+            display: 'flex',
+            position: 'relative',
+            flexDirection: 'column',
+            zIndex: '1',
+            padding: '64px 96px 96px 96px',
+            gap: '96px',
+          }}
+        >
           <Routes>
             <Route path='/' element={<HeroBanner children='Программы' />} />
-            <Route path='/programms' element={<HeroBanner children='Программы' />} />
+            <Route
+              path='/programms'
+              element={
+                <HeroBanner children=' Программы Программы Программы Программы Программы Программы Программы Программы ' />
+              }
+            />
             <Route path='/franchise' element={<HeroBanner children='Франшиза' />} />
             <Route path='/faq' element={<HeroBanner children='Вопросы и ответы' />} />
             <Route path='/contacts' element={<HeroBanner children='Контакты' />} />
             <Route path='/courses' element={<HeroBanner children='Мои курсы' />} />
             <Route path='/ui' element={<HeroBanner children='ReUI' />} />
+          </Routes>
+          <div className='app-wrapper-content'></div>
+        </div>
+        {/*  hero-banner */}
+        <div
+          className='app-wrapper'
+          style={{
+            display: 'flex',
+            position: 'relative',
+            flexDirection: 'column',
+            zIndex: '1',
+            padding: '64px 96px 96px 96px',
+            gap: '96px',
+          }}
+        >
+          <Routes>
+            {/* <Route path='/' element={<HeroBanner children='Программы' />} /> */}
+            {/* <Route
+              path='/programms'
+              element={
+                <HeroBanner children=' Программы2 Программы Программы Программы Программы Программы Программы Программы ' />
+              } */}
+            {/* /> */}
+            <Route path='/franchise' element={<HeroBanner children='Франшиза2' />} />
+            <Route path='/faq' element={<HeroBanner children='Вопросы и ответы2' />} />
+            <Route path='/contacts' element={<HeroBanner children='Контакты2' />} />
+            <Route path='/courses' element={<HeroBanner children='Мои курсы2' />} />
+            <Route path='/ui' element={<HeroBanner children='ReUI2' />} />
           </Routes>
           <div className='app-wrapper-content'></div>
         </div>

@@ -87,6 +87,7 @@ const StyledButton = styled.button<ButtonProps>`
   /* white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis; */
+  // width: 120px;
 
   /* width: 100%; */
   // white-space: nowrap; /* Без переносов */
@@ -97,7 +98,7 @@ const StyledButton = styled.button<ButtonProps>`
   ${(props) =>
     props.filled &&
     `
-    width: 100%;
+    // width: 100%;
     `}
 
   &:focus-visible {
@@ -253,7 +254,7 @@ export const Button: React.FC<ButtonProps> = ({
   color = 'lead',
   scaleble = true,
   size = 'md',
-  filled,
+  filled = false,
   label = 'Button',
   disabled,
   iconStart,

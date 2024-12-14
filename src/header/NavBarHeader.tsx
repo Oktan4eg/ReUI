@@ -3,7 +3,7 @@ import { ReactNode } from 'react';
 // import { Icon } from '../icon';
 import styled from 'styled-components';
 
-import { NavBarLogo } from './nav/item/NavBarLogo';
+import { NavBarLogo } from './nav/menu-item/NavBarLogo';
 import { NavBarMenu } from '././nav/NavBarMenu';
 
 interface HeaderProps {
