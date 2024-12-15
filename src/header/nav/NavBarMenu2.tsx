@@ -4,6 +4,7 @@ import { NavBarLink } from './menu-item/NavBarLink';
 import styled from 'styled-components';
 
 interface NavBarProps {
+  // item: Array<T>;
   item: Array<T>;
   // obj?: string[];
 }

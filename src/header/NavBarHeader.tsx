@@ -8,19 +8,14 @@ import { NavBarMenu2 } from '././nav/NavBarMenu2';
 import { NavBarMenu } from '././nav/NavBarMenu';
 
 interface HeaderProps {
-  /** Имя logo */
-  items?: {};
-  // route: string;
-  // name: string;
-  // item: string;
+  item: Array<T>;
 }
-const NavBarMenuItems = [
-  { id: '1', route: '/programms', name: 'Программы' },
-  { id: '2', route: '/franchise', name: 'Франшиза' },
-  { id: '3', route: '/faq', name: 'Вопросы и ответы' },
-  { id: '4', route: '/contacts', name: 'Контакты' },
-  { id: '5', route: '/courses', name: 'Мои курсы' },
-];
+type T = {
+  id: string;
+  name: string;
+  route: string;
+};
+
 const StyledHeader = styled.div<HeaderProps>`
   display: inline-flex;
   gap: 48px;
@@ -28,12 +23,42 @@ const StyledHeader = styled.div<HeaderProps>`
   justify-content: space-between;
 `;
 
-export const Header: React.FC<HeaderProps> = () => {
+export const Header: React.FC<HeaderProps> = ({ item }) => {
   return (
-    <StyledHeader>
+    <StyledHeader item={item}>
       <NavBarLogo />
-      {/* <NavBarMenu2 map={NavBarMenuItems} id={'2'} name={'2'} route={'2'} /> */}
-      <NavBarMenu />
+      <NavBarMenu2 item={item} />
+      {/* <NavBarMenu /> */}
     </StyledHeader>
   );
 };
+// interface HeaderProps {
+//   /** Имя logo */
+//   items?: {};
+//   // route: string;
+//   // name: string;
+//   // item: string;
+// }
+// // const NavBarMenuItems = [
+// //   { id: '1', route: '/programms', name: 'Программы' },
+// //   { id: '2', route: '/franchise', name: 'Франшиза' },
+// //   { id: '3', route: '/faq', name: 'Вопросы и ответы' },
+// //   { id: '4', route: '/contacts', name: 'Контакты' },
+// //   { id: '5', route: '/courses', name: 'Мои курсы' },
+// // ];
+// const StyledHeader = styled.div<HeaderProps>`
+//   display: inline-flex;
+//   gap: 48px;
+//   align-items: center;
+//   justify-content: space-between;
+// `;
+
+// export const Header: React.FC<HeaderProps> = () => {
+//   return (
+//     <StyledHeader>
+//       <NavBarLogo />
+//       {/* <NavBarMenu2 item={items.items} /> */}
+//       <NavBarMenu />
+//     </StyledHeader>
+//   );
+// };
