@@ -7,15 +7,16 @@ import { NavLink } from 'react-router-dom';
 
 interface NavBarLinkProps {
   /** Имя линки */
-  children?: ReactNode;
-  /** адесс роута */
-  to: string;
+  children?: ReactNode | string;
   /** id линки */
   id?: string;
+  /** адесс роута */
+  to?: string;
   /**
    * Дополнительный класс
    */
   className?: string;
+  key?: string;
 }
 
 const StyledNavBarLink = styled.li<NavBarLinkProps>`
@@ -36,7 +37,7 @@ const StyledNavBarLink = styled.li<NavBarLinkProps>`
   }
 `;
 
-export const NavBarLink: React.FC<NavBarLinkProps> = ({ className, children, to, id = '1' }) => {
+export const NavBarLink: React.FC<NavBarLinkProps> = ({ className, children, to = '', id = '1' }) => {
   return (
     <StyledNavBarLink to={to}>
       <NavLink to={to} id={id} className={`${className} link`}>

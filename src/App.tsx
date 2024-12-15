@@ -7,12 +7,27 @@ import { ThemeProvider } from 'styled-components';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 import { HeroBanner } from './hero-banner/hero-banner.tsx';
+import { NavBarMenu2 } from './header/nav/NavBarMenu2.tsx';
+import { NavBarMenu } from './header/nav/NavBarMenu.tsx';
+import { NavBarLink } from './header/nav/menu-item/NavBarLink.tsx';
+
+const items = [
+  { id: '1', route: '/programms', name: 'Программы' },
+  { id: '2', route: '/franchise', name: 'Франшиза' },
+  { id: '3', route: '/faq', name: 'Вопросы и ответы' },
+  { id: '4', route: '/contacts', name: 'Контакты' },
+  { id: '5', route: '/courses', name: 'Мои курсы' },
+  { id: '6', route: '/coursess', name: 'Мои курсыs' },
+];
 
 function App() {
   const { theme, setTheme } = useTheme();
 
   return (
+    // return (
     <ThemeProvider theme={theme === 'dark' ? darkTheme : lightTheme}>
+      {/* <div>{NavBarMenuItem}</div> */}
+
       <GlobalStyle />
       <BrowserRouter>
         {/*  theme switcher */}
@@ -61,8 +76,8 @@ function App() {
             zIndex: '1',
           }}
         >
-          <Header />
-          {/* <Header id='1' item='item' name='name' route='route' /> */}
+          {/* <Header /> */}
+          {/* <Header /> */}
         </div>
         {/*  hero-banner */}
         <div
@@ -76,19 +91,18 @@ function App() {
             gap: '96px',
           }}
         >
+          {/* <Header /> */}
+          <NavBarMenu2 obj={items} />
+          {/* <NavBarMenu /> */}
+
           <Routes>
-            <Route path='/' element={<HeroBanner children='Программы' />} />
-            <Route
-              path='/programms'
-              element={
-                <HeroBanner children=' Программы Программы Программы Программы Программы Программы Программы Программы ' />
-              }
-            />
+            {/* <Route path='/' element={<HeroBanner children=' Программы' />} /> */}
+            <Route path='/programms' element={<HeroBanner children=' Программы' />} />
             <Route path='/franchise' element={<HeroBanner children='Франшиза' />} />
             <Route path='/faq' element={<HeroBanner children='Вопросы и ответы' />} />
             <Route path='/contacts' element={<HeroBanner children='Контакты' />} />
             <Route path='/courses' element={<HeroBanner children='Мои курсы' />} />
-            <Route path='/ui' element={<HeroBanner children='ReUI' />} />
+            {/* <Route path='/ui' element={<HeroBanner children='ReUI' />} /> */}
           </Routes>
           <div className='app-wrapper-content'></div>
         </div>
@@ -104,20 +118,6 @@ function App() {
             gap: '96px',
           }}
         >
-          <Routes>
-            {/* <Route path='/' element={<HeroBanner children='Программы' />} /> */}
-            {/* <Route
-              path='/programms'
-              element={
-                <HeroBanner children=' Программы2 Программы Программы Программы Программы Программы Программы Программы ' />
-              } */}
-            {/* /> */}
-            <Route path='/franchise' element={<HeroBanner children='Франшиза2' />} />
-            <Route path='/faq' element={<HeroBanner children='Вопросы и ответы2' />} />
-            <Route path='/contacts' element={<HeroBanner children='Контакты2' />} />
-            <Route path='/courses' element={<HeroBanner children='Мои курсы2' />} />
-            <Route path='/ui' element={<HeroBanner children='ReUI2' />} />
-          </Routes>
           <div className='app-wrapper-content'></div>
         </div>
       </BrowserRouter>
