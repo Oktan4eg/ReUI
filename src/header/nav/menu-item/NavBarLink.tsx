@@ -16,7 +16,7 @@ interface NavBarLinkProps {
    * Дополнительный класс
    */
   className?: string;
-  key?: string;
+  // key: string;
 }
 
 const StyledNavBarLink = styled.li<NavBarLinkProps>`

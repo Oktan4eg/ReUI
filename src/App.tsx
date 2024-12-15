@@ -92,7 +92,7 @@ function App() {
           }}
         >
           {/* <Header /> */}
-          <NavBarMenu2 obj={items} />
+          <NavBarMenu2 item={items} />
           {/* <NavBarMenu /> */}
 
           <Routes>
